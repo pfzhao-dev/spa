@@ -1,0 +1,30 @@
+1 - 1 modifies
+stmt s; variable v;
+Select <s, v> such that Modifies(s, v)
+1 x, 2 x, 3 v
+5000
+2 - 1 uses
+stmt s; variable v;
+Select <s, v> such that Uses(s, v)
+1 a, 3 x
+5000
+3 - 1 affects
+stmt s1, s2;
+Select <s1, s2> such that Affects(s1, s2)
+none
+5000
+4 - 1 affects
+stmt s1, s2;
+Select <s1, s2> such that Affects*(s1, s2)
+none
+5000
+5 - 1 affectsbip
+stmt s1, s2;
+Select <s1, s2> such that AffectsBip(s1, s2)
+none
+5000
+6 - 1 affectsbip
+stmt s1, s2;
+Select <s1, s2> such that AffectsBip*(s1, s2)
+none
+5000

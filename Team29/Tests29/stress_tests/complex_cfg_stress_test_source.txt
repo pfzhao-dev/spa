@@ -1,0 +1,612 @@
+procedure main00 {
+ 	while (x00 < 0) {
+ 		a00 = b00;
+ 		b00 = k00;
+ 		k00 = a00;
+ 	}
+ 	while (k00 > 10) {
+ 		z00 = k00 + x00;
+ 		x00 = x00 + 1;
+ 		if (y00 == 0) then {
+ 			while (x00 < z00) {
+ 				x00 = z00 + r00; 
+ 				read x00;
+ 				x00 = z00 + r00;
+ 			}
+ 		} else {
+ 			x00 = y00 + k00;
+ 			call main01;
+ 		}
+ 	}
+ 	y00 = x00 + z00;
+ 	s00 = s00 + x00;
+ 	x00 = x00 + 1;
+ 	y00 = y00 + x00;
+ 	print z00;
+ 	x00 = x00 * x00;
+ 	while (y00 == z00) {
+ 		if (xy00 == z00) then {
+ 			z00 = z00 + 1;
+ 			x00 = y00 + 2;
+ 		} else {
+ 			while (z00 == (y00 + x00)) {
+ 				cr00 = cr00 + z00;
+ 			}
+ 		}
+ 	}
+ 	print z00;
+ }
+procedure main01 {
+ 	while (x01 < 0) {
+ 		a01 = b01;
+ 		b01 = k01;
+ 		k01 = a01;
+ 	}
+ 	while (k01 > 10) {
+ 		z01 = k01 + x01;
+ 		x01 = x01 + 1;
+ 		if (y01 == 0) then {
+ 			while (x01 < z01) {
+ 				x01 = z01 + r01; 
+ 				read x01;
+ 				x01 = z01 + r01;
+ 			}
+ 		} else {
+ 			x01 = y01 + k01;
+ 			call main02;
+ 		}
+ 	}
+ 	y01 = x01 + z01;
+ 	s01 = s01 + x01;
+ 	x01 = x01 + 1;
+ 	y01 = y01 + x01;
+ 	print z01;
+ 	x01 = x01 * x01;
+ 	while (y01 == z01) {
+ 		if (xy01 == z01) then {
+ 			z01 = z01 + 1;
+ 			x01 = y01 + 2;
+ 		} else {
+ 			while (z01 == (y01 + x01)) {
+ 				cr01 = cr01 + z01;
+ 			}
+ 		}
+ 	}
+ 	print z01;
+ }
+procedure main02 {
+ 	while (x02 < 0) {
+ 		a02 = b02;
+ 		b02 = k02;
+ 		k02 = a02;
+ 	}
+ 	while (k02 > 10) {
+ 		z02 = k02 + x02;
+ 		x02 = x02 + 1;
+ 		if (y02 == 0) then {
+ 			while (x02 < z02) {
+ 				x02 = z02 + r02; 
+ 				read x02;
+ 				x02 = z02 + r02;
+ 			}
+ 		} else {
+ 			x02 = y02 + k02;
+ 			call main03;
+ 		}
+ 	}
+ 	y02 = x02 + z02;
+ 	s02 = s02 + x02;
+ 	x02 = x02 + 1;
+ 	y02 = y02 + x02;
+ 	print z02;
+ 	x02 = x02 * x02;
+ 	while (y02 == z02) {
+ 		if (xy02 == z02) then {
+ 			z02 = z02 + 1;
+ 			x02 = y02 + 2;
+ 		} else {
+ 			while (z02 == (y02 + x02)) {
+ 				cr02 = cr02 + z02;
+ 			}
+ 		}
+ 	}
+ 	print z02;
+ }
+procedure main03 {
+ 	while (x03 < 0) {
+ 		a03 = b03;
+ 		b03 = k03;
+ 		k03 = a03;
+ 	}
+ 	while (k03 > 10) {
+ 		z03 = k03 + x03;
+ 		x03 = x03 + 1;
+ 		if (y03 == 0) then {
+ 			while (x03 < z03) {
+ 				x03 = z03 + r03; 
+ 				read x03;
+ 				x03 = z03 + r03;
+ 			}
+ 		} else {
+ 			x03 = y03 + k03;
+ 			call main04;
+ 		}
+ 	}
+ 	y03 = x03 + z03;
+ 	s03 = s03 + x03;
+ 	x03 = x03 + 1;
+ 	y03 = y03 + x03;
+ 	print z03;
+ 	x03 = x03 * x03;
+ 	while (y03 == z03) {
+ 		if (xy03 == z03) then {
+ 			z03 = z03 + 1;
+ 			x03 = y03 + 2;
+ 		} else {
+ 			while (z03 == (y03 + x03)) {
+ 				cr03 = cr03 + z03;
+ 			}
+ 		}
+ 	}
+ 	print z03;
+ }
+procedure main04 {
+ 	while (x04 < 0) {
+ 		a04 = b04;
+ 		b04 = k04;
+ 		k04 = a04;
+ 	}
+ 	while (k04 > 10) {
+ 		z04 = k04 + x04;
+ 		x04 = x04 + 1;
+ 		if (y04 == 0) then {
+ 			while (x04 < z04) {
+ 				x04 = z04 + r04; 
+ 				read x04;
+ 				x04 = z04 + r04;
+ 			}
+ 		} else {
+ 			x04 = y04 + k04;
+ 			call main05;
+ 		}
+ 	}
+ 	y04 = x04 + z04;
+ 	s04 = s04 + x04;
+ 	x04 = x04 + 1;
+ 	y04 = y04 + x04;
+ 	print z04;
+ 	x04 = x04 * x04;
+ 	while (y04 == z04) {
+ 		if (xy04 == z04) then {
+ 			z04 = z04 + 1;
+ 			x04 = y04 + 2;
+ 		} else {
+ 			while (z04 == (y04 + x04)) {
+ 				cr04 = cr04 + z04;
+ 			}
+ 		}
+ 	}
+ 	print z04;
+ }
+procedure main05 {
+ 	while (x05 < 0) {
+ 		a05 = b05;
+ 		b05 = k05;
+ 		k05 = a05;
+ 	}
+ 	while (k05 > 10) {
+ 		z05 = k05 + x05;
+ 		x05 = x05 + 1;
+ 		if (y05 == 0) then {
+ 			while (x05 < z05) {
+ 				x05 = z05 + r05; 
+ 				read x05;
+ 				x05 = z05 + r05;
+ 			}
+ 		} else {
+ 			x05 = y05 + k05;
+ 			call main06;
+ 		}
+ 	}
+ 	y05 = x05 + z05;
+ 	s05 = s05 + x05;
+ 	x05 = x05 + 1;
+ 	y05 = y05 + x05;
+ 	print z06;
+ 	x05 = x05 * x05;
+ 	while (y05 == z05) {
+ 		if (xy05 == z05) then {
+ 			z05 = z05 + 1;
+ 			x05 = y05 + 2;
+ 		} else {
+ 			while (z05 == (y05 + x05)) {
+ 				cr05 = cr05 + z05;
+ 			}
+ 		}
+ 	}
+ 	print z05;
+ }
+procedure main06 {
+ 	while (x06 < 0) {
+ 		a06 = b06;
+ 		b06 = k06;
+ 		k06 = a06;
+ 	}
+ 	while (k06 > 10) {
+ 		z06 = k06 + x06;
+ 		x06 = x06 + 1;
+ 		if (y06 == 0) then {
+ 			while (x06 < z06) {
+ 				x06 = z06 + r06; 
+ 				read x06;
+ 				x06 = z06 + r06;
+ 			}
+ 		} else {
+ 			x06 = y06 + k06;
+ 			call main07;
+ 		}
+ 	}
+ 	y06 = x06 + z06;
+ 	s06 = s06 + x06;
+ 	x06 = x06 + 1;
+ 	y06 = y06 + x06;
+ 	print z06;
+ 	x06 = x06 * x06;
+ 	while (y06 == z06) {
+ 		if (xy06 == z06) then {
+ 			z06 = z06 + 1;
+ 			x06 = y06 + 2;
+ 		} else {
+ 			while (z06 == (y06 + x06)) {
+ 				cr06 = cr06 + z06;
+ 			}
+ 		}
+ 	}
+ 	print z06;
+ }
+procedure main07 {
+ 	while (x07 < 0) {
+ 		a07 = b07;
+ 		b07 = k07;
+ 		k07 = a07;
+ 	}
+ 	while (k07 > 10) {
+ 		z07 = k07 + x07;
+ 		x07 = x07 + 1;
+ 		if (y07 == 0) then {
+ 			while (x07 < z07) {
+ 				x07 = z07 + r07; 
+ 				read x07;
+ 				x07 = z07 + r07;
+ 			}
+ 		} else {
+ 			x07 = y07 + k07;
+ 			call main08;
+ 		}
+ 	}
+ 	y07 = x07 + z07;
+ 	s07 = s07 + x07;
+ 	x07 = x07 + 1;
+ 	y07 = y07 + x07;
+ 	print z07;
+ 	x07 = x07 * x07;
+ 	while (y07 == z07) {
+ 		if (xy07 == z07) then {
+ 			z07 = z07 + 1;
+ 			x07 = y07 + 2;
+ 		} else {
+ 			while (z07 == (y07 + x07)) {
+ 				cr07 = cr07 + z07;
+ 			}
+ 		}
+ 	}
+ 	print z07;
+ }
+procedure main08 {
+ 	while (x08 < 0) {
+ 		a08 = b08;
+ 		b08 = k08;
+ 		k08 = a08;
+ 	}
+ 	while (k08 > 10) {
+ 		z08 = k08 + x08;
+ 		x08 = x08 + 1;
+ 		if (y08 == 0) then {
+ 			while (x08 < z08) {
+ 				x08 = z08 + r08; 
+ 				read x08;
+ 				x08 = z08 + r08;
+ 			}
+ 		} else {
+ 			x08 = y08 + k08;
+ 			call main09;
+ 		}
+ 	}
+ 	y08 = x08 + z08;
+ 	s08 = s08 + x08;
+ 	x08 = x08 + 1;
+ 	y08 = y08 + x08;
+ 	print z08;
+ 	x08 = x08 * x08;
+ 	while (y08 == z08) {
+ 		if (xy08 == z08) then {
+ 			z08 = z08 + 1;
+ 			x08 = y08 + 2;
+ 		} else {
+ 			while (z08 == (y08 + x08)) {
+ 				cr08 = cr08 + z08;
+ 			}
+ 		}
+ 	}
+ 	print z08;
+ }
+procedure main09 {
+ 	while (x09 < 0) {
+ 		a09 = b09;
+ 		b09 = k09;
+ 		k09 = a09;
+ 	}
+ 	while (k09 > 10) {
+ 		z09 = k09 + x09;
+ 		x09 = x09 + 1;
+ 		if (y09 == 0) then {
+ 			while (x09 < z09) {
+ 				x09 = z09 + r09; 
+ 				read x09;
+ 				x09 = z09 + r09;
+ 			}
+ 		} else {
+ 			x09 = y09 + k09;
+ 			call main010;
+ 		}
+ 	}
+ 	y09 = x09 + z09;
+ 	s09 = s09 + x09;
+ 	x09 = x09 + 1;
+ 	y09 = y09 + x09;
+ 	print z09;
+ 	x09 = x09 * x09;
+ 	while (y09 == z09) {
+ 		if (xy09 == z09) then {
+ 			z09 = z09 + 1;
+ 			x09 = y09 + 2;
+ 		} else {
+ 			while (z09 == (y09 + x09)) {
+ 				cr09 = cr09 + z09;
+ 			}
+ 		}
+ 	}
+ 	print z09;
+ }
+procedure main010 {
+ 	while (x010 < 0) {
+ 		a010 = b010;
+ 		b010 = k010;
+ 		k010 = a010;
+ 	}
+ 	while (k010 > 10) {
+ 		z010 = k010 + x010;
+ 		x010 = x010 + 1;
+ 		if (y010 == 0) then {
+ 			while (x010 < z010) {
+ 				x010 = z010 + r010; 
+ 				read x010;
+ 				x010 = z010 + r010;
+ 			}
+ 		} else {
+ 			x010 = y010 + k010;
+ 			call main011;
+ 		}
+ 	}
+ 	y010 = x010 + z010;
+ 	s010 = s010 + x010;
+ 	x010 = x010 + 1;
+ 	y010 = y010 + x010;
+ 	print z010;
+ 	x010 = x010 * x010;
+ 	while (y010 == z010) {
+ 		if (xy010 == z010) then {
+ 			z010 = z010 + 1;
+ 			x010 = y010 + 2;
+ 		} else {
+ 			while (z010 == (y010 + x010)) {
+ 				cr010 = cr010 + z010;
+ 			}
+ 		}
+ 	}
+ 	print z010;
+ }
+procedure main011 {
+ 	while (x011 < 0) {
+ 		a011 = b011;
+ 		b011 = k011;
+ 		k011 = a011;
+ 	}
+ 	while (k011 > 10) {
+ 		z011 = k011 + x011;
+ 		x011 = x011 + 1;
+ 		if (y011 == 0) then {
+ 			while (x011 < z011) {
+ 				x011 = z011 + r011; 
+ 				read x011;
+ 				x011 = z011 + r011;
+ 			}
+ 		} else {
+ 			x011 = y011 + k011;
+ 			call main012;
+ 		}
+ 	}
+ 	y011 = x011 + z011;
+ 	s011 = s011 + x011;
+ 	x011 = x011 + 1;
+ 	y011 = y011 + x011;
+ 	print z011;
+ 	x011 = x011 * x011;
+ 	while (y011 == z011) {
+ 		if (xy011 == z011) then {
+ 			z011 = z011 + 1;
+ 			x011 = y011 + 2;
+ 		} else {
+ 			while (z011 == (y011 + x011)) {
+ 				cr011 = cr011 + z011;
+ 			}
+ 		}
+ 	}
+ 	print z011;
+ }
+procedure main012 {
+ 	while (x012 < 0) {
+ 		a012 = b012;
+ 		b012 = k012;
+ 		k012 = a012;
+ 	}
+ 	while (k012 > 10) {
+ 		z012 = k012 + x012;
+ 		x012 = x012 + 1;
+ 		if (y012 == 0) then {
+ 			while (x012 < z012) {
+ 				x012 = z012 + r012; 
+ 				read x012;
+ 				x012 = z012 + r012;
+ 			}
+ 		} else {
+ 			x012 = y012 + k012;
+ 			call main013;
+ 		}
+ 	}
+ 	y012 = x012 + z012;
+ 	s012 = s012 + x012;
+ 	x012 = x012 + 1;
+ 	y012 = y012 + x012;
+ 	print z012;
+ 	x012 = x012 * x012;
+ 	while (y012 == z012) {
+ 		if (xy012 == z012) then {
+ 			z012 = z012 + 1;
+ 			x012 = y012 + 2;
+ 		} else {
+ 			while (z012 == (y012 + x012)) {
+ 				cr012 = cr012 + z012;
+ 			}
+ 		}
+ 	}
+ 	print z012;
+ }
+procedure main013 {
+ 	while (x013 < 0) {
+ 		a013 = b013;
+ 		b013 = k013;
+ 		k013 = a013;
+ 	}
+ 	while (k013 > 10) {
+ 		z013 = k013 + x013;
+ 		x013 = x013 + 1;
+ 		if (y013 == 0) then {
+ 			while (x013 < z013) {
+ 				x013 = z013 + r013; 
+ 				read x013;
+ 				x013 = z013 + r013;
+ 			}
+ 		} else {
+ 			x013 = y013 + k013;
+ 			call main014;
+ 		}
+ 	}
+ 	y013 = x013 + z013;
+ 	s013 = s013 + x013;
+ 	x013 = x013 + 1;
+ 	y013 = y013 + x013;
+ 	print z013;
+ 	x013 = x013 * x013;
+ 	while (y013 == z013) {
+ 		if (xy013 == z013) then {
+ 			z013 = z013 + 1;
+ 			x013 = y013 + 2;
+ 		} else {
+ 			while (z013 == (y013 + x013)) {
+ 				cr013 = cr013 + z013;
+ 			}
+ 		}
+ 	}
+ 	print z013;
+ }
+procedure main014 {
+ 	while (x014 < 0) {
+ 		a014 = b014;
+ 		b014 = k014;
+ 		k014 = a014;
+ 	}
+ 	while (k014 > 10) {
+ 		z014 = k014 + x014;
+ 		x014 = x014 + 1;
+ 		if (y014 == 0) then {
+ 			while (x014 < z014) {
+ 				x014 = z014 + r014; 
+ 				read x014;
+ 				x014 = z014 + r014;
+ 			}
+ 		} else {
+ 			x014 = y014 + k014;
+ 			call main015;
+ 		}
+ 	}
+ 	y014 = x014 + z014;
+ 	s014 = s014 + x014;
+ 	x014 = x014 + 1;
+ 	y014 = y014 + x014;
+ 	print z014;
+ 	x014 = x014 * x014;
+ 	while (y014 == z014) {
+ 		if (xy014 == z014) then {
+ 			z014 = z014 + 1;
+ 			x014 = y014 + 2;
+ 		} else {
+ 			while (z014 == (y014 + x014)) {
+ 				cr014 = cr014 + z014;
+ 			}
+ 		}
+ 	}
+ 	print z014;
+ }
+procedure main015 {
+ 	while (x015 < 0) {
+ 		a015 = b015;
+ 		b015 = k015;
+ 		k015 = a015;
+ 	}
+ 	while (k015 > 10) {
+ 		z015 = k015 + x015;
+ 		x015 = x015 + 1;
+ 		if (y015 == 0) then {
+ 			while (x015 < z015) {
+ 				x015 = z015 + r015; 
+ 				read x015;
+ 				x015 = z015 + r015;
+ 			}
+ 		} else {
+ 			x015 = y015 + k015;
+ 			call main016;
+ 		}
+ 	}
+ 	y015 = x015 + z015;
+ 	s015 = s015 + x015;
+ 	x015 = x015 + 1;
+ 	y015 = y015 + x015;
+ 	print z015;
+ 	x015 = x015 * x015;
+ 	while (y015 == z015) {
+ 		if (xy015 == z015) then {
+ 			z015 = z015 + 1;
+ 			x015 = y015 + 2;
+ 		} else {
+ 			while (z015 == (y015 + x015)) {
+ 				cr015 = cr015 + z015;
+ 			}
+ 		}
+ 	}
+ 	print z015;
+ }
+
+ procedure main016 {
+	 print z015;
+ }

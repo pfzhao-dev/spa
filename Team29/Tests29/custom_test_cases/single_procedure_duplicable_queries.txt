@@ -1,0 +1,200 @@
+1- Select stmt
+stmt s;
+Select s
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28
+5000
+2- Multi clause tuple selection
+assign a1, a2; prog_line n; procedure p; while w; variable v; stmt s;
+Select <a1, a2> such that Affects*(n, a1) and Next*(a1, w) and Follows*(n, _) pattern w(v, _) with n = s.stmt#
+2 2, 2 3, 2 4, 2 6, 2 7, 2 10, 2 12, 2 13, 2 15, 2 16, 2 17, 2 18, 2 20, 2 23, 2 24, 2 26, 3 2, 3 3, 3 4, 3 6, 3 7, 3 10, 3 12, 3 13, 3 15, 3 16, 3 17, 3 18, 3 20, 3 23, 3 24, 3 26, 4 2, 4 3, 4 4, 4 6, 4 7, 4 10, 4 12, 4 13, 4 15, 4 16, 4 17, 4 18, 4 20, 4 23, 4 24, 4 26, 6 2, 6 3, 6 4, 6 6, 6 7, 6 10, 6 12, 6 13, 6 15, 6 16, 6 17, 6 18, 6 20, 6 23, 6 24, 6 26, 7 2, 7 3, 7 4, 7 6, 7 7, 7 10, 7 12, 7 13, 7 15, 7 16, 7 17, 7 18, 7 20, 7 23, 7 24, 7 26, 10 2, 10 3, 10 4, 10 6, 10 7, 10 10, 10 12, 10 13, 10 15, 10 16, 10 17, 10 18, 10 20, 10 23, 10 24, 10 26, 15 2, 15 3, 15 4, 15 6, 15 7, 15 10, 15 12, 15 13, 15 15, 15 16, 15 17, 15 18, 15 20, 15 23, 15 24, 15 26, 16 2, 16 3, 16 4, 16 6, 16 7, 16 10, 16 12, 16 13, 16 15, 16 16, 16 17, 16 18, 16 20, 16 23, 16 24, 16 26, 17 2, 17 3, 17 4, 17 6, 17 7, 17 10, 17 12, 17 13, 17 15, 17 16, 17 17, 17 18, 17 20, 17 23, 17 24, 17 26, 18 2, 18 3, 18 4, 18 6, 18 7, 18 10, 18 12, 18 13, 18 15, 18 16, 18 17, 18 18, 18 20, 18 23, 18 24, 18 26, 20 2, 20 3, 20 4, 20 6, 20 7, 20 10, 20 12, 20 13, 20 15, 20 16, 20 17, 20 18, 20 20, 20 23, 20 24, 20 26, 23 2, 23 3, 23 4, 23 6, 23 7, 23 10, 23 12, 23 13, 23 15, 23 16, 23 17, 23 18, 23 20, 23 23, 23 24, 23 26, 24 2, 24 3, 24 4, 24 6, 24 7, 24 10, 24 12, 24 13, 24 15, 24 16, 24 17, 24 18, 24 20, 24 23, 24 24, 24 26, 26 2, 26 3, 26 4, 26 6, 26 7, 26 10, 26 12, 26 13, 26 15, 26 16, 26 17, 26 18, 26 20, 26 23, 26 24, 26 26, 12 10,12 12,12 13,12 15,12 16,12 17,12 18,12 2,12 20,12 23,12 24,12 26,12 3,12 4,12 6,12 7,13 10,13 12,13 13,13 15,13 16,13 17,13 18,13 2,13 20,13 23,13 24,13 26,13 3,13 4,13 6,13 7
+5000
+3 - Multi clause tuple selection
+print p; assign a; read r; variable v; while w; prog_line n; stmt s;
+Select <a, n> pattern w(v, _) such that Affects*(a, n) and Parent*(w, n) and Next*(n, w) with n = s.stmt#
+13 10,13 12,13 26,13 6,13 7,2 10,2 12,2 13,2 2,2 26,2 3,2 4,2 6,2 7,26 26,3 10,3 12,3 13,3 2,3 26,3 3,3 4,3 6,3 7,4 10,4 12,4 13,4 2,4 26,4 3,4 4,4 6,4 7,6 10,6 12,6 26,23 23,6 6,7 7, 12 10,12 12,12 23,12 24,12 26,12 6,12 7,13 23,13 24,15 24,17 24,18 24,2 23,2 24,23 26,3 23,3 24,4 23,4 24,6 23,6 24,6 7,7 10,7 12,7 23,7 24,7 26,7 6
+5000
+4 - Multi clause tuple selection
+stmt s; while w; if i; assign a1, a2; variable v;
+Select <i, w.stmt#> such that Affects*(a1, a2) and Next(w, a2) pattern a1(v, _) and i(v, _, _) such that Uses(w, v) with w.stmt# = w.stmt#
+22 5, 22 25, 22 9
+5000
+5 - Multi clause single select
+print p; assign a; read r; variable v; while w; prog_line n; stmt s;
+Select v pattern w(v, _) such that Affects*(a, n) and Parent*(w, n) and Next*(w, n) with n = s.stmt#
+x00, k00, y00, z00
+5000
+6 - Multi clause single select
+assign a1, a2; prog_line n; procedure p; while w; variable v; stmt s;
+Select a1 such that Affects*(n, a1) and Next*(w, a1) and Follows*(n, _) pattern w(v, _) with n = s.stmt#
+2,3,4,6,7,10,12,13,15,16,17,18,20,23,24,26
+5000
+7 - Multi clause single select
+procedure p; while w; variable v; assign a1; prog_line n; stmt s;
+Select p.procName such that Affects*(a1, n) and Uses(p, v) and Modifies(p, v) pattern a1(v, _"z00"_)
+main00
+5000
+8 - Multi clause tuple
+assign a1, a2; variable v; procedure p; stmt s; while w;
+Select <a1, a2, v> such that Uses(p, v) and Affects*(a1, a2) and Follows(s, a1) and Next*(w, a1) pattern a2(v, _) and a1(v, _)
+3 3 b00, 4 4 k00, 7 7 x00, 7 17 x00, 7 24 x00, 12 7 x00, 12 17 x00, 12 24 x00, 15 18 y00, 17 20 x00, 17 24 x00, 7 20 x00, 12 20 x00, 12 10 x00, 12 12 x00, 7 10 x00, 7 12 x00 
+5000
+9 - Multi clause tuple
+stmt s; assign a; procedure p; variable v; assign a2; while w;
+Select <p, v> such that Uses(p, v) and Affects*(a, a2) and Modifies(p, v) and Affects*(a2, a) pattern w(v, _) such that Next*(w, a)
+main00 x00, main00 y00, main00 z00, main00 k00
+5000
+10 - Multi clause tuple
+assign a1, a2; variable v, v2; while w; if i; procedure p;
+Select <i.stmt#, v2.varName> such that Affects*(a1, a2) pattern a2(v, _) and a1(v, _) and w(v2, _) such that Parent*(w, i) and Next*(w, i) and Next*(a1, w) and Uses(p, v2) and Modifies(p, v2)
+22 y00, 22 z00, 8 k00
+5000
+11 - Multi clause boolean
+print p; read r; if i; while w; variable v; assign a;
+Select BOOLEAN such that Parent*(i, w) and Uses(w, v) and Modifies(i, v) pattern w(v, _) and a(v, _) such that Affects*(i, a) and Affects*(a, i) and Follows*(a, i)
+none
+5000
+12 - Multi select boolean // Surely correct
+print p; read r; if i; while w; variable v; assign a1, a2;
+Select BOOLEAN such that Parent*(i, w) and Uses(w, v) and Modifies(i, v) pattern w(v, _) and a1(v, _) such that Affects*(a1, a2) and Affects*(a2, a1) 
+TRUE
+5000
+13 - Multi select tuple // surely correct
+assign a1, a2; variable v; while w1, w2; if i; procedure p; call c; 
+Select <a1.stmt#> such that Next*(c, a1) and Affects*(a1, a2) and Parent(w1, i) and Parent(i, w2) pattern w1(v, _) and w2(v, _) such that Affects*(a2, a1)
+23, 26, 12, 6, 7
+5000
+14 - Multi select tuple // surely correct
+assign a1, a2; variable v; while w1, w2; if i; procedure p; call c; 
+Select <a1.stmt#, v.varName> such that Next*(a1, c) and Affects*(a1, a2) and Parent(w1, i) and Parent(i, w2) pattern w1(v, _) and w2(v, _) such that Affects*(a2, a1)
+2 y00, 2 z00, 3 y00, 3 z00, 4 y00, 4 z00, 6 y00, 6 z00, 7 y00, 7 z00, 12 y00,12 z00
+5000
+15 - Multi clause single select 
+print p; read r; if i; while w; variable v; assign a1, a2;
+Select v such that Parent*(i, w) and Uses(w, v) and Modifies(i, v) pattern w(v, _) and a1(v, _) such that Affects*(a1, a2) and Affects*(a2, a1) 
+z00, x00
+5000
+16 - Multi clause single select
+stmt s; assign a, a2; prog_line n; while w; if i; variable v; print p;
+Select s such that Affects*(a, n) and Affects*(n, a) and Uses(w, v) pattern w(v, _) and i(v, _, _) such that Parent(i, w) and Parent(s, i) and Follows(a2, s) and Follows*(p, s) and Next*(p, s) and Next(s, i)
+21
+5000
+17 - Multi clause tuple select
+assign a; prog_line n; while w; if i; stmt s; variable v;
+Select <a, n> such that Affects*(a, n) and Next*(w, a) and Next*(n, a) and Affects*(n, a) and Parent(w, a) and Uses(a, v) and Uses(n, v) and Next*(a, w)
+2 2, 3 3, 4 4, 7 7, 26 26, 12 12, 6 6, 6 7, 7 6 
+5000
+18 - Multi clause single select
+stmt s; assign a1, a2; if i; read r; while w; variable v;
+Select r.varName such that Parent*(w, r) and Parent*(i, r) and Affects(a1, a2) pattern a1(v, _) and w(v, _) with r.varName = v.varName such that Next*(a1, w) and Modifies(w, v) and Parent*(i, w)
+x00
+5000
+19 - Multi clause tuple select
+assign a1, a2; call c; print p; variable v; while w; 
+Select <p.varName, c.procName> pattern a1(v, _) and w(v, _) such that Next*(c, w) and Next*(c, p) and Parent*(w, a1) and Follows*(p, w) and Modifies(w, v) and Next*(p, w) and Affects(a1, a2) and Affects*(a2, a1) and Uses(w, v) and Uses(p, v) with v.varName = p.varName
+z00 main01
+5000
+20 - Multi clause tuple select // unable to detect Affects*(23, 23)
+assign a1, a2; prog_line n; call c; print p; variable v; while w;
+Select <a1, a2> pattern a1(v, _) and w(v, _) such that Next*(c, w) and Next*(c, p) and Parent*(w, a1) and Follows*(p, w) and Modifies(w, v) and Next*(p, w) and Affects(a1, a2) and Affects*(a2, a1) and Uses(w, v) and Uses(p, v) with v.varName = p.varName
+23 23
+5000
+21 - Multi clause tuple select
+variable v; call c; print p; assign a1, a2; while w; if i;
+Select <p.varName, c.procName, v.varName> such that Parent*(w, a1) and Parent*(w, a2) and Affects*(a1, a2) and Affects(a1, a2) and Next*(w, i) and Next*(c, w) and Next*(p, w) and Next(w, i) pattern w(v, _) with p.varName = v.varName
+z00 main01 z00
+5000
+22 - Multi clause tuple select
+assign a1, a2; call c; read r; print p; while w1, w2; if i; variable v;
+Select <w1, w2> such that Follows(w1, w2) and Next*(w2, c) and Parent*(w2, a1) and Affects*(a1, a2) and Next*(w2, a1) and Uses(w1, v) pattern w1(v, _) such that Next*(r, p) and Next*(w2, r) and Next*(w1, r)
+1 5
+5000
+23 - Multi clause single select
+while w1, w2; if i; assign a, a1; assign n; variable v;
+Select n such that Affects*(a, n) and Parent*(w1, n) and Next*(a, n) and Affects*(n, a) and Follows(w1, w2) and Modifies(n, v) pattern w2(v, _) and n(v, _) such that Parent(w1, n) and Next*(a, a1)
+4
+5000
+24 - Multi clause single select
+variable v1, v2; assign a1, a2; while w1, w2; call c;
+Select a1 such that Follows(w1, w2) and Affects*(a1, a2) and Next(w1, w2) and Parent(w1, a1) and Next*(w2, c) and Uses(w1, v1) and Modifies(w2, v1) pattern w1(v1, _) and w2(v2, _) and a2(v2, _)
+2,3,4
+5000
+25 - Multi clause boolean select
+while w; if i; assign a; assign n; call c; variable v;
+Select BOOLEAN such that Follows(a, n) and Follows(n , i) and Modifies(n, v) and Uses(n, v) and Affects*(a, n) and Next*(a, n) and Parent*(w, a) and Next*(w, i) pattern n(v, _) 
+TRUE
+5000
+26 - Multi clause tuple select
+while w; if i; assign a; assign n; call c; variable v;
+Select <a, n> such that Follows(a, n) and Follows(n , i) and Modifies(n, v) and Uses(n, v) and Affects*(a, n) and Next*(a, n) and Parent*(w, a) and Next*(w, i) pattern n(v, _) 
+6 7
+5000
+27 - Multi clause tuple select
+stmt s; while w; if i; prog_line n; call c; assign a1, a2; print p; variable v;
+Select <v.varName, n, i> such that Affects*(a1, a2) and Next*(a1, a2) and Next*(c, w) and Parent*(w, a1) and Next(w, n) and Parent*(w, i) and Uses(w, v) pattern i(v, _, _) and w(v, _) with v.varName = p.varName
+z00 22 22, z00 27 22 
+5000
+28 - Multi clause tuple select
+stmt s; while w; print p; if i; variable v;
+Select <w, p.varName, s> such that Follows*(p, w) and Next*(w, s) and Next*(s, w) and Parent*(w, s) and Parent(i, s) and Parent(w, i) and Uses(p, v) and Modifies(w, v) pattern w(v, _) and i(v, _, _) with v.varName = p.varName
+21 z00 25, 21 z00 23, 21 z00 24
+5000
+29 - Multi clause tuple select
+prog_line n; while w; read r; if i; variable v; procedure p;
+Select <w, r.varName, n> such that Next*(r, w) and Next*(w, n) and Next*(n, w) and Parent*(w, n) and Parent(i, n) and Parent(w, i) and Uses(p, v) and Modifies(w, v) pattern w(v, _) and i(v, _, _)
+21 x00 23, 21 x00 24, 21 x00 25
+5000
+30 - Multi clause tuple select
+while w; if i; assign a, n; call c; variable v;
+Select <a, w> such that Follows(a, n) and Follows(n , i) and Modifies(n, v) and Uses(n, v) and Affects*(a, n) and Next*(a, n) and Parent*(w, a) and Next*(w, i) pattern n(v, _) 
+6 5
+5000
+31 - Multi clause tuple select
+while w, w2; if i; assign a1, a2; call c; variable v;
+Select <w, i, c.procName> such that Next(w, i) and Next*(c, i) and Affects*(a1, a2) and Parent(i, a1) and Parent(i, a2) and Parent(i, w2) pattern w(v, _) and i(v, _, _)
+21 22 main01
+5000
+32 - Multi clause tuple select
+if i; assign a1, a2, a3; variable v; while w; 
+Select <a1, v.varName> such that Next*(w, i) and Affects*(a1, a2) and Affects*(a2, a3) and Affects*(a3, a1) and Next*(a1, a2) and Next*(a2, a3) and Next*(a3, a1) and Parent(w, a1) and Follows(a1, a2) pattern a1(v, _)
+2 a00, 3 b00, 6 z00
+5000
+33 - Multi clause tuple select
+while w, w2; if i; assign a1, a2; print p; read r; call c; variable v;
+Select <p.varName, r.varName> such that Affects*(a1, a1) and Next*(a1, a1) and Affects*(a2, a2) and Next*(a2, a2) and Affects(a1, a2) and Parent*(w, a1) and Parent(w, a2) and Follows*(a1, a2) and Follows(w, w2) and Next*(w2, c)
+z00 x00
+5000
+34 - Multi clause single select
+assign a1, a2; if i1, i2; while w1, w2; variable v;
+Select <i1, i1, a1> such that Parent*(i1, a1) and Parent*(w1, i1) and Affects*(a1, a2) and Affects(a2, a1) and Follows*(w1, w2) and Next*(i1, w2) and Parent(w2, i2) and Parent*(i2, a2)
+none
+5000
+35 - Multi clause single select
+call c; print p; if i; while w; assign a; prog_line n; variable v;
+Select <v.varName, p.varName> such that Affects*(n, a) and Next*(a, n) and Parent*(w, i) pattern w(v, _) and a(v, _) such that Next*(n, a) and Next*(c, w) with n = a.stmt#
+z00 z00, k00 z00
+5000
+36 - Multi clause tuple select
+call c; print p; if i; while w; assign a; prog_line n; variable v, v2;
+Select <v2, v2, v> such that Affects*(n, a) and Next*(a, n) and Parent*(w, i) pattern w(v, _) and a(v, _) such that Next*(n, a) and Next*(c, w) pattern i(v, _, _) with n = a.stmt#
+x00 x00 z00, y00 y00 z00, a00 a00 z00, b00 b00 z00, k00 k00 z00, cr00 cr00 z00, s00 s00 z00, z00 z00 z00, r00 r00 z00, xy00 xy00 z00
+5000
+37 - Multi clause boolean select
+assign a1, a2, a3, a4; call c; while w; if i; variable v;
+Select <c, w> such that Affects*(a1, a2) and Affects*(a2, a3) and Affects*(a3, a4) and Parent*(w, a1) and Follows(a1, a2) and Follows(a2, a3) and Next*(a3, a1) pattern w(v, _) such that Next*(w, i)
+14 1
+5000
+38 - Multi clause tuple select
+assign a1; while w; assign a2; variable v;
+Select <a1, a2, w> such that Parent*(w, a1) and Parent*(w, a2) and Next*(w, a1) and Next*(w, a2) and Next*(a1, w) and Next*(a2, w) pattern w(v, _) and a1(v, _)
+23 23 21, 23 24 21, 23 26 21, 10 10 9,10 12 9,12 10 9,12 12 9
+5000
+39 - Multi clause single select
+procedure p; assign a1, a2; prog_line n; while w; if i; variable v; call c;
+Select v such that Affects(a1, a2) and Affects*(a2, n) and Follows*(w, c) and Parent(w, a1) pattern a1(v, _) and w(v, _) such that Modifies(w, v)
+none
+5000
+40 - Test query
+assign a1; variable v; while w;
+Select v pattern w(v, _) and a1(v, _)
+z00, k00, x00, y00
+5000

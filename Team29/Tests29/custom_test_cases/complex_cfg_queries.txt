@@ -1,0 +1,1140 @@
+1 - no common synonym (Follows)
+stmt s;
+Select s such that Follows(2, 3)
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30
+5000
+2 - no common synonym (Follows)
+assign a;
+Select a such that Follows(18, 25)
+2,3,4,7,8,11,15,17,20,21,22,23,24,26,27,28,30
+5000
+3 - no common synonym (Follows)
+variable v;
+Select v such that Follows(22, 23)
+x, a, b, c, d, y, z, r, s
+5000
+4 - no common synonym (Follows) not hold
+
+Select BOOLEAN such that Follows(16, 17)
+FALSE
+5000
+5 - no common synonym (Follows) not hold 
+stmt s; assign a;
+Select <a, s> such that Follows(14, 15)
+none
+5000
+6 - no common synonym (Follows) not hold
+read r;
+Select r such that Follows(19, 23)
+none
+5000
+7 - no common synonym (Follows*)
+print p;
+Select p such that Follows*(17, 25)
+29
+5000
+8 - no common synonym (Follows*)
+while w;
+Select w such that Follows*(26, 30)
+1,6,10,18
+5000
+9 - no common synonym (Follows*)
+if i; read r;
+Select <i,r.varName> such that Follows*(6, 16)
+9 x, 19 x
+5000
+10 - no common synonym (Follows*) holds
+
+Select BOOLEAN such that Follows*(19, 22)
+TRUE
+5000
+11 - no common synonym (Follows*) not hold 
+assign a;
+Select a.stmt# such that Follows*(6, 9)
+none
+5000
+12 - no common synonym (Follows*) not hold
+procedure p;
+Select p.procName such that Follows*(14, 16)
+none
+5000
+13 - no common synonym (modifies)
+procedure p; call c;
+Select <c.procName, p> such that Modifies("main", "c")
+readMe main, readMe readMe, readMe One, readMe Two, One main, One readMe, One One, One Two, Two main, Two readMe, Two One, Two Two
+5000
+14 - no common synonym (modifies)
+print p;
+Select p.varName such that Modifies(18, "d")
+c
+5000
+15 - no common synonym (modifies)
+if i;
+Select i.stmt# such that Modifies(6, "s")
+9, 19
+5000
+16 - no common synonym (modifies) not hold
+stmt s;
+Select s such that Modifies("Two", "c")
+none
+5000
+17 - no common synonym (modifies) not hold 
+assign a;
+Select a such that Modifies("Print", "x")
+none
+5000
+18 - no common synonym (modifies) not hold
+print p;
+Select p such that Modifies(10, "b")
+none
+5000
+19 - no common synonym (uses)
+
+Select BOOLEAN such that Uses("readMe", "d")
+TRUE
+5000
+20 - no common synonym (uses)
+call c;
+Select c such that Uses(25, "x")
+5, 13, 14, 16, 25
+5000
+21 - no common synonym (uses)
+print r;
+Select r.varName such that Uses(29, "c")
+c
+5000
+22 - no common synonym (uses) not hold
+read r;
+Select r such that Uses(12, "x")
+none
+5000
+23 - no common synonym (uses) not hold 
+procedure p;
+Select p.procName such that Uses("main", "k")
+none
+5000
+24 - no common synonym (uses) not hold
+while w;
+Select w such that Uses(18, "z")
+none
+5000
+25 - no common synonym (calls)
+procedure p;
+Select p such that Calls("main", "readMe")
+main, readMe, One, Two
+5000
+26 - no common synonym (calls)
+call p;
+Select p.procName such that Calls("readMe", "One")
+readMe, One, Two
+5000
+27 - no common synonym (calls)
+read r;
+Select r.varName such that Calls("One", "Two")
+x
+5000
+28 - no common synonym (calls) not hold
+assign a; call c;
+Select <a, c> such that Calls("main", "One")
+none
+5000
+29 - no common synonym (calls) not hold 
+stmt s;
+Select s such that Calls("readMe", "main")
+none
+5000
+30 - no common synonym (calls) not hold
+variable v;
+Select v such that Calls("main", "readme")
+none
+5000
+31 - no common synonym (calls*)
+call c;
+Select c.procName such that Calls*("main", "Two")
+readMe, One, Two
+5000
+32 - no common synonym (calls*)
+print p; 
+Select p.varName such that Calls*("One", "Two")
+c
+5000
+33 - no common synonym (calls*)
+prog_line n;
+Select n such that Calls*("readMe", "One")
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30
+5000
+34 - no common synonym (calls*) not hold
+prog_line n;
+Select n such that Calls*("readMe", "main")
+none
+5000
+35 - no common synonym (calls*) not hold 
+procedure p;
+Select p such that Calls*("Two", "One")
+none
+5000
+36 - no common synonym (calls*) not hold
+constant c;
+Select BOOLEAN such that Calls*("One", "readMe")
+FALSE
+5000
+37 - no common synonym (next)
+stmt s;
+Select s such that Next(14, 6)
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30
+5000
+38 - no common synonym (next)
+assign a;
+Select a such that Next(19, 21)
+2,3,4,7,8,11,15,17,20,21,22,23,24,26,27,28,30
+5000
+39 - no common synonym (next)
+while w;
+Select w such that Next(6, 15)
+1,6,10,18
+5000
+40 - no common synonym (next) not hold
+
+Select BOOLEAN such that Next(18, 21)
+FALSE
+5000
+41 - no common synonym (next) not hold
+call c;
+Select c such that Next(14, 15)
+none
+5000
+42 - no common synonym (next) not hold
+constant c;
+Select c such that Next(18, 20)
+none
+5000
+43 - no common synonym (next*)
+procedure p;
+Select p such that Next*(6, 16)
+main, readMe, One, Two
+5000
+44 - no common synonym (next*)
+print p;
+Select p.varName such that Next*(14, 13)
+c
+5000
+45 - no common synonym (next*)
+read r; call c;
+Select <c.procName, r.stmt#> such that Next*(20, 21)
+readMe 12, One 12, Two 12
+5000
+46 - no common synonym (next*) not hold
+print p; read r;
+Select <p, r.varName> such that Next*(11, 17)
+none
+5000
+47 - no common synonym (next*) not hold
+procedure p;
+Select p.procName such that Next*(26, 15)
+none
+5000
+48 - no common synonym (next*) not hold
+print p;
+Select p such that Next*(25, 26)
+none
+5000
+49 - no common synonym (affects)
+read r;
+Select r such that Affects(17, 23)
+12
+5000
+50 - no common synonym (affects)
+print p;
+Select p such that Affects(20, 22)
+29
+5000
+51 - no common synonym (affects)
+stmt s;
+Select s such that Affects(17, 20)
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30
+5000
+52 - no common synonym (affects)
+variable v;
+Select v such that Affects(27, 28)
+x, a, b, c, d, y, z, r, s
+5000
+53 - no common synonym (affects)
+
+Select BOOLEAN such that Affects(27, 30)
+TRUE
+5000
+54 - no common synonym (affects)
+constant c;
+Select c such that Affects(21, 22)
+1, 10, 0
+5000
+55 - no common synonym (affects) not hold
+call c;
+Select c such that Affects(8, 15)
+13,14,16,25,5
+5000
+56 - no common synonym (affects) not hold
+print p;
+Select p such that Affects(17, 21)
+none
+5000
+57 - no common synonym (affects) not hold
+call c;
+Select c such that Affects(4, 2)
+none
+5000
+58 - no common synonym (affects*)
+call c;
+Select c such that Affects*(4, 2)
+5,13,14,16,25
+5000
+59 - no common synonym (affects*)
+variable v;
+Select v such that Affects*(8, 7)
+x, a, b, c, d, y, z, r, s
+5000
+60 - no common synonym (affects*)
+assign a;
+Select a such that Affects*(24, 22)
+2,3,4,7,8,11,15,17,20,21,22,23,24,26,27,28,30
+5000
+61 - no common synonym (affects*)
+call c;
+Select c such that Affects*(7, 15)
+5,13,14,16,25
+5000
+62 - no common synonym (affects*)
+print p;
+Select p such that Affects*(4, 3)
+29
+5000
+63 - no common synonym (affects*)
+constant c;
+Select c such that Affects*(17, 24)
+1,0,10
+5000
+64 - no common synonym (affects*) not hold
+call c;
+Select c such that Affects*(17, 21)
+5,13,14,16,25
+5000
+65 - no common synonym (affects*) holds
+constant c;
+Select c.value such that Affects*(23, 21)
+1, 10, 0
+5000
+66 - no common synonym (affects*) not hold
+print p;
+Select p.varName such that Affects*(21, 23)
+c
+5000
+67 - 1 common synonym (Follows)
+assign a;
+Select a such that Follows(a, 12)
+11
+5000
+68 - 1 common synonym (Follows)
+call c;
+Select c such that Follows(18, c)
+25
+5000
+69 - 1 common synonym (Follows*)
+if i; stmt s;
+Select i such that Follows*(s, i)
+9
+5000
+70 - 1 common synonym (Follows*)
+assign a; read r;
+Select a such that Follows*(a, r)
+11
+5000
+71 - 1 common synonym (Follows) does not hold
+print p; read r;
+Select <r, p> such that Follows(p, r)
+none
+5000
+72 - 1 common synonym (Follows*) does not hold
+read r;
+Select r such that Follows*(19, 25)
+none
+5000
+73 - 1 common synonym (Parent)
+if i; while w;
+Select i such that Parent(w,i)
+19, 9
+5000
+74 - 1 common synonym (Parent)
+if i; assign a;
+Select BOOLEAN such that Parent(i, a)
+TRUE
+5000
+75 - 1 common synonym (Parent*)
+read r; while w;
+Select r such that Parent*(w, r)
+12
+5000
+76 - 1 common synonym (Parent*)
+call c; if i;
+Select c such that Parent*(i, c)
+14, 13
+5000
+77 - 1 common synonym (Parent) does not hold
+prog_line n1, n2;
+Select n1 such that Parent(n1, n2)
+1, 6, 9, 10, 18, 19
+5000
+78 - 1 common synonym (Parent*) does not hold
+prog_line n1, n2;
+Select n1 such that Parent*(n1, n2)
+1, 6, 9, 10, 18, 19
+5000
+79 - 1 common synonym (Modifies)
+variable v; if i;
+Select v such that Modifies(i, v)
+x, a, b, c, d, s, y
+5000
+80 - 1 common synonym (Modifies)
+variable v; 
+Select v such that Modifies("One", v)
+a, b, c, d, s, x, y
+5000
+81 - 1 common synonym (Modifies)
+procedure p;
+Select p such that Modifies(p, "c")
+One, main, readMe
+5000
+82 - 1 common synonym (Modifies) does not hold
+print p; variable v;
+Select p such that Modifies(p, v)
+none
+5000
+83 - 1 common synonym (Modifies) does not hold
+procedure p;
+Select p such that Modifies(p, "l")
+none
+5000
+84 - 1 common synonym (Modifies) does not hold
+call c;
+Select c such that Modifies(c, "r")
+none
+5000
+85 - 1 common synonym (Uses)
+print p;
+Select p.stmt# such that Uses(p, "c")
+29
+5000
+86 - 1 common synonym (Uses)
+procedure p; variable v;
+Select p such that Uses(p, v)
+One, Two, readMe, main
+5000
+87 - 1 common synonym (Uses)
+stmt s; variable v;
+Select s such that Uses(s, v)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30
+5000
+88 - 1 common synonym (Uses) does not hold
+call c; 
+Select c such that Uses(c, "x")
+5, 14, 16, 13, 25
+5000
+89 - 1 common synonym (Uses) does not hold
+procedure p;
+Select p such that Uses(p, "k")
+none
+5000
+90 - 1 common synonym (Uses) does not hold
+read r; variable v;
+Select r such that Uses(r, v)
+none
+5000
+91 - 1 common synonym (Calls) holds
+procedure p;
+Select p such that Calls(p, "readMe")
+main
+5000
+92 - 1 common synonym (Calls) holds
+procedure p1, p2;
+Select <p1, p2> such that Calls(p1, p2)
+main readMe, readMe One, readMe Two, One Two
+5000
+93 - 1 common synonym (Calls*) holds
+procedure p1;
+Select p1 such that Calls*("main", p1)
+readMe, One, Two
+5000
+94 - 1 common synonym (Calls*) holds
+procedure p;
+Select BOOLEAN such that Calls*("One", p)
+TRUE
+5000
+95 - 1 common synonym (Calls) does not hold
+call c;
+Select c such that Calls(c, "readMe")
+none
+5000
+96 - 1 common synonym (Calls*) does not hold
+procedure p1, p2;
+Select <p1.procName, p2> such that Calls*(p1, "main")
+none
+5000
+97 - 1 common synonym (Calls*) does not hold
+procedure p;
+Select BOOLEAN such that Calls*("Two", p)
+FALSE
+5000
+98 - 1 common synonym (Next) holds
+while w; if i;
+Select <i.stmt#, w> such that Next(w, i)
+19 18
+5000
+99 - 1 common synonym (Next) holds
+assign a; while w;
+Select a.stmt# such that Next(a, w)
+4, 17, 24
+5000
+100 - 1 common synonym (Next*) holds
+if i; while w;
+Select <i, w> such that Next*(i, w)
+9 6, 9 10, 19 18
+5000
+101 - 1 common synonym (Next*) holds
+call c; stmt a;
+Select <c.stmt#, a.stmt#> such that Next*(c, a)
+13 6, 13 7, 13 8, 13 9, 13 10, 13 11, 13 12, 13 13, 13 14, 13 15, 13 16, 14 6, 14 7, 14 8, 14 9, 14 10, 14 11, 14 12, 14 13, 14 14, 14 15, 14 16
+5000
+102 - 1 common synonym (Next*) does not hold
+call c; print p;
+Select <c, p> such that Next*(c, p)
+none
+5000
+103 - 1 common synonym (Next) does not hold
+read r; while w;
+Select r such that Next(r, w)
+none
+5000
+104 - 1 common synonym (Next*) does not hold
+if i; assign a;
+Select a such that Next*(a, 6)
+7, 8, 11
+5000
+105 - 1 common synonym (Affects) holds
+assign a1, a2;
+Select a1 such that Affects(a1, a2)
+2, 3, 4, 7, 8, 17, 20, 21, 22, 23, 24, 27
+5000
+106 - 1 common synonym (Affects) holds
+prog_line n1; assign a;
+Select n1 such that Affects(n1, 22)
+21, 20, 23, 24
+5000
+107 - 1 common synonym (Affects*) holds
+assign a1, a2;
+Select a1 such that Affects*(a1, 2)
+2, 3, 4
+5000
+108 - 1 common synonym (Affects*) holds
+assign a;
+Select a such that Affects*(17, a)
+20, 21, 22, 23, 24
+5000
+109 - 1 common synonym (Affects*) holds
+assign a; prog_line n;
+Select a such that Affects*(_, a)
+2,3,4,7,8,20,21,22,23,24, 11, 15, 28, 30
+5000
+110 - 1 common synonym (Affects) does not hold
+prog_line n;
+Select n such that Affects(n, 8)
+8
+5000
+111 - 1 common synonym (Affects) does not hold
+while w;
+Select w such that Affects(w, _)
+none
+5000
+112 - 1 common synonym (Affects*) does not hold
+prog_line n;
+Select n such that Affects*(n, 8)
+8
+5000
+113 - 1 common synonym (Affects*) does not hold
+prog_line n; 
+Select BOOLEAN such that Affects*(n, 26)
+FALSE
+5000
+114 - 1 common synonym (Follows, pattern)
+if i; assign a; variable v;
+Select a such that Follows(i, a) pattern a(v, _"b"_)
+22
+5000
+115 - 1 common synonym (Follows, pattern)
+while w; call c;
+Select c.procName such that Follows(w, c) pattern w("c", _)
+Two
+5000
+116 - 1 common synonym (Follows, pattern)
+while w; assign a; variable v;
+Select <a, w> such that Follows(a, w) pattern a(v, _"c + d"_) and w(v, _)
+none
+5000
+117 - 1 common synonym (Follows*, pattern)
+stmt s; if i; variable v;
+Select v.varName such that Follows*(s, i) pattern i(v, _, _)
+y
+5000
+118 - 1 common synonym (Follows*, pattern)
+assign a; variable v; call c;
+Select a such that Follows*(a, c) pattern a(_, _"x"_)
+15
+5000
+119 - 1 common synonym (Follows*, pattern)
+while w; variable v; if i;
+Select <w, v.varName> such that Follows*(w, i) pattern w(v, _) and pattern i(v, _, _)
+none
+5000
+120 - 1 common synonym (Parent, pattern)
+assign a; while w; variable v;
+Select a pattern a(v, _) and w(v, _) such that Parent(w, a)
+23, 11
+5000
+121 - 1 common synonym (Parent, pattern)
+if i; variable v; call c;
+Select i such that Parent(i, c) pattern i(v, _, _)
+9
+5000
+122 - 1 common synonym (Parent, pattern)
+if i; assign a; variable v;
+Select a such that Parent(i, a) pattern i(v, _, _) and a(_, "a - 1")
+20
+5000
+123 - 1 common synonym (Parent*, pattern)
+assign a1, a2; while w; variable v;
+Select w such that Parent(a1, a2) pattern w (v, _)
+none
+5000
+124 - 1 common synonym (Parent*, pattern)
+print p; read r; if i;
+Select i such that Parent*(i, r) pattern i("y", _, _)
+9
+5000
+125 - 1 common synonym (Parent*, pattern)
+call c; while w; variable v;
+Select c.procName such that Parent*(w, c) pattern w(v, _)
+Two, One
+5000
+126 - 1 common synonym (Uses, pattern)
+while w; if i; variable v;
+Select <v.varName, w.stmt#> such that Uses(i, v) and Uses(w, v) pattern i(v, _, _)
+d 18, d 6, y 6, y 10
+5000
+127 - 1 common synonym (Uses, pattern)
+if i; assign a; variable v;
+Select i such that Uses(a, v) pattern i (v,_,_) and a (v, _)
+9
+5000
+128 - 1 common synonym (Uses, pattern)
+assign a; variable v; if i;
+Select v such that Uses(a, v) pattern a(_, _"b*d"_) and i(v, _, _)
+d
+5000
+129 - 1 common synonym (Modifies, pattern)
+variable v; assign a; call c;
+Select c.procName such that Modifies(c, v) pattern a(v, _)
+readMe, One, Two
+5000
+130 - 1 common synonym (Modifies, pattern)
+if i; while w; variable v;
+Select v.varName such that Modifies(i, v) pattern w(v, _)
+x, c
+5000
+131 - 1 common synonym (Modifies, pattern)
+variable v; assign a; while w;
+Select w such that Modifies(w, v) and Modifies(a, v) pattern a (v, _"r"_)
+6, 10
+5000
+132 - 1 common synonym (Calls, pattern)
+procedure p1, p2; if i; variable v;
+Select p1.procName such that Calls(p1, p2) pattern i("d", _, _) 
+main, readMe, One
+5000
+133 - 1 common synonym (Calls, pattern)
+call c; procedure p1, p2;
+Select <p1.procName, p2.procName> such that Calls(p1, p2) pattern c("readMe", _)
+none
+5000
+134 - 1 common synonym (Calls, pattern)
+procedure p1; if i; while w; call c; variable v;
+Select w such that Calls(c, p1) pattern w(v, _)
+none
+5000
+135 - 1 common synonym (Calls*, pattern)
+procedure p1; if i; while w; call c; variable v;
+Select p1 such that Calls*(p1, "One") pattern w("c", _)
+main, readMe
+5000
+136 - 1 common synonym (Calls*, pattern)
+procedure p; if i; variable v;
+Select p such that Calls*("Two", p) pattern i(v, _, _)
+none
+5000
+137 - 1 common synonym (Calls*, pattern)
+procedure p1; procedure p2; assign a; variable v;
+Select <p1, p2.procName> such that Calls*(p1, p2) pattern a(v, _) such that Uses(p2, v)
+main One, main readMe, readMe One, readMe Two, One Two, main Two
+5000
+138 - 1 common synonym (Next, pattern)
+variable v; if i; while w;
+Select v such that Next(w, i) pattern i(v, _, _)
+d
+5000
+139 - 1 common synonym (Next, pattern)
+print p; if i; call c;
+Select i such that Next(i, p) pattern i("d", _, _)
+none
+5000
+140 - 1 common synonym (Next, pattern)
+read r; while w; call c; if i;
+Select i such that Next*(i, r) pattern w("x", _)
+9
+5000
+141 - 1 common synonym (Next*, pattern)
+assign a; while w; variable v; 
+Select w such that Next*(a, w) pattern a(v, _) and w(v, _)
+10, 18
+5000
+142 - 1 common synonym (Next*, pattern)
+while w; if i; variable v; 
+Select i such that Next*(i, w) pattern w(v, _) and i(v, _, _)
+none
+5000
+143 - 1 common synonym (Next*, pattern)
+if i; assign a;
+Select a such that Next*(i, a) pattern a("x", _"z"_)
+11
+5000
+144 - 1 common synonym (Affects, pattern)
+call c; assign a; variable v;
+Select c such that Next*(a, c) pattern a (_, _"b"_)
+25, 5
+5000
+145 - 1 common synonym (Affects, pattern)
+if i; while w; assign a1, a2; variable v;
+Select BOOLEAN such that Affects(a1, a2) pattern a1(v, _) and a2(v, _)
+TRUE
+5000
+146 - 1 common synonym (Affects, pattern)
+while w; if i; variable v; assign a; prog_line n;
+Select n such that Affects(a, n) pattern a(v, _) and i(v, _, _)
+21, 23, 24
+5000
+147 - 1 common synonym (Affects*, pattern)
+while w; if i; variable v; assign a; prog_line n;
+Select n such that Affects*(a, n) pattern a(v, _) and i(v, _, _)
+23, 24, 21, 22
+5000
+148 - 1 common synonym (Affects*, pattern)
+while w; if i; assign a;
+Select a such that Affects*(a, 2) pattern a(_, _"b"_)
+2
+5000
+149 - 1 common synonym (Affects*, pattern)
+assign a1, a2; print p;
+Select p such that Affects*(p, a1) pattern a2(_, _)
+none
+5000
+150 - Single with clause
+stmt s;
+Select s with 1 = "1"
+none
+5000
+151 - Single with clause
+while w;
+Select w with 123456 = 123456
+1,6,10,18
+5000
+152 - Single with clause
+if i;
+Select i with 0 = "0"
+none
+5000
+153 - Single with clause
+assign a;
+Select a with "p" = "p"
+2,3,4,7,8,11,15,17,20,21,22,23,24,26,27,28,30
+5000
+154 - 1 common synonym single with clause
+assign a; stmt s;
+Select a with s.stmt# = a.stmt#
+2,3,4,7,8,11,15,17,20,21,22,23,24,26,27,28,30
+5000
+155 - 1 common synonym single with clause
+call c; procedure p;
+Select <c.procName, p> with c.procName = p.procName
+readMe readMe, One One, Two Two
+5000
+156 - 1 common synonym single with clause
+constant c; stmt s;
+Select s with c.value = s.stmt#
+1, 10
+5000
+157 - 1 common synonym single with clause
+call c; variable v;
+Select c with c.procName = v.varName
+none
+5000
+158 - 1 common synonym (Parent, pattern, with)
+if i; while w; assign a; variable v; read r;
+Select <i, w> such that Parent(i, w) with r.varName = v.varName pattern a(v, _"r"_) and w(v, _)
+9 10
+5000
+159 - 1 common synonym (Follows, pattern, with)
+while w; assign a; variable v; print p;
+Select v such that Follows(a, w) pattern w(v, _) with v.varName = p.varName
+c
+5000
+160 - 1 common synonym (Follows*, pattern, with)
+assign a1, a2; print p; read r; 
+Select <a1, a2, p.varName> with p.varName = r.varName such that Follows*(a1, a2) pattern a1(v, _)
+none
+5000
+161 - 1 common synonym (Follows*, pattern, with)
+stmt s; assign a; while w;
+Select s such that Follows*(s, a) pattern a(_, _"x"_) and w("x", _) with a.stmt# = a.stmt#
+7, 26, 27, 28, 6, 29
+5000
+162 - 1 common synonym (Parent, pattern, with)
+while w; assign a; variable v; constant c;
+Select v.varName such that Parent(w, a) with w.stmt# = c.value pattern a (v, _"z"_) and w(v, _)
+x
+5000
+163 - 1 common synonym (Parent*, pattern, with)
+call c; procedure p; if i;
+Select <i, c> such that Parent*(i, c) with c.procName = p.procName pattern i ("y", _, _)
+9 13, 9 14
+5000
+164 - 1 common synonym (Parent*, pattern, with)
+while w; constant c; assign a1; read r; variable v;
+Select <w, c> such that Parent*(w, a1) and Parent*(w, r) with c.value = w.stmt# pattern w(v, _) and a1(v, _)
+10 10
+5000
+165 - 1 common synonym (Parent*, pattern, with)
+if i; assign a; print p; call c; variable v;
+Select <c, a, p, i> such that Parent*(i, a) and Parent*(i, c) with c.procName = i.varName pattern i(v, _, _)
+none
+5000
+166 - 1 common synonym (Modifies, pattern, with)
+assign a; while w; if i; variable v; read r;
+Select i such that Modifies(i, v) pattern i(v, _, _) with v.varName = r.varName
+none
+5000
+167 - 1 common synonym (Modifies, pattern, with)
+procedure p; call c; print pr; variable v; assign a;
+Select a such that Modifies(p, v) with p.procName = c.procName pattern a(v, _) 
+2, 3, 4, 7, 8, 11, 15, 17, 20, 21, 22, 23, 24, 26, 27, 28, 30
+5000
+168 - 1 common synonym (Uses, pattern, with)
+procedure p; call c; print pr; variable v; assign a;
+Select p such that Uses(p, v) with p.procName = c.procName pattern a(v, _) 
+readMe, One, Two 
+5000
+169 - 1 common synonym (Uses, pattern, with)
+assign a; while w; if i; variable v; print r;
+Select v such that Uses(i, v) pattern w(v, _) with v.varName = r.varName
+c
+5000
+170 - 1 common synonym (Calls, pattern, with)
+procedure p1, p2; call c; variable v; while w;
+Select c.procName such that Calls(p1, p2) and Uses(p1, v) pattern w(v, _) with c.procName = p1.procName
+readMe, One
+5000
+171 - 1 common synonym (Calls*, pattern, with)
+procedure p1, p2; print p; read r; while w; assign a; variable v;
+Select v.varName such that Calls*(p1, p2) pattern w(v, _) with r.varName = "x"
+x, c, z
+5000
+172 - 1 common synonym (Next, pattern, with)
+variable v; while w; assign a; print p;
+Select v such that Next(w, a) pattern a("z", _"c"_) with v.varName = p.varName
+c
+5000
+173 - 1 common synonym (Next*, pattern, with)
+variable v; print p; while w; call c;
+Select BOOLEAN with p.varName = v.varName pattern w(v, _) such that Next(w, c)
+TRUE
+5000
+174 - 1 common synonym (Affects*, pattern, with)
+read r; call c; procedure p; prog_line n1; assign a; variable v;
+Select <n1, a> such that Affects*(n1, a) with c.procName = p.procName pattern a(v, _)
+2 2, 2 3, 2 4, 3 3, 3 4, 3 2, 4 2, 4 3, 4 4, 7 11, 8 15, 7 15, 17 20, 17 21, 17 23, 17 24, 20 22, 20 23, 20 24, 21 22, 21 23, 21 24, 22 23, 22 24, 22 21, 22 22, 23 23, 23 22, 23 24, 23 21, 24 23, 24 22, 24 24, 24 21, 27 28, 27 30, 17 22,20 21,21 21,8 11,8 7,8 8
+5000
+175 - 1 single clause no synonym Nextbip
+read r; 
+Select r such that NextBip(16, 17)
+12
+5000
+176 - 1 single clause no synonym Nextbip
+print p; 
+Select p such that NextBip(30, 6)
+29
+5000
+177 - 1 single clause no synonym NextBip
+procedure p;
+Select p such that NextBip(18, 25)
+main, readMe, One, Two
+5000
+178 - 1 single clause no synonym NextBip (not hold)
+call c;
+Select c such that NextBip(30, 5)
+none
+5000
+179 - 1 single clause no synonym NextBip (not hold)
+constant c;
+Select c such that NextBip(17, 25)
+none
+5000
+180 - 1 single clause no synonym NextBip*
+variable c;
+Select c such that NextBip*(26, 26)
+x,a,b,c,d,y,z,r,s
+5000
+181 - 1 single clause no synonym NextBip*
+call c;
+Select c.stmt# such that NextBip*(18, 17)
+5,13,14,16,25
+5000
+182 - 1 single clause no synonym NextBip*
+prog_line n;
+Select n such that NextBip*(30, 26)
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30
+5000
+183 - 1 single clause no synonym NextBip*(does not hold)
+stmt s; assign a;
+Select <s, a> such that NextBip*(16, 15)
+none
+5000
+184 - 1 single clause no synonym NextBip*(does not hold)
+procedure p;
+Select p.procName such that NextBip*(5, 4)
+none
+5000
+185 - 1 single clause no synonym NextBip* does not hold
+constant c;
+Select c such that NextBip*(17, 4)
+none
+5000
+186 - 1 single clause no synonym AffectsBip 
+stmt s;
+Select s such that AffectsBip(8, 27)
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30
+5000
+187 - 1 single clause no synonym AffectsBip
+read r;
+Select r such that AffectsBip(15, 28)
+12
+5000
+188 - 1 single clause no synonym AffectsBip
+print p; 
+Select p such that AffectsBip(30, 7)
+29
+5000
+189 - 1 single clause no synonym AffectsBip (does not hold)
+variable v;
+Select v such that AffectsBip(30, 11)
+none
+5000
+190 - 1 single clause no synonym AffectsBip (does not hold)
+print p;
+Select p such that AffectsBip(15, 15)
+none
+5000
+191 - 1 single clause no synonym AffectsBip (does not hold)
+
+Select BOOLEAN such that AffectsBip(17, 2)
+FALSE
+5000
+192 - 1 single clause no synonym AffectsBip*
+call c;
+Select c such that AffectsBip*(7, 30)
+none
+5000
+193 - 1 single clause no synonym AffectsBip*
+prog_line n;
+Select n such that AffectsBip*(30, 11)
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30
+5000
+194 - 1 single clause no synonym Affectsbip* (does not hold)
+procedure p;
+Select p such that AffectsBip*(15, 15)
+none
+5000
+195 - 1 single clause no synonym AffectsBip* (does not hold)
+stmt s;
+Select s such that AffectsBip*(24, 15)
+1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,4,5,6,7,8,9
+5000
+196 - 1 single clause common synonym NextBip
+stmt s;
+Select s such that NextBip(25, s)
+26
+5000
+197 - 1 single clause common synonym NextBip
+while s;
+Select s such that NextBip(30, s)
+6, 10
+5000
+198 - 1 single clause common synonym NextBip
+call c;
+Select c such that NextBip(c, 17)
+16, 14
+5000
+199 - 1 single clause common synonym NextBip( does not hold)
+procedure p; assign a;
+Select p such that NextBip(a, 17)
+none
+5000
+200 - 1 single clause common synonym NextBip(doe not hold)
+print p;
+Select p such that NextBip(25, 16)
+none
+5000
+201 - 1 single clause common synonym NextBip*
+read p;
+Select p such that NextBip*(p, 16)
+12
+5000
+202 - 1 single clause common synonym NextBip*
+print p;
+Select p such that NextBip*(p, 26)
+29
+5000
+203 - 1 single clause common synonym NextBip* (does not hold)
+procedure p; assign a; call c;
+Select BOOLEAN such that NextBip*(a, c)
+TRUE
+5000
+204 - 1 single clause common synonym NextBip* (does not hold)
+call c; 
+Select c such that NextBip*(c, 1)
+none
+5000
+205 - 1 single clause common synonym AffectsBip
+prog_line n;
+Select n such that AffectsBip(n, n)
+26, 28, 8
+5000
+206 - 1 single clause common synonym AffectsBip
+assign a;
+Select a such that AffectsBip(a, 15)
+7, 8, 30
+5000
+207 - 1 single clause common synonym AffectsBip
+assign a;
+Select a such that AffectsBip(15, a)
+28
+5000
+208 - 1 single clause common synonym AffectsBip (does not hold)
+stmt s;
+Select s such that AffectsBip(s, s)
+26,28,8
+5000
+209 - 1 single clause common synonym AffectsBip (does not hold)
+assign a; while w;
+Select w such that AffectsBip(29, a)
+none
+5000
+210 - 1 single clause common synonym AffectsBip*
+assign a;
+Select a such that AffectsBip*(a, a)
+2,3,4,8,17,20,21,22,23,24,26,27,28,30
+5000
+211 - 1 single clause common synonym AffectsBip*
+assign a;
+Select a such that AffectsBip*(a, 17)
+17, 20, 21, 22, 23, 24, 2, 3, 4
+5000
+212 - 1 single clause common synonym AffectsBip*
+assign a;
+Select BOOLEAN such that AffectsBip*(7, a)
+TRUE
+5000
+213 - 2 clause common synonym AffectsBip* (does not hold)
+prog_line n; while w;
+Select n such that AffectsBip*(n, 4) and Parent(w, n)
+2,3,4
+5000
+214 - 1 clause common synonym AffectsBip*(does not hold)
+assign a;
+Select a such that AffectsBip*(12, a)
+none
+5000
+215 - 1 nextbip 1 pattern
+assign a1, a2; variable v;
+Select v such that NextBip(a1, a2) pattern a1(v, _)
+a, b, z, x, d, c, s
+5000
+216 - 1 nextbip 1 pattern 
+call c; while w;
+Select c.procName such that NextBip(c, w) pattern w("c", _)
+readMe
+5000
+217 - 1 nextbip* 1 pattern 
+prog_line n; if i;
+Select n such that NextBip*(n, i) pattern i ("y", _, _)
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,17,18,19,20,21,22,23,24,25,26,27,28,29,30
+5000
+218 - 1 nextbip* 1 pattern
+while w; if i; variable v;
+Select <i,w> such that NextBip*(w, i) pattern i(v, _, _) and w(v, _)
+none
+5000
+219 - 1 nextbip*  1 pattern
+while w; call c;
+Select c such that NextBip*(w, c) pattern w("x", _)
+5,13,14,16,25
+5000
+220 - 1 affectsbip 1 pattern 
+while w; assign a1, a2; variable v;
+Select w such that AffectsBip(a1, a2) pattern w(v, _) and a1(v, _) and a2(v, _)
+1,10
+5000
+221 - 1 affectsbip 1 pattern
+print p; read r; prog_line n; assign a;
+Select r such that AffectsBip(a, n) pattern a("x", _"x"_)
+12
+5000
+222 - 1 affectsbip* 1 pattern
+assign a1, a2; while w;
+Select a1 such that AffectsBip*(a1, a2) pattern a1(_, _"x"_)
+26, 27, 28, 30, 7, 8, 15 
+5000
+223 - 1 affectsbip* 1 pattern
+assign a; prog_line n; while w; variable v;
+Select a such that AffectsBip*(a, n) pattern w(v, _) and a(v, _)
+7, 8, 4, 21, 23, 27, 30
+5000
+224 - 1 nextbip* 1 pattern 1 with
+print p; read r; while w; assign a; variable v;
+Select a such that NextBip*(p, a) pattern a(v, _) with v.varName = r.varName
+8, 11, 27, 30
+5000
+225 - 1 nextbip* 1 pattern 1 with
+read r; while w; if i; print p; variable v;
+Select i such that NextBip*(i, w) pattern w(v, _) with v.varName = p.varName
+19, 9
+5000
+226 - 1 affectsbip* 1 pattern 1 with
+read r; while w; if i; print p; prog_line n1; variable v; assign n2;
+Select i such that AffectsBip*(n1, n2) pattern n2(v, _) with v.varName = p.varName
+19, 9
+5000
+227 - 1 affectsbip* 1 pattern 1 with
+read r; while w; print p; if i; assign a1, a2; variable v; call c;
+Select a1 such that AffectsBip*(a1, a2) pattern a1(v, _) and a2(v, _) with v.varName = p.varName
+21, 23, 4
+5000
+228 - 1 affectsbip 1 pattern 1 with
+assign a; prog_line n; if i; while w; call c;
+Select w such that AffectsBip(a, n) pattern w ("x", _) with c.procName = "One"
+10, 1
+5000

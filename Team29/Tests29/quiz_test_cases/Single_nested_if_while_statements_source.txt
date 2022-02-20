@@ -1,0 +1,18 @@
+procedure SIMPLE {
+p = 4;
+a = p * 2;
+if (c == k) then {
+pattern = p * a * a + p * ifs + p * w;
+while(w > 0) {
+call AST;
+w = w - 1;}
+ifs = ifs -1;}
+else {
+call PQL;}}
+
+procedure AST {
+read c;
+print c;}
+
+procedure PQL {
+call AST;}

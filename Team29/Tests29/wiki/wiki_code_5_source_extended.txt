@@ -1,0 +1,144 @@
+procedure First00 {
+  read x00;
+  read z00;
+  call Second00; }
+ 
+  procedure Second00 {
+  x00 = 0;
+  i00 = 5;
+  while (i00!=0) {
+      x00 = x00 + 2*y00;
+      call Third00;
+      i00 = i00 - 1; }
+  if (x00==1) then {
+      x00 = x00+1; }
+      else {
+      z00 = 1; }
+  z00 = z00 + x00 + i00;
+  y00 = z00 + 2;
+  x00 = x00 * y00 + z00; }
+ 
+  procedure Third00 {
+      z00 = 5;
+      v00 = z00;
+      print v00; }
+procedure First01 {
+  read x01;
+  read z01;
+  call Second01; }
+ 
+  procedure Second01 {
+  x01 = 0;
+  i01 = 5;
+  while (i01!=0) {
+      x01 = x01 + 2*y01;
+      call Third01;
+      i01 = i01 - 1; }
+  if (x01==1) then {
+      x01 = x01+1; }
+      else {
+      z01 = 1; }
+  z01 = z01 + x01 + i01;
+  y01 = z01 + 2;
+  x01 = x01 * y01 + z01; }
+ 
+  procedure Third01 {
+      z01 = 5;
+      v01 = z01;
+      print v01; }
+procedure First02 {
+  read x02;
+  read z02;
+  call Second02; }
+ 
+  procedure Second02 {
+  x02 = 0;
+  i02 = 5;
+  while (i02!=0) {
+      x02 = x02 + 2*y02;
+      call Third02;
+      i02 = i02 - 1; }
+  if (x02==1) then {
+      x02 = x02+1; }
+      else {
+      z02 = 1; }
+  z02 = z02 + x02 + i02;
+  y02 = z02 + 2;
+  x02 = x02 * y02 + z02; }
+ 
+  procedure Third02 {
+      z02 = 5;
+      v02 = z02;
+      print v02; }
+procedure First03 {
+  read x03;
+  read z03;
+  call Second03; }
+ 
+  procedure Second03 {
+  x03 = 0;
+  i03 = 5;
+  while (i03!=0) {
+      x03 = x03 + 2*y03;
+      call Third03;
+      i03 = i03 - 1; }
+  if (x03==1) then {
+      x03 = x03+1; }
+      else {
+      z03 = 1; }
+  z03 = z03 + x03 + i03;
+  y03 = z03 + 2;
+  x03 = x03 * y03 + z03; }
+ 
+  procedure Third03 {
+      z03 = 5;
+      v03 = z03;
+      print v03; }
+procedure First04 {
+  read x04;
+  read z04;
+  call Second04; }
+ 
+  procedure Second04 {
+  x04 = 0;
+  i04 = 5;
+  while (i04!=0) {
+      x04 = x04 + 2*y04;
+      call Third04;
+      i04 = i04 - 1; }
+  if (x04==1) then {
+      x04 = x04+1; }
+      else {
+      z04 = 1; }
+  z04 = z04 + x04 + i04;
+  y04 = z04 + 2;
+  x04 = x04 * y04 + z04; }
+ 
+  procedure Third04 {
+      z04 = 5;
+      v04 = z04;
+      print v04; }
+procedure First05 {
+  read x05;
+  read z05;
+  call Second05; }
+ 
+  procedure Second05 {
+  x05 = 0;
+  i05 = 5;
+  while (i05!=0) {
+      x05 = x05 + 2*y05;
+      call Third05;
+      i05 = i05 - 1; }
+  if (x05==1) then {
+      x05 = x05+1; }
+      else {
+      z05 = 1; }
+  z05 = z05 + x05 + i05;
+  y05 = z05 + 2;
+  x05 = x05 * y05 + z05; }
+ 
+  procedure Third05 {
+      z05 = 5;
+      v05 = z05;
+      print v05; }

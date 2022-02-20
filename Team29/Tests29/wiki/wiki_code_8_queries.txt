@@ -1,0 +1,40 @@
+1 - 1 modifies
+variable v;
+Select v such that Modifies(4, v)
+x, t, y
+5000
+2 - 1 affects
+
+Select BOOLEAN such that Affects (1, 5)
+FALSE
+5000
+3 - 1 affects
+
+Select BOOLEAN such that Affects (2, 5)
+FALSE
+5000
+4 - 1 affects
+
+Select BOOLEAN such that Affects (3, 10)
+FALSE
+5000
+5 - 1 affects
+assign a; stmt s;
+Select <a, s> such that Affects (a, s)
+2 3, 3 5, 6 9, 6 10, 7 11, 9 11
+5000
+6 - 1 affects*
+stmt s1, s2;
+Select <s1, s2> such that Affects* (s1, s2)
+2 3, 3 5, 2 5, 6 9, 6 10, 6 11, 7 11, 9 11
+5000
+7 - 1 affectsbip
+assign a; stmt s;
+Select <a, s> such that AffectsBip (a, s)
+2 3, 2 5, 3 5, 3 10, 6 9, 6 10, 7 11, 9 11, 10 5, 11 5
+5000
+8 - 1 affectsbip*
+stmt s1, s2;
+Select <s1, s2> such that AffectsBip* (s1, s2)
+2 3, 2 5, 2 10, 3 5, 3 10, 6 5, 6 9, 6 10, 6 11, 7 5, 7 11, 9 5, 9 11, 10 5, 11 5
+5000

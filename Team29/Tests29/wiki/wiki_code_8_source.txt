@@ -1,0 +1,17 @@
+procedure p {
+
+    x = 1;
+    y = 2;
+    z = y;
+    call q;
+    z = x + y + z;}
+
+procedure q {
+
+    x = 5;
+    t = 4; 
+    if ( z > 0 ) then {
+        t = x + 1; }
+       else {
+       y = z + x; }
+  x = t + 1; }

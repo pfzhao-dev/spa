@@ -1,0 +1,600 @@
+1 - no such that and pattern select stmt
+stmt stmt;
+Select stmt
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+2 - no such that and pattern select read
+read r23;
+Select r23
+4, 10, 14
+5000
+3 - no such that and pattern select print
+print p;
+Select p
+3, 11, 16, 18
+5000
+4 - no such that and pattern select assign
+assign a;
+Select a
+1, 2, 7, 9, 13, 15, 17
+5000
+5 - no such that and pattern select if
+if i;
+Select i
+5, 6
+5000
+6 - no such that and pattern select while
+while w;
+Select w
+8, 12
+5000
+7 - no such that and pattern select variable
+variable v;
+Select v
+x, y, z, k, p, l, zz, pop, pq, zk, kz, pz, pl, lp, myName
+5000
+8 - no such that and pattern select constant
+constant c;
+Select c
+0, 1
+5000
+9 - 1 such that follows holds (read) 
+read r;
+Select r such that Follows(14, 15)
+4, 10, 14
+5000
+10 - 1 such that follows holds (stmt)
+stmt stmt;
+Select stmt such that Follows(14, 15)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+11 - 1 such that follows holds (print)
+print p;
+Select p such that Follows(14, 15)
+3, 11, 16, 18
+5000
+12 - 1 such that follows holds (assign)
+assign a;
+Select a such that Follows(14, 15)
+1, 2, 7, 9, 13, 15, 17
+5000
+13 - 1 such that follows holds(if)
+if i;
+Select i such that Follows(10, 11)
+5, 6
+5000
+14 - 1 such that Follows* holds(while)
+while w;
+Select w such that Follows*(1, 4)
+8, 12
+5000
+15 - 1 such that follows* holds (variable)
+variable v;
+Select v such that Follows*(5, 18)
+x, y, z, k, p, l, zz, pop, pq, zk, kz, pz, pl, lp, myName
+5000
+16 - 1 such that follows* holds (constant)
+constant c;
+Select c such that Follows*(16, 17)
+0, 1
+5000
+17 - 1 such that follows does not hold (read)
+read r;
+Select r such that Follows(14, 16)
+none
+5000
+18 - 1 such that follows does not hold (stmt)
+stmt stmt;
+Select stmt such that Follows(1, 3)
+none
+5000
+19 - 1 such that follows* does not hold (print)
+print p;
+Select p such that Follows*(1, 6)
+none
+5000
+20 - 1 such that follows* does not hold (assign)
+assign a;
+Select a such that Follows*(8, 9)
+none
+5000
+21 - 1 such that follows* does not hold(if)
+if i;
+Select i such that Follows*(10, 13)
+none
+5000
+22 - 1 such that Follows* does hold(while)
+while w;
+Select w such that Follows*(5, 10)
+none
+5000
+23 - 1 such that follows* does not hold (variable)
+variable v;
+Select v such Follows*(7, 9)
+none
+5000
+24 - 1 such that follows* holds (constant)
+constant c;
+Select c such that Follows*(16, 18)
+none
+5000
+25 - 1 such that Parent holds (read)
+read r;
+Select r such that Parent(6, 7)
+4, 10, 14
+5000
+26 - 1 such that Parent holds (stmt)
+stmt s;
+Select s such that Parent(12, 13)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+27 - 1 such that Parent holds (print) 
+print p;
+Select p such that Parent(5, 16)
+3, 11, 16, 18
+5000
+28 - 1 such that Parent holds (assign)
+assign a;
+Select a such that Parent(6, 14)
+1, 2, 7, 9, 13, 15, 17
+5000
+29 - 1 such that Parent holds(if) 
+if i;
+Select i such that Parent(8, 12)
+5, 6
+5000
+30 - 1 such that Parent* holds(while) 
+while w;
+Select w such that Parent*(5, 15)
+8, 12
+5000
+31 - 1 such that Parent* holds (variable) --> Fails
+variable v;
+Select v such that Parent*(8, 13)
+x, y, z, k, p, l, zz, pop, pq, zk, kz, pz, pl, lp, myName
+5000
+32 - 1 such that Parent* holds (constant)
+constant c;
+Select c such that Parent*(5, 13)
+0, 1
+5000
+33 - 1 such that Parent does not hold (read)
+read r;
+Select r such that Parent(4, 16)
+none
+5000
+34 - 1 such that follows does not hold (stmt)
+stmt stmt;
+Select stmt such that Parent(5, 10)
+none
+5000
+35 - 1 such that Parent* does not hold (print)
+print p;
+Select p such that Parent*(1, 6)
+none
+5000
+36 - 1 such that Parent* does not hold (assign)
+assign a;
+Select a such that Parent*(8, 14)
+none
+5000
+37 - 1 such that parent* does not hold(if)
+if i;
+Select i such that Parent*(10, 11)
+none
+5000
+38 - 1 such that Parent* does not hold(while)
+while w;
+Select w such that Parent*(5, 18)
+none
+5000
+39 - 1 such that parent* does not hold (variable)
+variable v;
+Select v such Parent*(7, 9)
+none
+5000
+40 - 1 such that parent* does not hold (constant)
+constant c;
+Select c such that Parent*(3, 14)
+none
+5000
+41 - 1 such that uses holds (read)
+read r; 
+Select r such that Uses(5, "zz")
+4, 10, 14
+5000
+42 - 1 such that uses holds (print) 
+print p; 
+Select p such that Uses(15, "z")
+3, 11, 16, 18
+5000
+43 - 1 such that uses holds (assign)
+assign a; 
+Select a such that Uses(18, "myName")
+1,2,7,9,13,15,17
+5000
+44 - 1 such that uses holds (variable)
+variable v;
+Select v such that Uses(5, "lp")
+x, y, z, k, p, l, zz, pop, pq, zk, kz, pz, pl, lp, myName
+5000
+45 - 1 such that uses does not hold (variable)
+variable v;
+Select v such that Uses(5, "myName")
+none
+5000
+46 - 1 such that uses does not hold (constant)
+constant c;
+Select c such that Uses(12, "z")
+none
+5000
+47 - 1 such that uses does not hold (while)
+while w;
+Select w such that Uses(4, "y")
+none
+5000
+48 - 1 such that modifies holds (variables)
+variable v;
+Select v such that Modifies(5, "k")
+x, y, z, k, p, l, zz, pop, pq, zk, kz, pz, pl, lp, myName
+5000
+49 - 1 such that modifies holds (assign)
+assign a;
+Select a such that Modifies(6, "zz")
+1, 2, 7, 9, 13, 15, 17
+5000
+50 - 1 such that modifies holds (if)
+if i;
+Select i such that Modifies(5, "p")
+5, 6
+5000
+51 - 1 such that modifies holds (while)
+while w;
+Select w such that Modifies(6, "z")
+8, 12
+5000
+52 - 1 such that modifies does not hold (constants)
+constant c;
+Select c such that Modifies(8, "pop")
+none
+5000
+53 - 1 such that modifies does not hold (variable)
+variable v;
+Select v such that Modifies(12, "zk")
+none
+5000
+54 - 1 such that unknown follows (read)
+read r;
+Select r such that Follows(r, 5)
+4
+5000
+55 - 1 such that 1 unknown follows (print)
+print p;
+Select p such that Follows(_, p)
+3, 11, 18
+5000
+56 - 1 such that 1 unknown follows (while)
+while w;
+Select w such that Follows(w, _)
+none
+5000
+57 - 1 such that 1 unknown follows* (while)
+while w;
+Select w such that Follows*(w, _)
+none
+5000
+58 - 1 such that 1 unknown follows* (stmt)
+stmt s; 
+Select s such that Follows*(s, _)
+1, 2, 3, 4, 5, 7, 9, 10, 11, 14, 16
+5000
+59 - 1 such that 1 unknown Follows* (assign)
+assign a;
+Select a such that Follows*(a, _)
+1, 2, 7, 9
+5000 
+60 - 1 such that 1 unknown Follows (variable)
+variable v;
+Select v such that Follows(v, 2)
+none
+5000
+61 - 1 such that 1 unknown Parent (stmt)
+stmt s;
+Select s such that Parent(s, _)
+5, 6, 8, 12
+5000
+62 - 1 such that 1 unknown Parent (read)
+read r; 
+Select r such that Parent(_, r)
+10, 14
+5000
+63 - 1 such that 1 unknown Parent (constant)
+constant c;
+Select c such that Parent(c, _)
+none
+5000
+64 - 1 such that 1 unknown Parent (while) 
+while w;
+Select w such that Parent(_, w)
+8, 12
+5000
+65 - 1 such that 1 unknown Parent* (if) 
+if i;
+Select i such that Parent*(i, 16)
+5
+5000
+66 - 1 such that 1 unknown Parent* (assign)
+assign a;
+Select a such that Parent*(_, a)
+7, 9, 13, 15, 17
+5000
+67 - 1 such that 1 unknown Parent* (stmt)
+stmt s;
+Select s such that Parent*(s, 15)
+5, 6
+5000
+68 - 1 such that 1 unknown Parent* (variable)
+variable v;
+Select v such that Parent*(v, _)
+none
+5000
+69 - 1 such that 1 unknown Parent* (print)
+print p;
+Select p such that Parent*(_, p)
+11, 16
+5000
+70 - 1 such that 1 unknown Uses (print)
+print p;
+Select p such that Uses(p, "x")
+3
+5000
+71 - 1 such that 1 unknown Uses (stmt)
+stmt s;
+Select s such that Uses(s, _)
+1, 2, 3, 5, 6, 7, 8, 9, 11, 12, 13, 15, 16, 17, 18
+5000
+72 - 1 such that 1 unknown Uses (assign)
+assign a;
+Select a such that Uses(a, _)
+1, 2, 7, 9, 13, 15, 17
+5000
+73 - 1 such that 1 unknown Uses (variable)
+variable v; 
+Select v such that Uses(5, v)
+z, y, x, p, k, pop, pq, kz, pz, pl, lp, l, zk, zz
+5000
+74 - 1 such that 1 unknown Uses (while)
+while w;
+Select w such that Uses(w, _)
+8, 12
+5000
+75 - 1 such that 1 unknown Uses (if)
+if i;
+Select i such that Uses(i, "x")
+5, 6
+5000
+76 - 1 such that 1 unknown Modifies (if)
+if i;
+Select i such that Modifies(i, _)
+5, 6
+5000
+77 - 1 such that 1 unknown Modifies (while)
+while w;
+Select w such that Modifies(w, "k")
+8
+5000
+78 - 1 such that 1 unknown Modifies (print)
+print p;
+Select p such that Modifies(p, "x")
+none
+5000
+79 - 1 such that 1 unknown Modifies (read)
+read r; 
+Select r such that Modifies(r, _)
+4, 10, 14
+5000
+80 - 1 such that 1 unknown Modifies (stmt)
+stmt s;
+Select s such that Modifies(s, "k")
+5, 6, 7, 8, 9, 10, 14
+5000
+81 - 1 such that 2 unknown Follows (read, print)
+read r; print p;
+Select r such that Follows(r, p)
+10
+5000
+82 - 1 such that 2 unknown Follows (stmt, if)
+stmt s; if i;
+Select s such that Follows(s, i)
+4
+5000
+83 - 1 such that 2 unknown Follows* (while, if)
+while w; if i;
+Select w such that Follows*(w, i)
+none
+5000
+84 - 1 such that 2 unknown Follows* (if, assign)
+assign a; if i;
+Select a such that Follows*(a, i)
+1, 2
+5000
+85 - 1 such that 2 unknown Follows* (assign, read)
+assign a; read r;
+Select r such that Follows*(a, r)
+4, 10
+5000
+86 - 1 such that 2 unknown Follows* (print, stmt)
+stmt s; print p;
+Select s such that Follows*(s, p)
+1, 2, 3, 4, 5, 9, 10
+5000
+87 - 1 such that 2 unknown Parent (stmt, if)
+stmt s; if i;
+Select s such that Parent(s, i)
+5
+5000
+88 - 1 such that 2 unknown Parent (read, assign)
+read r; assign a;
+Select a such that Parent(a, r)
+none
+5000
+89 - 1 such that 2 unknown Parent (while, print)
+print p; while w;
+Select w such that Parent(w, p)
+8
+5000
+90 - 1 such that 2 unknown Parent* (if, assign)
+assign a; if i;
+Select i such that Parent*(i, a)
+5, 6
+5000
+91 - 1 such that 2 unknown Parent* (print, stmt)
+stmt s; print p;
+Select s such that Parent*(s, p)
+5, 6, 8
+5000
+92 - 1 such that 2 unknown Parent* (read, while)
+while w; read r;
+Select r such that Parent*(w, r)
+10
+5000
+93 - 1 such that 2 unknown Uses (read)
+variable v; read r;
+Select r such that Uses(r, v)
+none
+5000
+94 - 1 such that 2 unknown Uses (print)
+variable v; print p;
+Select p such that Uses(p, v)
+3, 11, 16, 18
+5000
+95 - 1 such that 2 unknown Uses (stmt)
+variable v; stmt s;
+Select s such that Uses(s, v)
+1, 2, 3, 5, 6, 7, 8, 9, 11, 12, 13, 15, 16, 17, 18
+5000
+96 - 1 such that 2 unknown Uses (assign)
+variable v; assign a;
+Select v such that Uses(a, v)
+x, y, z, p, pq, zk, kz, pz, pl, lp
+5000
+97 - 1 such that 2 unknown Uses (while)
+variable v; while w;
+Select v such that Uses(w, v)
+k, p, y, z, pop, zz, pq, zk, kz, pz, pl, l
+5000
+98 - 1 such that 2 unknown Uses (if)
+variable v; if i;
+Select v such that Uses(i, v)
+z, y, x, k, p, zz, pop, zk, pq, kz, pz, pl, lp, l
+5000
+99 - 1 such that 2 unknown Modifies (print)
+variable v; print p;
+Select v such that Modifies(p, v)
+none
+5000
+100 - 1 such that 2 unknown Modifies (read)
+variable v; read r;
+Select v such that Modifies(v, r)
+none
+5000
+101 - 1 such that 2 unknown Modifies (if)
+variable v; if i;
+Select v such that Modifies(i, v)
+k, zz, z, p
+5000
+102 - 1 such that 2 unknown Modifies (stmt)
+stmt s; variable v;
+Select s such that Modifies(s, v)
+1, 2, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 17
+5000
+103 - 1 such that 2 unknown Modifies (while)
+while w; variable v;
+Select w such that Modifies(w, v)
+8, 12
+5000
+104 - 1 such that 2 unknown Modifies (assign)
+assign a; variable v;
+Select a such that Modifies(a, v)
+1, 2, 7, 9, 13, 15, 17
+5000
+105 - 1 pattern 1 unknown (assign)
+assign a; variable v;
+Select v pattern a (v, _"pz/pl"_)
+zz
+5000
+106 - 1 pattern 1 unknown (assign)
+assign a; variable v;
+Select a pattern a (v, _"y"_)
+1, 2, 9, 15
+5000
+107 - 1 pattern 1 unknown (assign)
+assign a; variable v;
+Select a pattern a (_, _"z + x"_)
+15
+5000
+108 - 1 pattern 1 unknown (assign)
+assign a; variable v;
+Select v pattern a (v, _"x"_)
+x, k, z
+5000
+109 - 1 pattern 1 unknown (stmt)
+stmt s; variable v; assign a;
+Select s pattern a (v, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+110 - 1 pattern 1 unknown (assign)
+assign a; variable v;
+Select v such that pattern a (_, v)
+none
+5000
+111 - 1 patttern 2 unknown (assign) --> FAILS
+assign a; variable v;
+Select v pattern a (v, _"pq *  zk +    kz - pz / pl"_)
+zz
+5000
+112 - 1 pattern 1 such that (follows)
+assign a; stmt s1; stmt s2; variable v;
+Select v such that Follows(s2, s1) pattern a (v, "x + y")
+x
+5000
+113 - 1 pattern 1 such that 1 uncommon unknown
+assign a; variable v; stmt s;
+Select v such that Follows(s, 1) pattern a (v, _)
+none
+5000
+114 - 1 pattern 1 such that 1 uncommon unknown
+stmt s1; assign a; variable v;
+Select s1 such that Follows(5, s1) pattern a (_, _"x"_)
+18
+5000
+115 - 1 pattern 1 such that 1 uncommon unknown
+if i; while w; assign a; variable v;
+Select w such that Parent*(i, w) pattern a (_, "kz - pz")
+none
+5000
+116 - 1 pattern 1 such that 1 common unknown 
+if i; variable v; assign a;
+Select v such that Uses(i, v) pattern a (v, _"x + p"_)
+k
+5000
+117 - 1 pattern 1 such that 1 common unknown
+assign a;
+Select a pattern a ("x", _"y"_) such that Modifies(a, "x")
+1
+5000
+118 - 1 pattern 1 such that 1 common unknown 
+assign a; if i; variable v;
+Select v such that Uses(i, v) pattern a (v, _)
+k, p, x, y, zz, z
+5000
+119 - 1 pattern 1 such that 1 common unknown 
+assign a; variable v;
+Select a pattern a ("p", _"lp"_) such that Follows(16, a)
+17
+5000
+120 - 1 pattern 1 such that 1 common unknown
+assign a; print p; variable v;
+Select v such that Uses(p, v) pattern a (_, v)
+none
+5000

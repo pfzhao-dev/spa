@@ -1,0 +1,13 @@
+﻿procedure Sun {
+ call Moon+;
+ x = 0;
+ y += 1;
+ if ( x) {​​​​​​​
+ z = 9 + X;
+ q = read();
+ call Star}}
+
+procedure Star {​​​​​​​
+ call Sun;
+ print Star;
+​​​​​​​ while true {}}

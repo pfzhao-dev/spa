@@ -1,0 +1,197 @@
+procedure p00 {
+ 
+     x00 = 1;
+     y00 = 2;
+     z00 = y00;
+     call q00;
+     z00 = x00 + y00 + z00;}
+ 
+ procedure q00 {
+ 
+     x00 = 5;
+     t00 = 4;
+     if ( z00 > 0 ) then {
+         t00 = x00 + 1; }
+        else {
+        y00 = z00 + x00; }
+   x00 = t00 + 1; }
+
+procedure p01 {
+ 
+     x01 = 1;
+     y01 = 2;
+     z01 = y01;
+     call q01;
+     z01 = x01 + y01 + z01;}
+ 
+ procedure q01 {
+ 
+     x01 = 5;
+     t01 = 4;
+     if ( z01 > 0 ) then {
+         t01 = x01 + 1; }
+        else {
+        y01 = z01 + x01; }
+   x01 = t01 + 1; }
+
+procedure p02 {
+ 
+     x02 = 1;
+     y02 = 2;
+     z02 = y02;
+     call q02;
+     z02 = x02 + y02 + z02;}
+ 
+ procedure q02 {
+ 
+     x02 = 5;
+     t02 = 4;
+     if ( z02 > 0 ) then {
+         t02 = x02 + 1; }
+        else {
+        y02 = z02 + x02; }
+   x02 = t02 + 1; }
+
+procedure p03 {
+ 
+     x03 = 1;
+     y03 = 2;
+     z03 = y03;
+     call q03;
+     z03 = x03 + y03 + z03;}
+ 
+ procedure q03 {
+ 
+     x03 = 5;
+     t03 = 4;
+     if ( z03 > 0 ) then {
+         t03 = x03 + 1; }
+        else {
+        y03 = z03 + x03; }
+   x03 = t03 + 1; }
+
+procedure p04 {
+ 
+     x04 = 1;
+     y04 = 2;
+     z04 = y04;
+     call q04;
+     z04 = x04 + y04 + z04;}
+ 
+ procedure q04 {
+ 
+     x04 = 5;
+     t04 = 4;
+     if ( z04 > 0 ) then {
+         t04 = x04 + 1; }
+        else {
+        y04 = z04 + x04; }
+   x04 = t04 + 1; }
+
+procedure p05 {
+ 
+     x05 = 1;
+     y05 = 2;
+     z05 = y05;
+     call q05;
+     z05 = x05 + y05 + z05;}
+ 
+ procedure q05 {
+ 
+     x05 = 5;
+     t05 = 4;
+     if ( z05 > 0 ) then {
+         t05 = x05 + 1; }
+        else {
+        y05 = z05 + x05; }
+   x05 = t05 + 1; }
+
+procedure p06 {
+ 
+     x06 = 1;
+     y06 = 2;
+     z06 = y06;
+     call q06;
+     z06 = x06 + y06 + z06;}
+ 
+ procedure q06 {
+ 
+     x06 = 5;
+     t06 = 4;
+     if ( z06 > 0 ) then {
+         t06 = x06 + 1; }
+        else {
+        y06 = z06 + x06; }
+   x06 = t06 + 1; }
+
+procedure p07 {
+ 
+     x07 = 1;
+     y07 = 2;
+     z07 = y07;
+     call q07;
+     z07 = x07 + y07 + z07;}
+ 
+ procedure q07 {
+ 
+     x07 = 5;
+     t07 = 4;
+     if ( z07 > 0 ) then {
+         t07 = x07 + 1; }
+        else {
+        y07 = z07 + x07; }
+   x07 = t07 + 1; }
+
+procedure p08 {
+ 
+     x08 = 1;
+     y08 = 2;
+     z08 = y08;
+     call q08;
+     z08 = x08 + y08 + z08;}
+ 
+ procedure q08 {
+ 
+     x08 = 5;
+     t08 = 4;
+     if ( z08 > 0 ) then {
+         t08 = x08 + 1; }
+        else {
+        y08 = z08 + x08; }
+   x08 = t08 + 1; }
+
+procedure p09 {
+ 
+     x09 = 1;
+     y09 = 2;
+     z09 = y09;
+     call q09;
+     z09 = x09 + y09 + z09;}
+ 
+ procedure q09 {
+ 
+     x09 = 5;
+     t09 = 4;
+     if ( z09 > 0 ) then {
+         t09 = x09 + 1; }
+        else {
+        y09 = z09 + x09; }
+   x09 = t09 + 1; }
+
+procedure p010 {
+ 
+     x010 = 1;
+     y010 = 2;
+     z010 = y010;
+     call q010;
+     z010 = x010 + y010 + z010;}
+ 
+ procedure q010 {
+ 
+     x010 = 5;
+     t010 = 4;
+     if ( z010 > 0 ) then {
+         t010 = x010 + 1; }
+        else {
+        y010 = z010 + x010; }
+   x010 = t010 + 1; }

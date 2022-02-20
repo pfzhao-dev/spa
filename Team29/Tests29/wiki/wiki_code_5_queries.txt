@@ -1,0 +1,3430 @@
+1 - no such that and select stmt
+stmt stmt;
+Select stmt
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+2 - no such that and select read
+read r23;
+Select r23
+1, 2
+5000
+3 - no such that and select print
+print Select;
+Select Select
+18
+5000
+4 - no such that and select call
+call Pattern;
+Select Pattern
+3, 8
+5000
+5 - no such that and select while
+while while;
+Select while
+6
+5000
+6 - no such that and select if
+if IF;
+Select IF
+10
+5000
+7 - no such that and select assign
+assign as;
+Select as
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+8 - no such that and select variable
+variable var;
+Select var
+x, z, i, y, v
+5000
+9 - no such that and select constant
+constant c;
+Select c
+0, 5, 2, 1
+5000
+10 - no such that and select prog_line
+prog_line pg;
+Select pg
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+11 - no such that and select procedure
+procedure p;
+Select p
+First, Second, Third
+5000
+12 - no such that and select boolean
+
+Select BOOLEAN
+TRUE
+5000
+13 - no such that and select procName of procedure
+procedure procName ;
+Select procName . procName
+First, Second, Third
+5000
+14 - no such that and select procName of call
+call c ;
+Select c.procName
+Second, Third
+5000
+15 - no such that and select varName of variable
+variable v ;
+Select v.varName
+x, z, i, y, v
+5000
+16 - no such that and select varName of read
+read r ;
+Select r.varName
+x, z
+5000
+17 - no such that and select varName of print
+print p ;
+Select p.varName
+v
+5000
+18 - no such that and select value of constant
+constant c ;
+Select c.value
+0, 5, 2, 1
+5000
+19 - no such that and select stmt# of stmt
+stmt stmt ;
+Select stmt.stmt#
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+20 - no such that and select stmt# of read
+read r ;
+Select r.stmt#
+1, 2
+5000
+21 - no such that and select stmt# of print
+print p ;
+Select p.stmt#
+18
+5000
+22 - no such that and select stmt# of call
+call c ;
+Select c.stmt#
+3, 8
+5000
+23 - no such that and select stmt# of while
+while w ;
+Select w.stmt#
+6
+5000
+24 - no such that and select stmt# of if
+if if ;
+Select if.stmt#
+10
+5000
+25 - no such that and select stmt# of assign
+assign a ;
+Select a.stmt#
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+26 - no such that and select tuple
+assign a, a1 ; print p; call call; constant c;
+Select <p.varName, c.value>
+v 0, v 1, v 2, v 5
+5000
+27 - no such that and select stmt
+stmt stmt;
+Select <stmt, stmt, stmt.stmt#>
+1 1 1, 2 2 2, 3 3 3, 4 4 4, 5 5 5, 6 6 6, 7 7 7, 8 8 8, 9 9 9, 10 10 10, 11 11 11, 12 12 12, 13 13 13, 14 14 14, 15 15 15, 16 16 16, 17 17 17, 18 18 18
+5000
+28 - no such that and select read
+read r23;
+Select <r23, r23, r23.stmt#, r23.varName>
+1 1 1 x, 2 2 2 z
+5000
+29 - no such that and select print
+print Select;
+Select <Select, Select, Select.stmt#, Select.varName>
+18 18 18 v
+5000
+30 - no such that and select call
+call Pattern;
+Select <Pattern, Pattern, Pattern.stmt#, Pattern.procName>
+3 3 3 Second, 8 8 8 Third
+5000
+31 - no such that and select while
+while while;
+Select <while, while, while.stmt#>
+6 6 6
+5000
+32 - no such that and select if
+if IF;
+Select <IF, IF, IF.stmt#>
+10 10 10
+5000
+33 - no such that and select assign
+assign as;
+Select <as, as, as.stmt#>
+4 4 4, 5 5 5, 7 7 7, 9 9 9, 11 11 11, 12 12 12, 13 13 13, 14 14 14, 15 15 15, 16 16 16, 17 17 17
+5000
+34 - no such that and select variable
+variable var;
+Select <var, var, var.varName>
+x x x, z z z, i i i, y y y, v v v
+5000
+35 - no such that and select constant
+constant c;
+Select <c, c, c.value>
+0 0 0, 5 5 5, 2 2 2, 1 1 1
+5000
+36 - no such that and select prog_line
+prog_line pg;
+Select <pg, pg>
+1 1, 2 2, 3 3, 4 4, 5 5, 6 6, 7 7, 8 8, 9 9, 10 10, 11 11, 12 12, 13 13, 14 14, 15 15, 16 16, 17 17, 18 18
+5000
+37 - no such that and select procedure
+procedure p;
+Select <p, p, p.procName>
+First First First, Second Second Second, Third Third Third
+5000
+38 - 1 such that Follows holds
+stmt stmt;
+Select stmt such that Follows (5, 6)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+39 - 1 such that Follows holds
+read r23;
+Select r23 such that Follows (6, 10)
+1, 2
+5000
+40 - 1 such that Follows holds
+print Select;
+Select Select such that Follows (10, 13)
+18
+5000
+41 - 1 such that Follows holds
+call Pattern;
+Select Pattern such that Follows (1, 2)
+3, 8
+5000
+42 - 1 such that Follows holds
+while while;
+Select while such that Follows (7, 8)
+6
+5000
+43 - 1 such that Follows* holds
+if IF;
+Select IF such that Follows* (1, 3)
+10
+5000
+44 - 1 such that Follows* holds
+assign as;
+Select as such that Follows* (4, 15)
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+45 - 1 such that Follows* holds
+variable var;
+Select var such that Follows* (7, 9)
+x, z, i, y, v
+5000
+46 - 1 such that Follows* holds
+constant c;
+Select c such that Follows* (13, 15)
+0, 5, 2, 1
+5000
+47 - 1 such that Follows* holds
+prog_line pg;
+Select pg such that Follows* (16, 18)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+48 - 1 such that Follows* holds
+if if ;
+Select if.stmt# such that Follows* (2, 3)
+10
+5000
+49 - 1 such that Follows* holds
+assign a ;
+Select a.stmt# such that Follows* (10, 13)
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+50 - 1 such that Follows* holds
+assign a, a1 ; print p; call call; constant c;
+Select <p.varName, c.value> such that Follows* (6, 10)
+v 0, v 1, v 2, v 5
+5000
+51 - 1 such that Follows does not hold
+procedure p;
+Select p such that Follows (1, 1)
+none
+5000
+52 - 1 such that Follows does not hold
+
+Select BOOLEAN such that Follows (6, 6)
+FALSE
+5000
+53 - 1 such that Follows does not hold
+procedure procName ;
+Select procName . procName such that Follows (1, 3)
+none
+5000
+54 - 1 such that Follows does not hold
+call c ;
+Select c.procName such that Follows (6, 7)
+none
+5000
+55 - 1 such that Follows does not hold
+variable v ;
+Select v.varName such that Follows (9, 10)
+none
+5000
+56 - 1 such that Follows does not hold
+read r ;
+Select r.varName such that Follows (11, 12)
+none
+5000
+57 - 1 such that Follows does not hold
+print p ;
+Select p.varName such that Follows (12, 13)
+none
+5000
+58 - 1 such that Follows does not hold
+constant c ;
+Select c.value such that Follows (15, 16)
+none
+5000
+59 - 1 such that Follows* does not hold
+stmt stmt ;
+Select stmt.stmt# such that Follows* (3, 4)
+none
+5000
+60 - 1 such that Follows* does not hold
+read r ;
+Select r.stmt# such that Follows* (1, 18)
+none
+5000
+61 - 1 such that Follows* does not hold
+print p ;
+Select p.stmt# such that Follows* (15, 15)
+none
+5000
+62 - 1 such that Follows* does not hold
+call c ;
+Select c.stmt# such that Follows* (8, 11)
+none
+5000
+63 - 1 such that Follows* does not hold
+while w ;
+Select w.stmt# such that Follows* (11, 12)
+none
+5000
+64 - 1 such that Parent holds
+stmt stmt;
+Select stmt such that Parent (6, 7)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+65 - 1 such that Parent holds
+read r23;
+Select r23 such that Parent (6, 8)
+1, 2
+5000
+66 - 1 such that Parent holds
+print Select;
+Select Select such that Parent (6, 9)
+18
+5000
+67 - 1 such that Parent holds
+call Pattern;
+Select Pattern such that Parent (10, 11)
+3, 8
+5000
+68 - 1 such that Parent holds
+while while;
+Select while such that Parent (10, 12)
+6
+5000
+69 - 1 such that Parent* holds
+if IF;
+Select IF such that Parent* (6, 7)
+10
+5000
+70 - 1 such that Parent* holds
+assign as;
+Select as such that Parent* (6, 8)
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+71 - 1 such that Parent* holds
+variable var;
+Select var such that Parent* (6, 9)
+x, z, i, y, v
+5000
+72 - 1 such that Parent* holds
+constant c;
+Select c such that Parent* (10, 11)
+0, 5, 2, 1
+5000
+73 - 1 such that Parent* holds
+prog_line pg;
+Select pg such that Parent* (10, 12)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+74 - 1 such that Parent* holds
+if if ;
+Select if.stmt# such that Parent* (10, 11)
+10
+5000
+75 - 1 such that Parent* holds
+assign a ;
+Select a.stmt# such that Parent* (10, 12)
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+76 - 1 such that Parent* holds
+assign a, a1 ; print p; call call; constant c;
+Select <p.varName, c.value> such that Parent* (6, 9)
+v 0, v 1, v 2, v 5
+5000
+77 - 1 such that Parent does not hold
+procedure p;
+Select p such that Parent (1, 1)
+none
+5000
+78 - 1 such that Parent does not hold
+
+Select BOOLEAN such that Parent (6, 6)
+FALSE
+5000
+79 - 1 such that Parent does not hold
+procedure procName ;
+Select procName . procName such that Parent (1, 3)
+none
+5000
+80 - 1 such that Parent does not hold
+call c ;
+Select c.procName such that Parent (6, 10)
+none
+5000
+81 - 1 such that Parent does not hold
+variable v ;
+Select v.varName such that Parent (9, 6)
+none
+5000
+82 - 1 such that Parent does not hold
+read r ;
+Select r.varName such that Parent (11, 12)
+none
+5000
+83 - 1 such that Parent does not hold
+print p ;
+Select p.varName such that Parent (12, 13)
+none
+5000
+84 - 1 such that Parent does not hold
+constant c ;
+Select c.value such that Parent (15, 16)
+none
+5000
+85 - 1 such that Parent* does not hold
+stmt stmt ;
+Select stmt.stmt# such that Parent* (3, 4)
+none
+5000
+86 - 1 such that Parent* does not hold
+read r ;
+Select r.stmt# such that Parent* (1, 18)
+none
+5000
+87 - 1 such that Parent* does not hold
+print p ;
+Select p.stmt# such that Parent* (15, 15)
+none
+5000
+88 - 1 such that Parent* does not hold
+call c ;
+Select c.stmt# such that Parent* (8, 11)
+none
+5000
+89 - 1 such that Parent* does not hold
+while w ;
+Select w.stmt# such that Parent* (11, 12)
+none
+5000
+90 - 1 such that Uses holds
+stmt stmt;
+Select stmt such that Uses (7, "x")
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+91 - 1 such that Uses holds
+read r23;
+Select r23 such that Uses (13, "i")
+1, 2
+5000
+92 - 1 such that Uses holds
+print Select;
+Select Select such that Uses (18, "v")
+18
+5000
+93 - 1 such that Uses holds
+call Pattern;
+Select Pattern such that Uses (6, "i")
+3, 8
+5000
+94 - 1 such that Uses holds
+while while;
+Select while such that Uses (6, "x")
+6
+5000
+95 - 1 such that Uses holds
+if IF;
+Select IF such that Uses (10, "x")
+10
+5000
+96 - 1 such that Uses holds
+assign as;
+Select as such that Uses ("First", "i")
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+97 - 1 such that Uses holds
+variable var;
+Select var such that Uses ("Second", "x")
+x, z, i, y, v
+5000
+98 - 1 such that Uses holds
+constant c;
+Select c such that Uses ("Third", "v")
+0, 5, 2, 1
+5000
+99 - 1 such that Uses holds
+prog_line pg;
+Select pg such that Uses (3, "i")
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+100 - 1 such that Uses holds
+if if ;
+Select if.stmt# such that Uses (8, "z")
+10
+5000
+101 - 1 such that Uses holds
+assign a ;
+Select a.stmt# such that Uses ("First", "y")
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+102 - 1 such that Uses holds
+assign a, a1 ; print p; call call; constant c;
+Select <p.varName, c.value> such that Uses ("Second", "v")
+v 0, v 1, v 2, v 5
+5000
+103 - 1 such that Uses does not hold
+procedure p;
+Select p such that Uses (7, "i")
+none
+5000
+104 - 1 such that Uses does not hold
+
+Select BOOLEAN such that Uses (13, "y")
+FALSE
+5000
+105 - 1 such that Uses does not hold
+procedure procName ;
+Select procName . procName such that Uses (18, "z")
+none
+5000
+106 - 1 such that Uses does not hold
+call c ;
+Select c.procName such that Uses (6, "z")
+Second, Third
+5000
+107 - 1 such that Uses does not hold
+variable v ;
+Select v.varName such that Uses (8, "y")
+none
+5000
+108 - 1 such that Uses does not hold
+read r ;
+Select r.varName such that Uses (10, "y")
+none
+5000
+109 - 1 such that Uses does not hold
+print p ;
+Select p.varName such that Uses (10, "z")
+none
+5000
+110 - 1 such that Uses does not hold
+constant c ;
+Select c.value such that Uses ("First", "j")
+none
+5000
+111 - 1 such that Uses does not hold
+stmt stmt ;
+Select stmt.stmt# such that Uses ("Second", "jf")
+none
+5000
+112 - 1 such that Uses does not hold
+read r ;
+Select r.stmt# such that Uses ("Third", "x")
+none
+5000
+113 - 1 such that Uses does not hold
+print p ;
+Select p.stmt# such that Uses ("Third", "i")
+none
+5000
+114 - 1 such that Uses does not hold
+call c ;
+Select c.stmt# such that Uses (8, "y")
+none
+5000
+115 - 1 such that Uses does not hold
+while w ;
+Select w.stmt# such that Uses (8, "x")
+none
+5000
+116 - 1 such that Modifies holds
+stmt stmt;
+Select stmt such that Modifies (4, "x")
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+117 - 1 such that Modifies holds
+read r23;
+Select r23 such that Modifies (5, "i")
+1, 2
+5000
+118 - 1 such that Modifies holds
+print Select;
+Select Select such that Modifies (1, "x")
+18
+5000
+119 - 1 such that Modifies holds
+call Pattern;
+Select Pattern such that Modifies (2, "z")
+3, 8
+5000
+120 - 1 such that Modifies holds
+while while;
+Select while such that Modifies (6, "x")
+6
+5000
+121 - 1 such that Modifies holds
+if IF;
+Select IF such that Modifies (10, "z")
+10
+5000
+122 - 1 such that Modifies holds
+assign as;
+Select as such that Modifies ("First", "x")
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+123 - 1 such that Modifies holds
+variable var;
+Select var such that Modifies ("Second", "z")
+x, z, i, y, v
+5000
+124 - 1 such that Modifies holds
+constant c;
+Select c such that Modifies ("Third", "v")
+0, 5, 2, 1
+5000
+125 - 1 such that Modifies holds
+prog_line pg;
+Select pg such that Modifies (3, "i")
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+126 - 1 such that Modifies holds
+if if ;
+Select if.stmt# such that Modifies (8, "z")
+10
+5000
+127 - 1 such that Modifies holds
+assign a ;
+Select a.stmt# such that Modifies ("First", "v")
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+128 - 1 such that Modifies holds
+assign a, a1 ; print p; call call; constant c;
+Select <p.varName, c.value> such that Modifies ("Second", "v")
+v 0, v 1, v 2, v 5
+5000
+129 - 1 such that Modifies does not hold
+procedure p;
+Select p such that Modifies (7, "y")
+none
+5000
+130 - 1 such that Modifies does not hold
+
+Select BOOLEAN such that Modifies (13, "x")
+FALSE
+5000
+131 - 1 such that Modifies does not hold
+procedure procName ;
+Select procName . procName such that Modifies (1, "z")
+none
+5000
+132 - 1 such that Modifies does not hold
+call c ;
+Select c.procName such that Modifies (6, "y")
+none
+5000
+133 - 1 such that Modifies does not hold
+variable v ;
+Select v.varName such that Modifies (8, "y")
+none
+5000
+134 - 1 such that Modifies does not hold
+read r ;
+Select r.varName such that Modifies (10, "y")
+none
+5000
+135 - 1 such that Modifies does not hold
+print p ;
+Select p.varName such that Modifies (10, "z")
+v
+5000
+136 - 1 such that Modifies does not hold
+constant c ;
+Select c.value such that Modifies ("First", "j")
+none
+5000
+137 - 1 such that Modifies does not hold
+stmt stmt ;
+Select stmt.stmt# such that Modifies ("Second", "jf")
+none
+5000
+138 - 1 such that Modifies does not hold
+read r ;
+Select r.stmt# such that Modifies ("Third", "x")
+none
+5000
+139 - 1 such that Modifies does not hold
+print p ;
+Select p.stmt# such that Modifies ("Third", "i")
+none
+5000
+140 - 1 such that Modifies does not hold
+call c ;
+Select c.stmt# such that Modifies (8, "y")
+none
+5000
+141 - 1 such that Modifies does not hold
+while w ;
+Select w.stmt# such that Modifies (8, "x")
+none
+5000
+142 - 1 such that Calls holds
+stmt stmt;
+Select stmt such that Calls ("First", "Second")
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+143 - 1 such that Calls holds
+read r23;
+Select r23 such that Calls ("Second", "Third")
+1, 2
+5000
+144 - 1 such that Calls* holds
+print Select;
+Select Select such that Calls* ("First", "Second")
+18
+5000
+145 - 1 such that Calls* holds
+call Pattern;
+Select Pattern such that Calls* ("First", "Third")
+3, 8
+5000
+146 - 1 such that Calls* holds
+while while;
+Select while such that Calls* ("Second", "Third")
+6
+5000
+147 - 1 such that Calls does not hold
+if IF;
+Select IF such that Calls ("First", "First")
+none
+5000
+148 - 1 such that Calls does not hold
+assign as;
+Select as such that Calls ("Second", "First")
+none
+5000
+149 - 1 such that Calls does not hold
+variable var;
+Select var such that Calls ("Second", "Second")
+none
+5000
+150 - 1 such that Calls does not hold
+constant c;
+Select c such that Calls ("Third", "First")
+none
+5000
+151 - 1 such that Calls does not hold
+prog_line pg;
+Select pg such that Calls ("Third", "Second")
+none
+5000
+152 - 1 such that Calls does not hold
+if if ;
+Select if.stmt# such that Calls ("Third", "Third")
+none
+5000
+153 - 1 such that Calls does not hold
+assign a ;
+Select a.stmt# such that Calls ("First", "y")
+none
+5000
+154 - 1 such that Calls* does not hold
+assign a, a1 ; print p; call call; constant c;
+Select <p.varName, c.value> such that Calls* ("First", "First")
+none
+5000
+155 - 1 such that Calls* does not hold
+procedure p;
+Select p such that Calls* ("Second", "Second")
+none
+5000
+156 - 1 such that Calls* does not hold
+
+Select BOOLEAN such that Calls* ("Second", "First")
+FALSE
+5000
+157 - 1 such that Calls* does not hold
+procedure procName ;
+Select procName . procName such that Calls* ("Third", "First")
+none
+5000
+158 - 1 such that Calls* does not hold
+call c ;
+Select c.procName such that Calls* ("Third", "Second")
+none
+5000
+159 - 1 such that Calls* does not hold
+variable v ;
+Select v.varName such that Calls* ("Third", "Third")
+none
+5000
+160 - 1 such that Calls* does not hold
+constant c ;
+Select c.value such that Calls* ("First", "j")
+none
+5000
+161 - 1 such that Calls* does not hold
+stmt stmt ;
+Select stmt.stmt# such that Calls* ("Second", "jf")
+none
+5000
+162 - 1 such that Calls* does not hold
+read r ;
+Select r.stmt# such that Calls* ("Third", "x")
+none
+5000
+163 - 1 such that Calls* does not hold
+print p ;
+Select p.stmt# such that Calls* ("Third", "i")
+none
+5000
+164 - 1 such that Calls* does not hold
+call c ;
+Select c.stmt# such that Calls* (8, "y")
+none
+5000
+165 - 1 such that Calls* does not hold
+while w ;
+Select w.stmt# such that Calls* (8, "x")
+none
+5000
+166 - 1 such that Next holds
+stmt stmt;
+Select stmt such that Next (5, 6)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+167 - 1 such that Next holds
+read r23;
+Select r23 such that Next (6, 7)
+1, 2
+5000
+168 - 1 such that Next holds
+print Select;
+Select Select such that Next (6, 10)
+18
+5000
+169 - 1 such that Next holds
+call Pattern;
+Select Pattern such that Next (8, 9)
+3, 8
+5000
+170 - 1 such that Next holds
+while while;
+Select while such that Next (10, 12)
+6
+5000
+171 - 1 such that Next holds
+if IF;
+Select IF such that Next (11, 13)
+10
+5000
+172 - 1 such that Next* holds
+assign as;
+Select as such that Next* (4,5)
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+173 - 1 such that Next* holds
+variable var;
+Select var such that Next* (4, 6)
+x, z, i, y, v
+5000
+174 - 1 such that Next* holds
+constant c;
+Select c such that Next* (5, 8)
+0, 5, 2, 1
+5000
+175 - 1 such that Next* holds
+prog_line pg;
+Select pg such that Next* (7, 6)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+176 - 1 such that Next* holds
+if if ;
+Select if.stmt# such that Next* (8, 8)
+10
+5000
+177 - 1 such that Next* holds
+assign a ;
+Select a.stmt# such that Next* (8, 11)
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+178 - 1 such that Next* holds
+assign a, a1 ; print p; call call; constant c;
+Select <p.varName, c.value> such that Next* (8, 15)
+v 0, v 1, v 2, v 5
+5000
+179 - 1 such that Next* holds
+
+Select BOOLEAN such that Next* (5, 12)
+TRUE
+5000
+180 - 1 such that Next does not hold
+procedure p;
+Select p such that Next (9, 7)
+none
+5000
+181 - 1 such that Next does not hold
+
+Select BOOLEAN such that Next (10, 13)
+FALSE
+5000
+182 - 1 such that Next does not hold
+procedure procName ;
+Select procName . procName such that Next (11, 12)
+none
+5000
+183 - 1 such that Next does not hold
+call c ;
+Select c.procName such that Next (8, 5)
+none
+5000
+184 - 1 such that Next does not hold
+variable v ;
+Select v.varName such that Next (11, 10)
+none
+5000
+185 - 1 such that Next does not hold
+read r ;
+Select r.varName such that Next (6, 8)
+none
+5000
+186 - 1 such that Next does not hold
+print p ;
+Select p.varName such that Next (6, 9)
+none
+5000
+187 - 1 such that Next does not hold
+constant c ;
+Select c.value such that Next (3, 4)
+none
+5000
+188 - 1 such that Next* does not hold
+stmt stmt ;
+Select stmt.stmt# such that Next* (11, 12)
+none
+5000
+189 - 1 such that Next* does not hold
+read r ;
+Select r.stmt# such that Next* (8, 5)
+none
+5000
+190 - 1 such that Next* does not hold
+print p ;
+Select p.stmt# such that Next* (12, 10)
+none
+5000
+191 - 1 such that Next* does not hold
+call c ;
+Select c.stmt# such that Next* (15, 16)
+none
+5000
+192 - 1 such that Next* does not hold
+while w ;
+Select w.stmt# such that Next* (6, 5)
+none
+5000
+193 - 1 such that Next* does not hold
+Select BOOLEAN such that Next* (5, 11) and Next* (11, 12)
+
+FALSE
+5000
+194 - 1 such that NextBip holds
+stmt stmt;
+Select stmt such that NextBip (3, 4)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+195 - 1 such that NextBip holds
+read r23;
+Select r23 such that NextBip (8, 16)
+1, 2
+5000
+196 - 1 such that NextBip holds
+print Select;
+Select Select such that NextBip (18, 9)
+18
+5000
+197 - 1 such that NextBip holds
+call Pattern;
+Select Pattern such that NextBip (9, 6)
+3, 8
+5000
+198 - 1 such that NextBip holds
+while while;
+Select while such that NextBip (5, 6)
+6
+5000
+199 - 1 such that NextBip holds
+if IF;
+Select IF such that NextBip (11, 13)
+10
+5000
+200 - 1 such that NextBip* holds
+assign as;
+Select as such that NextBip* (1, 15)
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+201 - 1 such that NextBip* holds
+variable var;
+Select var such that NextBip* (3, 18)
+x, z, i, y, v
+5000
+202 - 1 such that NextBip* holds
+constant c;
+Select c such that NextBip* (4, 17)
+0, 5, 2, 1
+5000
+203 - 1 such that NextBip* holds
+prog_line pg;
+Select pg such that NextBip* (6, 8)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+204 - 1 such that NextBip* holds
+if if ;
+Select if.stmt# such that NextBip* (9, 18)
+10
+5000
+205 - 1 such that NextBip* holds
+assign a ;
+Select a.stmt# such that NextBip* (11, 13)
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+206 - 1 such that NextBip* holds
+assign a, a1 ; print p; call call; constant c;
+Select <p.varName, c.value> such that NextBip* (8, 15)
+v 0, v 1, v 2, v 5
+5000
+207 - 1 such that NextBip* holds
+
+Select BOOLEAN such that NextBip* (2, 17)
+TRUE
+5000
+208 - 1 such that NextBip does not hold
+procedure p;
+Select p such that NextBip (4, 3)
+none
+5000
+209 - 1 such that NextBip does not hold
+
+Select BOOLEAN such that NextBip (16, 8)
+FALSE
+5000
+210 - 1 such that NextBip does not hold
+procedure procName ;
+Select procName . procName such that NextBip (17, 5)
+none
+5000
+211 - 1 such that NextBip does not hold
+call c ;
+Select c.procName such that NextBip (7, 5)
+none
+5000
+212 - 1 such that NextBip does not hold
+variable v ;
+Select v.varName such that NextBip (11, 12)
+none
+5000
+213 - 1 such that NextBip does not hold
+read r ;
+Select r.varName such that NextBip (10, 13)
+none
+5000
+214 - 1 such that NextBip does not hold
+print p ;
+Select p.varName such that NextBip (6, 9)
+none
+5000
+215 - 1 such that NextBip does not hold
+constant c ;
+Select c.value such that NextBip (3, 3)
+none
+5000
+216 - 1 such that NextBip* does not hold
+stmt stmt ;
+Select stmt.stmt# such that NextBip* (11, 12)
+none
+5000
+217 - 1 such that NextBip* does not hold
+read r ;
+Select r.stmt# such that NextBip* (8, 5)
+none
+5000
+218 - 1 such that NextBip* does not hold
+print p ;
+Select p.stmt# such that NextBip* (12, 10)
+none
+5000
+219 - 1 such that NextBip* does not hold
+call c ;
+Select c.stmt# such that NextBip* (15, 16)
+none
+5000
+220 - 1 such that NextBip* does not hold
+while w ;
+Select w.stmt# such that NextBip* (6, 5)
+none
+5000
+221 - 1 such that NextBip* does not hold
+Select BOOLEAN such that NextBip* (5, 11) and NextBip* (11, 12)
+
+FALSE
+5000
+222 - 1 such that Affects holds
+stmt stmt;
+Select stmt such that Affects (5, 9)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+223 - 1 such that Affects holds
+read r23;
+Select r23 such that Affects (7, 11)
+1, 2
+5000
+224 - 1 such that Affects holds
+print Select;
+Select Select such that Affects (7, 13)
+18
+5000
+225 - 1 such that Affects holds
+call Pattern;
+Select Pattern such that Affects (9, 9)
+3, 8
+5000
+226 - 1 such that Affects holds
+while while;
+Select while such that Affects (4, 7)
+6
+5000
+227 - 1 such that Affects holds
+if IF;
+Select IF such that Affects (4, 11)
+10
+5000
+228 - 1 such that Affects holds
+assign as;
+Select as such that Affects (4,13)
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+229 - 1 such that Affects holds
+variable var;
+Select var such that Affects (4, 15)
+x, z, i, y, v
+5000
+230 - 1 such that Affects holds
+constant c;
+Select c such that Affects (5, 13)
+0, 5, 2, 1
+5000
+231 - 1 such that Affects holds
+prog_line pg;
+Select pg such that Affects (12, 13)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+232 - 1 such that Affects* holds
+if if ;
+Select if.stmt# such that Affects* (4, 7)
+10
+5000
+233 - 1 such that Affects* holds
+assign a ;
+Select a.stmt# such that Affects* (4, 13)
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+234 - 1 such that Affects* holds
+assign a, a1 ; print p; call call; constant c;
+Select <p.varName, c.value> such that Affects* (4, 14)
+v 0, v 1, v 2, v 5
+5000
+235 - 1 such that Affects* holds
+
+Select BOOLEAN such that Affects* (4, 15)
+TRUE
+5000
+236 - 1 such that Affects does not hold
+procedure p;
+Select p such that Affects (12, 14)
+none
+5000
+237 - 1 such that Affects does not hold
+
+Select BOOLEAN such that Affects (12, 15)
+FALSE
+5000
+238 - 1 such that Affects does not hold
+procedure procName ;
+Select procName . procName such that Affects (5, 6)
+none
+5000
+239 - 1 such that Affects does not hold
+call c ;
+Select c.procName such that Affects (12, 9)
+none
+5000
+240 - 1 such that Affects does not hold
+variable v ;
+Select v.varName such that Affects (1, 2)
+none
+5000
+241 - 1 such that Affects does not hold
+read r ;
+Select r.varName such that Affects (7, 8)
+none
+5000
+242 - 1 such that Affects does not hold
+print p ;
+Select p.varName such that Affects (8, 8)
+none
+5000
+243 - 1 such that Affects does not hold
+constant c ;
+Select c.value such that Affects (8, 9)
+none
+5000
+244 - 1 such that Affects* does not hold
+stmt stmt ;
+Select stmt.stmt# such that Affects* (4, 5)
+none
+5000
+245 - 1 such that Affects* does not hold
+read r ;
+Select r.stmt# such that Affects* (6, 15)
+none
+5000
+246 - 1 such that Affects* does not hold
+print p ;
+Select p.stmt# such that Affects* (5, 11)
+none
+5000
+247 - 1 such that Affects* does not hold
+call c ;
+Select c.stmt# such that Affects* (4, 12)
+none
+5000
+248 - 1 such that Affects* does not hold
+while w ;
+Select w.stmt# such that Affects* (16, 18)
+none
+5000
+249 - 1 such that AffectsBip holds
+stmt stmt;
+Select stmt such that AffectsBip (5, 9)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+250 - 1 such that AffectsBip holds
+read r23;
+Select r23 such that AffectsBip (7, 11)
+1, 2
+5000
+251 - 1 such that AffectsBip holds
+print Select;
+Select Select such that AffectsBip (7, 13)
+18
+5000
+252 - 1 such that AffectsBip holds
+
+Select BOOLEAN such that AffectsBip (16, 13)
+TRUE
+5000
+253 - 1 such that AffectsBip holds
+
+Select BOOLEAN such that AffectsBip (12, 13)
+TRUE
+5000
+254 - 1 such that AffectsBip holds
+
+Select BOOLEAN such that AffectsBip (16, 17)
+TRUE
+5000
+255 - 1 such that AffectsBip holds
+call Pattern;
+Select Pattern such that AffectsBip (9, 9)
+3, 8
+5000
+256 - 1 such that AffectsBip holds
+while while;
+Select while such that AffectsBip (4, 7)
+6
+5000
+257 - 1 such that AffectsBip holds
+if IF;
+Select IF such that AffectsBip (4, 11)
+10
+5000
+258 - 1 such that AffectsBip holds
+assign as;
+Select as such that AffectsBip (4,13)
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+259 - 1 such that AffectsBip holds
+variable var;
+Select var such that AffectsBip (4, 15)
+x, z, i, y, v
+5000
+260 - 1 such that AffectsBip holds
+constant c;
+Select c such that AffectsBip (5, 13)
+0, 5, 2, 1
+5000
+261 - 1 such that AffectsBip holds
+prog_line pg;
+Select pg such that AffectsBip (12, 13)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+262 - 1 such that AffectsBip* holds
+if if ;
+Select if.stmt# such that AffectsBip* (4, 7)
+10
+5000
+263 - 1 such that AffectsBip* holds
+assign a ;
+Select a.stmt# such that AffectsBip* (4, 13)
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+264 - 1 such that AffectsBip* holds
+assign a, a1 ; print p; call call; constant c;
+Select <p.varName, c.value> such that AffectsBip* (4, 14)
+v 0, v 1, v 2, v 5
+5000
+265 - 1 such that AffectsBip* holds
+
+Select BOOLEAN such that AffectsBip* (4, 15)
+TRUE
+5000
+266 - 1 such that AffectsBip* holds
+
+Select BOOLEAN such that AffectsBip* (16, 17)
+TRUE
+5000
+267 - 1 such that AffectsBip* holds
+
+Select BOOLEAN such that AffectsBip* (16, 13)
+TRUE
+5000
+268 - 1 such that AffectsBip* holds
+
+Select BOOLEAN such that AffectsBip* (12, 13)
+TRUE
+5000
+269 - 1 such that AffectsBip* holds
+
+Select BOOLEAN such that AffectsBip* (16, 14)
+TRUE
+5000
+270 - 1 such that AffectsBip* holds
+
+Select BOOLEAN such that AffectsBip* (16, 15)
+TRUE
+5000
+271 - 1 such that AffectsBip does not hold
+procedure p;
+Select p such that AffectsBip (12, 14)
+none
+5000
+272 - 1 such that AffectsBip does not hold
+
+Select BOOLEAN such that AffectsBip (12, 15)
+FALSE
+5000
+273 - 1 such that AffectsBip does not hold
+procedure procName ;
+Select procName . procName such that AffectsBip (5, 6)
+none
+5000
+274 - 1 such that AffectsBip does not hold
+call c ;
+Select c.procName such that AffectsBip (12, 9)
+none
+5000
+275 - 1 such that AffectsBip does not hold
+variable v ;
+Select v.varName such that AffectsBip (1, 2)
+none
+5000
+276 - 1 such that AffectsBip does not hold
+read r ;
+Select r.varName such that AffectsBip (7, 8)
+none
+5000
+277 - 1 such that AffectsBip does not hold
+print p ;
+Select p.varName such that AffectsBip (8, 8)
+none
+5000
+278 - 1 such that AffectsBip does not hold
+constant c ;
+Select c.value such that AffectsBip (1, 7)
+none
+5000
+279 - 1 such that AffectsBip* does not hold
+stmt stmt ;
+Select stmt.stmt# such that AffectsBip* (4, 5)
+none
+5000
+280 - 1 such that AffectsBip* does not hold
+read r ;
+Select r.stmt# such that AffectsBip* (6, 15)
+none
+5000
+281 - 1 such that AffectsBip* does not hold
+print p ;
+Select p.stmt# such that AffectsBip* (5, 11)
+none
+5000
+282 - 1 such that AffectsBip* does not hold
+call c ;
+Select c.stmt# such that AffectsBip* (4, 12)
+none
+5000
+283 - 1 such that AffectsBip* does not hold
+while w ;
+Select w.stmt# such that AffectsBip* (16, 18)
+none
+5000
+284 - 1 such that 1 unknown Follows
+stmt stmt;
+Select stmt such that Follows (stmt, 5)
+4
+5000
+285 - 1 such that 1 unknown Follows
+read r23;
+Select r23 such that Follows (r23, 3)
+2
+5000
+286 - 1 such that 1 unknown Follows
+print Select;
+Select Select such that Follows (17, Select)
+18
+5000
+287 - 1 such that 1 unknown Follows
+call Pattern;
+Select Pattern such that Follows (_, Pattern)
+3, 8
+5000
+288 - 1 such that 1 unknown Follows
+while while;
+Select while such that Follows (while, _)
+6
+5000
+289 - 1 such that 1 unknown Follows
+procedure p;
+Select p such that Follows (p, _)
+none
+5000
+290 - 1 such that 1 unknown Follows
+if g;
+Select BOOLEAN such that Follows (g, _)
+TRUE
+5000
+291 - 1 such that 1 unknown Follows*
+stmt stmt ;
+Select stmt.stmt# such that Follows* (3, stmt)
+none
+5000
+292 - 1 such that 1 unknown Follows*
+read r ;
+Select r.stmt# such that Follows* (4, r)
+none
+5000
+293 - 1 such that 1 unknown Follows*
+constant c;
+Select c such that Follows* (c, _)
+none
+5000
+294 - 1 such that 1 unknown Follows*
+prog_line pg;
+Select pg such that Follows* (pg, 13)
+4, 5, 6, 10
+5000
+295 - 1 such that 1 unknown Follows*
+if if ;
+Select if.stmt# such that Follows* (if, 15)
+10
+5000
+296 - 1 such that 1 unknown Follows*
+assign a ;
+Select a.stmt# such that Follows* (a, 9)
+7
+5000
+297 - 1 such that 1 unknown Follows*
+assign a, a1 ; print p; call call; constant c;
+Select <p.varName, c.value> such that Follows* (p, _)
+none
+5000
+298 - 1 such that 1 unknown Parent
+procedure procName ;
+Select procName . procName such that Parent (procName, _)
+none
+5000
+299 - 1 such that 1 unknown Parent
+call c ;
+Select c.procName such that Parent (_, c)
+Third
+5000
+300 - 1 such that 1 unknown Parent
+variable v ;
+Select v.varName such that Parent (_, v)
+none
+5000
+301 - 1 such that 1 unknown Parent
+read r ;
+Select r.varName such that Parent (r, _)
+none
+5000
+302 - 1 such that 1 unknown Parent
+print p ;
+Select p.varName such that Parent (p, _)
+none
+5000
+303 - 1 such that 1 unknown Parent
+constant c ;
+Select c.value such that Parent (_, c)
+none
+5000
+304 - 1 such that 1 unknown Parent*
+print p ;
+Select p.stmt# such that Parent* (p, _)
+none
+5000
+305 - 1 such that 1 unknown Parent*
+call c ;
+Select c.stmt# such that Parent* (6, c)
+8
+5000
+306 - 1 such that 1 unknown Parent*
+while w ;
+Select w.stmt# such that Parent* (w, 9)
+6
+5000
+307 - 1 such that 1 unknown Parent*
+if IF;
+Select IF such that Parent* (IF, _)
+10
+5000
+308 - 1 such that 1 unknown Parent*
+assign as;
+Select as such that Parent* (_, as)
+7, 9, 11, 12
+5000
+309 - 1 such that 1 unknown Parent*
+variable var;
+Select var such that Parent* (_, var)
+none
+5000
+310 - 1 such that 1 unknown Uses
+stmt stmt;
+Select stmt such that Uses (stmt, "x")
+3, 6, 7, 10, 11, 13, 15
+5000
+311 - 1 such that 1 unknown Uses
+read r23;
+Select r23 such that Uses (r23, "x")
+none
+5000
+312 - 1 such that 1 unknown Uses
+print Select;
+Select Select such that Uses (print, "x")
+none
+5000
+313 - 1 such that 1 unknown Uses
+call Pattern;
+Select Pattern such that Uses (Pattern, "y")
+3
+5000
+314 - 1 such that 1 unknown Uses
+while while;
+Select while such that Uses (while, "x")
+6
+5000
+315 - 1 such that 1 unknown Uses
+procedure p;
+Select p such that Uses (p, "v")
+First, Second, Third
+5000
+316 - 1 such that 1 unknown Uses
+if g;
+Select BOOLEAN such that Uses (g, _)
+TRUE
+5000
+317 - 1 such that 1 unknown Uses
+stmt stmt ;
+Select stmt.stmt# such that Uses (stmt, "v")
+3, 6, 8, 18
+5000
+318 - 1 such that 1 unknown Uses
+read r ;
+Select r.stmt# such that Uses (r, _)
+none
+5000
+319 - 1 such that 1 unknown Uses
+constant c;
+Select c such that Uses (c, _)
+none
+5000
+320 - 1 such that 1 unknown Uses
+prog_line pg;
+Select pg such that Uses (pg, "i")
+3, 6, 9, 13
+5000
+321 - 1 such that 1 unknown Uses
+if if ;
+Select if.stmt# such that Uses (if, "z")
+none
+5000
+322 - 1 such that 1 unknown Uses
+assign a ;
+Select a.stmt# such that Uses (a, "x")
+7, 11, 13, 15
+5000
+323 - 1 such that 1 unknown Uses
+assign a, a1 ; procedure p; call call; constant c;
+Select <p.procName, c.value> such that Uses (p, _)
+First 0, First 1, First 2, First 5, Second 0, Second 1, Second 2, Second 5, Third 0, Third 1, Third 2, Third 5
+5000
+324 - 1 such that 1 unknown Modifies
+procedure procName ;
+Select procName . procName such that Modifies (procName, "x")
+First, Second
+5000
+325 - 1 such that 1 unknown Modifies
+call c ;
+Select c.procName such that Modifies (c, "y")
+Second
+5000
+326 - 1 such that 1 unknown Modifies
+variable v ;
+Select v.varName such that Modifies (_, v)
+none
+5000
+327 - 1 such that 1 unknown Modifies
+read r ;
+Select r.varName such that Modifies (r, _)
+x, z
+5000
+328 - 1 such that 1 unknown Modifies
+print p ;
+Select p.varName such that Modifies (p, _)
+none
+5000
+329 - 1 such that 1 unknown Modifies
+constant c ;
+Select c.value such that Modifies (_, c)
+none
+5000
+330 - 1 such that 1 unknown Modifies
+print p ;
+Select p.stmt# such that Modifies (p, _)
+none
+5000
+331 - 1 such that 1 unknown Modifies
+call c ;
+Select c.stmt# such that Modifies (c, "v")
+3, 8
+5000
+332 - 1 such that 1 unknown Modifies
+while w ;
+Select w.stmt# such that Modifies (w, "i")
+6
+5000
+333 - 1 such that 1 unknown Modifies
+if IF;
+Select IF such that Modifies (IF, _)
+10
+5000
+334 - 1 such that 1 unknown Modifies
+assign as;
+Select as such that Modifies (as, _)
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+335 - 1 such that 1 unknown Modifies
+variable var;
+Select var such that Modifies (8, var)
+z, v
+5000
+336 - 1 such that 1 unknown Calls
+procedure p, q;
+Select p such that Calls (p, _)
+First, Second
+5000
+337 - 1 such that 1 unknown Calls
+procedure p;
+Select p such that Calls* (p, "Third")
+First, Second
+5000
+338 - 1 such that 1 unknown Calls
+print p ;
+Select p.stmt# such that Calls (p, _)
+none
+5000
+339 - 1 such that 1 unknown Calls
+call c ;
+Select c.stmt# such that Calls (6, c)
+none
+5000
+340 - 1 such that 1 unknown Calls
+while w ;
+Select w.stmt# such that Calls (w, 9)
+none
+5000
+341 - 1 such that 1 unknown Calls*
+if IF;
+Select IF such that Calls* (IF, _)
+none
+5000
+342 - 1 such that 1 unknown Calls*
+assign as;
+Select as such that Calls* (_, as)
+none
+5000
+343 - 1 such that 1 unknown Calls*
+variable var;
+Select var such that Calls* (_, var)
+none
+5000
+344 - 1 such that 1 unknown Next
+stmt stmt;
+Select stmt such that Next (stmt, 5)
+4
+5000
+345 - 1 such that 1 unknown Next
+read r23;
+Select r23 such that Next (r23, 3)
+2
+5000
+346 - 1 such that 1 unknown Next
+print Select;
+Select Select such that Next (17, Select)
+18
+5000
+347 - 1 such that 1 unknown Next
+call Pattern;
+Select Pattern such that Next (_, Pattern)
+3, 8
+5000
+348 - 1 such that 1 unknown Next
+while while;
+Select while such that Next (while, _)
+6
+5000
+349 - 1 such that 1 unknown Next
+procedure p;
+Select p such that Next (p, _)
+none
+5000
+350 - 1 such that 1 unknown Next
+if g;
+Select BOOLEAN such that Next (g, _)
+TRUE
+5000
+351 - 1 such that 1 unknown Next*
+stmt stmt ;
+Select stmt.stmt# such that Next* (3, stmt)
+none
+5000
+352 - 1 such that 1 unknown Next*
+read r ;
+Select r.stmt# such that Next* (4, r)
+none
+5000
+353 - 1 such that 1 unknown Next*
+constant c;
+Select c such that Next* (c, _)
+none
+5000
+354 - 1 such that 1 unknown Next*
+prog_line pg;
+Select pg such that Next* (pg, 13)
+4, 5, 6, 7, 8, 9, 10, 11, 12
+5000
+355 - 1 such that 1 unknown Next*
+if if ;
+Select if.stmt# such that Next* (if, 15)
+10
+5000
+356 - 1 such that 1 unknown Next*
+assign a ;
+Select a.stmt# such that Next* (a, 9)
+4, 5, 7, 9
+5000
+357 - 1 such that 1 unknown Next*
+assign a, a1 ; print p; call call; constant c;
+Select <p.varName, c.value> such that Next* (_, p)
+v 0,v 1,v 2,v 5
+5000
+358 - 1 such that 1 unknown NextBip
+stmt stmt;
+Select stmt such that NextBip (stmt, 5)
+4
+5000
+359 - 1 such that 1 unknown NextBip
+read r23;
+Select r23 such that NextBip (r23, 3)
+2
+5000
+360 - 1 such that 1 unknown NextBip
+print Select;
+Select Select such that NextBip (17, Select)
+18
+5000
+361 - 1 such that 1 unknown NextBip
+call Pattern;
+Select Pattern such that NextBip (Pattern, _)
+3, 8
+5000
+362 - 1 such that 1 unknown NextBip
+while while;
+Select while such that NextBip (while, _)
+6
+5000
+363 - 1 such that 1 unknown NextBip
+procedure p;
+Select p such that NextBip (p, _)
+none
+5000
+364 - 1 such that 1 unknown NextBip
+if g;
+Select BOOLEAN such that NextBip (g, _)
+TRUE
+5000
+365 - 1 such that 1 unknown NextBip*
+stmt stmt ;
+Select stmt.stmt# such that NextBip* (3, stmt)
+4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+366 - 1 such that 1 unknown NextBip*
+read r ;
+Select r.stmt# such that NextBip* (4, r)
+none
+5000
+367 - 1 such that 1 unknown NextBip*
+constant c;
+Select c such that NextBip* (c, _)
+none
+5000
+368 - 1 such that 1 unknown NextBip*
+prog_line pg;
+Select pg such that NextBip* (pg, 13)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 16, 17, 18
+5000
+369 - 1 such that 1 unknown NextBip*
+if if ;
+Select if.stmt# such that NextBip* (if, 15)
+10
+5000
+370 - 1 such that 1 unknown NextBip*
+assign a ;
+Select a.stmt# such that NextBip* (a, 9)
+4, 5, 7, 9, 16, 17
+5000
+371 - 1 such that 1 unknown NextBip*
+assign a, a1 ; print p; call call; constant c;
+Select <p.varName, c.value> such that NextBip* (_, p)
+v 0,v 1,v 2,v 5
+5000
+372 - 1 such that 1 unknown Affects
+stmt stmt;
+Select stmt such that Affects (stmt, _)
+4, 5, 7, 9, 11, 12, 13, 14, 16
+5000
+373 - 1 such that 1 unknown Affects
+read r23;
+Select r23 such that Affects (r23, _)
+none
+5000
+374 - 1 such that 1 unknown Affects
+print Select;
+Select Select such that Affects (_, Select)
+none
+5000
+375 - 1 such that 1 unknown Affects
+call Pattern;
+Select Pattern such that Affects (_, Pattern)
+none
+5000
+376 - 1 such that 1 unknown Affects
+while while;
+Select while such that Affects (while, _)
+none
+5000
+377 - 1 such that 1 unknown Affects
+procedure p;
+Select p such that Affects (p, _)
+none
+5000
+378 - 1 such that 1 unknown Affects
+if g;
+Select BOOLEAN such that Affects (g, _)
+none
+5000
+379 - 1 such that 1 unknown Affects*
+stmt stmt ;
+Select stmt.stmt# such that Affects* (_, stmt)
+7, 9, 11, 13, 14, 15, 17
+5000
+380 - 1 such that 1 unknown Affects*
+read r ;
+Select r.stmt# such that Affects* (_, r)
+none
+5000
+381 - 1 such that 1 unknown Affects*
+constant c;
+Select c such that Affects* (c, _)
+none
+5000
+382 - 1 such that 1 unknown Affects*
+prog_line pg;
+Select pg such that Affects* (pg, 15)
+4, 5, 7, 9, 11, 12, 13, 14
+5000
+383 - 1 such that 1 unknown Affects*
+if if ;
+Select if.stmt# such that Affects* (if, _)
+none
+5000
+384 - 1 such that 1 unknown Affects*
+assign a;
+Select a such that Affects* (a, 13)
+4, 5, 7, 9, 11, 12
+5000
+385 - 1 such that 1 unknown Affects*
+assign a;
+Select <a, a, a.stmt#> such that Affects* (a, 13)
+4 4 4, 5 5 5, 7 7 7, 9 9 9, 11 11 11, 12 12 12
+5000
+386 - 1 such that 1 unknown AffectsBip
+stmt stmt;
+Select stmt such that AffectsBip (stmt, _)
+4, 5, 7, 9, 11, 12, 13, 14, 16
+5000
+387 - 1 such that 1 unknown AffectsBip
+read r23;
+Select r23 such that AffectsBip (r23, _)
+none
+5000
+388 - 1 such that 1 unknown AffectsBip
+print Select;
+Select Select such that AffectsBip (_, Select)
+none
+5000
+389 - 1 such that 1 unknown AffectsBip
+call Pattern;
+Select Pattern such that AffectsBip (_, Pattern)
+none
+5000
+390 - 1 such that 1 unknown AffectsBip
+while while;
+Select while such that AffectsBip (while, _)
+none
+5000
+391 - 1 such that 1 unknown AffectsBip
+procedure p;
+Select p such that AffectsBip (p, _)
+none
+5000
+392 - 1 such that 1 unknown AffectsBip
+if g;
+Select BOOLEAN such that AffectsBip (g, _)
+none
+5000
+393 - 1 such that 1 unknown AffectsBip*
+stmt stmt ;
+Select stmt.stmt# such that AffectsBip* (_, stmt)
+7, 9, 11, 13, 14, 15, 17
+5000
+394 - 1 such that 1 unknown AffectsBip*
+read r ;
+Select r.stmt# such that AffectsBip* (_, r)
+none
+5000
+395 - 1 such that 1 unknown AffectsBip*
+constant c;
+Select c such that AffectsBip* (c, _)
+none
+5000
+396 - 1 such that 1 unknown AffectsBip*
+prog_line pg;
+Select pg such that AffectsBip* (pg, 15)
+4, 5, 7, 9, 11, 12, 13, 14, 16
+5000
+397 - 1 such that 1 unknown AffectsBip*
+if if ;
+Select if.stmt# such that AffectsBip* (if, _)
+none
+5000
+398 - 1 such that 1 unknown AffectsBip*
+assign a;
+Select a such that AffectsBip* (a, 13)
+4, 5, 7, 9, 11, 12, 16
+5000
+399 - 1 such that 2 unknown Follows
+stmt stmt; read r;
+Select stmt such that Follows (stmt, r)
+1
+5000
+400 - 1 such that 2 unknown Follows
+print Select; call Parent;
+Select Select such that Follows (Select, print)
+none
+5000
+401 - 1 such that 2 unknown Follows
+while while; if if;
+Select while such that Follows (while, if)
+6
+5000
+402 - 1 such that 2 unknown Follows
+procedure p; stmt stmt;
+Select p such that Follows (p, stmt)
+none
+5000
+403 - 1 such that 2 unknown Follows*
+read r ; constant c;
+Select r.stmt# such that Follows* (c, r)
+none
+5000
+404 - 1 such that 2 unknown Follows*
+prog_line pg; if if ;
+Select <pg, if.stmt#> such that Follows* (pg, if)
+4 10, 5 10, 6 10
+5000
+405 - 1 such that 2 unknown Follows*
+assign a, a1 ; print p; call call; constant c;
+Select <a.stmt#, c.value> such that Follows* (a, p)
+16 0, 16 1, 16 2, 16 5, 17 0, 17 1, 17 2, 17 5
+5000
+406 - 1 such that 2 unknown Parent
+procedure procName ; call c ;
+Select procName . procName such that Parent (procName, c)
+none
+5000
+407 - 1 such that 2 unknown Parent
+variable v ; constant c ;
+Select v.varName such that Parent (c, v)
+none
+5000
+408 - 1 such that 2 unknown Parent
+read r ;print p ;
+Select r.varName such that Parent (r, p)
+none
+5000
+409 - 1 such that 2 unknown Parent*
+print p ; call c ;
+Select p.stmt# such that Parent* (p, c)
+none
+5000
+410 - 1 such that 2 unknown Parent*
+while w ; call c;
+Select <w.stmt#, c> such that Parent* (w, 9)
+6 3, 6 8
+5000
+411 - 1 such that 2 unknown Parent*
+if IF; assign a;
+Select <IF, a> such that Parent* (IF, a)
+10 11, 10 12
+5000
+412 - 1 such that 2 unknown Parent*
+variable v, var;
+Select var such that Parent* (v, var)
+none
+5000
+413 - 1 such that 2 unknown Uses
+stmt stmt; variable v;
+Select <stmt.stmt#, v.varName> such that Uses (stmt, v)
+3 i, 3 x, 3 y, 3 z, 3 v, 6 i, 6 x, 6 y, 6 z, 6 v, 7 x, 7 y, 8 z, 8 v, 9 i, 10 x, 11 x, 13 z, 13 x, 13 i, 14 z, 15 x, 15 y, 15 z, 17 z, 18 v
+5000
+414 - 1 such that 2 unknown Uses
+read r23; variable v;
+Select <r23.varName, v.varName> such that Uses (r23, v)
+none
+5000
+415 - 1 such that 2 unknown Uses
+print Select; variable v;
+Select <Select.stmt#, v.varName> such that Uses (Select, v)
+18 v
+5000
+416 - 1 such that 2 unknown Uses
+call Pattern; variable v;
+Select <Pattern.procName, v.varName> such that Uses (Pattern, v)
+Second i, Second x, Second y, Second z, Second v, Third z, Third v
+5000
+417 - 1 such that 2 unknown Uses
+while while; variable v;
+Select <while.stmt#, v.varName> such that Uses (while, v)
+6 i, 6 x, 6 y, 6 z, 6 v
+5000
+418 - 1 such that 2 unknown Uses
+procedure p; variable v;
+Select p such that Uses (p, v)
+First, Second, Third
+5000
+419 - 1 such that 2 unknown Uses
+if g; variable v;
+Select BOOLEAN such that Uses (g, v)
+TRUE
+5000
+420 - 1 such that 2 unknown Uses
+constant c; variable v;
+Select c such that Uses (c, v)
+none
+5000
+421 - 1 such that 2 unknown Uses
+prog_line pg; variable v;
+Select pg such that Uses (pg, v)
+3, 6, 7, 8, 9, 10, 11, 13, 14, 15, 17, 18
+5000
+422 - 1 such that 2 unknown Uses
+if if ; variable v;
+Select <if.stmt#, v.varName> such that Uses (if, v)
+10 x
+5000
+423 - 1 such that 2 unknown Uses
+assign a ; variable v;
+Select <a.stmt#, v.varName> such that Uses (a, v)
+7 x, 7 y, 9 i, 11 x, 13 z, 13 x, 13 i, 14 z, 15 x, 15 y, 15 z, 17 z
+5000
+424 - 1 such that 2 unknown Modifies
+assign a, a1 ; procedure p; call call; constant c; variable v;
+Select <p.procName, c.value> such that Modifies (p, v)
+First 0, First 1, First 2, First 5, Second 0, Second 1, Second 2, Second 5, Third 0, Third 1, Third 2, Third 5
+5000
+425 - 1 such that 2 unknown Modifies
+procedure procName ; variable v;
+Select procName . procName such that Modifies (procName, v)
+First, Second, Third
+5000
+426 - 1 such that 2 unknown Modifies
+call c ; variable v;
+Select c.procName such that Modifies (c, v)
+Second, Third
+5000
+427 - 1 such that 2 unknown Modifies
+read r ;  variable v;
+Select r.varName such that Modifies (r, v)
+x, z
+5000
+428 - 1 such that 2 unknown Modifies
+print p ; variable v;
+Select p.varName such that Modifies (p, v)
+none
+5000
+429 - 1 such that 2 unknown Modifies
+constant c ; variable v;
+Select c.value such that Modifies (_v c)
+none
+5000
+430 - 1 such that 2 unknown Modifies
+call c ; variable v;
+Select c.stmt# such that Modifies (c, v)
+3, 8
+5000
+431 - 1 such that 2 unknown Modifies
+while w ; variable v;
+Select w.stmt# such that Modifies (w, v)
+6
+5000
+432 - 1 such that 2 unknown Modifies
+if IF; variable v;
+Select IF such that Modifies (IF, v)
+10
+5000
+433 - 1 such that 2 unknown Modifies
+assign as; variable v;
+Select as such that Modifies (as, v)
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+434 - 1 such that 2 unknown Calls
+procedure p, q;
+Select p.procName such that Calls (p, q)
+First, Second
+5000
+435 - 1 such that 2 unknown Calls
+procedure procName, p2;
+Select <procName . procName, p2.procName> such that Calls (procName, p2)
+First Second, Second Third
+5000
+436 - 1 such that 2 unknown Calls
+procedure p, q;
+Select <p,q > such that Calls (p, q)
+First Second, Second Third
+5000
+437 - 1 such that 2 unknown Calls
+variable v ; constant c ;
+Select v.varName such that Calls (c, v)
+none
+5000
+438 - 1 such that 2 unknown Calls
+read r ;print p ;
+Select r.varName such that Calls (r, p)
+none
+5000
+439 - 1 such that 2 unknown Calls*
+print p ; call c ;
+Select p.stmt# such that Calls* (p, c)
+none
+5000
+440 - 1 such that 2 unknown Calls*
+while w ; call c;
+Select <w.stmt#, c> such that Calls* (w, 9)
+none
+5000
+441 - 1 such that 2 unknown Calls*
+if IF; assign a;
+Select <IF, a> such that Calls* (IF, a)
+none
+5000
+442 - 1 such that 2 unknown Calls*
+variable v, var;
+Select var such that Calls* (v, var)
+none
+5000
+443 - 1 such that 2 unknown Next
+stmt stmt; read r;
+Select stmt such that Next (stmt, r)
+1
+5000
+444 - 1 such that 2 unknown Next
+print Select; call Calls;
+Select Select such that Next (Select, print)
+none
+5000
+445 - 1 such that 2 unknown Next
+while while; if if;
+Select while such that Next (while, if)
+6
+5000
+446 - 1 such that 2 unknown Next
+procedure p; stmt stmt;
+Select p such that Next (p, stmt)
+none
+5000
+447 - 1 such that 2 unknown Next*
+read r ; constant c;
+Select r.stmt# such that Next* (c, r)
+none
+5000
+448 - 1 such that 2 unknown Next*
+prog_line pg; if if ;
+Select <pg, if.stmt#> such that Next* (pg, if)
+4 10, 5 10, 6 10, 7 10, 8 10, 9 10
+5000
+449 - 1 such that 2 unknown Next*
+assign a ; print p; call call; constant c;
+Select <a, c.value> such that Next* (a, p)
+16 0, 16 1, 16 2, 16 5, 17 0, 17 1, 17 2, 17 5
+5000
+450 - 1 such that 2 unknown NextBip
+stmt stmt; read r;
+Select stmt such that NextBip (stmt, r)
+1
+5000
+451 - 1 such that 2 unknown NextBip
+print Select; call Calls;
+Select Select such that NextBip (Select, print)
+none
+5000
+452 - 1 such that 2 unknown NextBip
+while while; if if;
+Select while such that NextBip (while, if)
+6
+5000
+453 - 1 such that 2 unknown NextBip
+procedure p; stmt stmt;
+Select p such that NextBip (p, stmt)
+none
+5000
+454 - 1 such that 2 unknown NextBip
+stmt s; prog_line pg;
+Select <s, pg> such that NextBip (s, pg)
+1 2, 2 3, 3 4, 4 5, 5 6, 6 7, 6 10, 7 8, 8 16, 16 17, 17 18, 18 9, 9 6, 10 11, 10 12, 11 13, 12 13, 13 14, 14 15
+5000
+455 - 1 such that 2 unknown NextBip*
+stmt s; prog_line pg;
+Select <s.stmt#, pg> such that NextBip* (s, pg)
+1 2, 1 3, 1 4, 1 5, 1 6, 1 7, 1 8, 1 9, 1 10, 1 11, 1 12, 1 13, 1 14, 1 15, 1 16, 1 17, 1 18, 2 3, 2 4, 2 5, 2 6, 2 7, 2 8, 2 9, 2 10, 2 11, 2 12, 2 13, 2 14, 2 15, 2 16, 2 17, 2 18, 3 4, 3 5, 3 6, 3 7, 3 8, 3 9, 3 10, 3 11, 3 12, 3 13, 3 14, 3 15, 3 16, 3 17, 3 18, 4 5, 4 6, 4 7, 4 8, 4 9, 4 10, 4 11, 4 12, 4 13, 4 14, 4 15, 4 16, 4 17, 4 18, 5 6, 5 7, 5 8, 5 9, 5 10, 5 11, 5 12, 5 13, 5 14, 5 15, 5 16, 5 17, 5 18, 6 6, 6 7, 6 8, 6 9, 6 10, 6 11, 6 12, 6 13, 6 14, 6 15, 6 16, 6 17, 6 18, 7 6, 7 7, 7 8, 7 9, 7 10, 7 11, 7 12, 7 13, 7 14, 7 15, 7 16, 7 17, 7 18, 8 6, 8 7, 8 8, 8 9, 8 10, 8 11, 8 12, 8 13, 8 14, 8 15, 8 16, 8 17, 8 18, 9 6, 9 7, 9 8, 9 9, 9 10, 9 11, 9 12, 9 13, 9 14, 9 15, 9 16, 9 17, 9 18, 10 11, 10 12, 10 13, 10 14, 10 15, 11 13, 11 14, 11 15, 12 13, 12 14, 12 15, 13 14, 13 15, 14 15, 16 6, 16 7, 16 8, 16 9, 16 10, 16 11, 16 12, 16 13, 16 14, 16 15, 16 16, 16 17, 16 18, 17 6, 17 7, 17 8, 17 9, 17 10, 17 11, 17 12, 17 13, 17 14, 17 15, 17 16, 17 17, 17 18, 18 6, 18 7, 18 8, 18 9, 18 10, 18 11, 18 12, 18 13, 18 14, 18 15, 18 16, 18 17, 18 18
+5000
+456 - 1 such that 2 unknown NextBip*
+read r ; constant c;
+Select r.stmt# such that NextBip* (c, r)
+none
+5000
+457 - 1 such that 2 unknown NextBip*
+prog_line pg; if if ;
+Select <pg, if.stmt#> such that NextBip* (pg, if)
+1 10, 2 10, 3 10, 4 10, 5 10, 6 10, 7 10, 8 10, 9 10, 16 10, 17 10, 18 10
+5000
+458 - 1 such that 2 unknown NextBip*
+assign a ; print p; call call; constant c;
+Select <a, c.value> such that NextBip* (a, p)
+4 0, 4 1, 4 2, 4 5, 5 0, 5 1, 5 2, 5 5, 7 0, 7 1, 7 2, 7 5, 9 0, 9 1, 9 2, 9 5, 16 0, 16 1, 16 2, 16 5, 17 0, 17 1, 17 2, 17 5
+5000
+459 - 1 such that 2 unknown Affects
+stmt stmt; read r;
+Select stmt such that Affects (stmt, r)
+none
+5000
+460 - 1 such that 2 unknown Affects
+print Select; call Parent;
+Select Select such that Affects (Select, print)
+none
+5000
+461 - 1 such that 2 unknown Affects
+while while; if if;
+Select while such that Affects (while, if)
+none
+5000
+462 - 1 such that 2 unknown Affects
+procedure p; stmt stmt;
+Select p such that Affects (p, stmt)
+none
+5000
+463 - 1 such that 2 unknown Affects
+prog_line p; stmt s;
+Select <p, s.stmt#> such that Affects (p, s)
+4 7, 4 11, 4 13, 4 15, 5 9, 5 13, 7 7, 7 11, 7 13, 7 15, 9 9, 9 13, 11 13, 11 15, 12 13, 13 14, 13 15, 14 15, 16 17
+5000
+464 - 1 such that 2 unknown Affects*
+read r ; constant c;
+Select r.stmt# such that Affects* (c, r)
+none
+5000
+465 - 1 such that 2 unknown Affects*
+prog_line pg; if if ;
+Select <pg, if.stmt#> such that Affects* (pg, if)
+none
+5000
+466 - 1 such that 2 unknown Affects*
+assign a1, a2;
+Select <a1, a2> such that Affects* (a1, a2)
+4 7, 4 11, 4 13, 4 14, 4 15, 5 9, 5 13, 5 14, 5 15, 7 7, 7 11, 7 13, 7 14, 7 15, 9 9, 9 13, 9 14, 9 15, 11 13, 11 14, 11 15, 12 13, 12 14, 12 15, 13 14, 13 15, 14 15, 16 17
+5000
+467 - 1 such that 2 unknown AffectsBip
+stmt stmt; read r;
+Select stmt such that AffectsBip (stmt, r)
+none
+5000
+468 - 1 such that 2 unknown AffectsBip
+print Select; call Parent;
+Select Select such that AffectsBip (Select, print)
+none
+5000
+469 - 1 such that 2 unknown AffectsBip
+while while; if if;
+Select while such that AffectsBip (while, if)
+none
+5000
+470 - 1 such that 2 unknown AffectsBip
+procedure p; stmt stmt;
+Select p such that AffectsBip (p, stmt)
+none
+5000
+471 - 1 such that 2 unknown AffectsBip
+prog_line p; stmt s;
+Select <p, s.stmt#> such that AffectsBip (p, s)
+4 7, 4 11, 4 13, 4 15, 5 9, 5 13, 7 7, 7 11, 7 13, 7 15, 9 9, 9 13, 11 13, 11 15, 12 13, 13 14, 13 15, 14 15, 16 13, 16 17
+5000
+472 - 1 such that 2 unknown AffectsBip*
+read r ; constant c;
+Select r.stmt# such that AffectsBip* (c, r)
+none
+5000
+473 - 1 such that 2 unknown AffectsBip*
+prog_line pg; if if ;
+Select <pg, if.stmt#> such that AffectsBip* (pg, if)
+none
+5000
+474 - 1 such that 2 unknown AffectsBip*
+assign a1, a2;
+Select <a1, a2> such that AffectsBip* (a1, a2)
+4 7, 4 11, 4 13, 4 14, 4 15, 5 9, 5 13, 5 14, 5 15, 7 7, 7 11, 7 13, 7 14, 7 15, 9 9, 9 13, 9 14, 9 15, 11 13, 11 14, 11 15, 12 13, 12 14, 12 15, 13 14, 13 15, 14 15, 16 13, 16 14, 16 15, 16 17
+5000
+475 - 1 pattern 1 unknown
+assign a;
+Select a pattern a ( _ , "x + 2 * y")
+7
+5000
+476 - 1 pattern 1 unknown
+assign a;
+Select a pattern a ( _ , "z")
+17
+5000
+477 - 1 pattern 1 unknown
+assign a;
+Select a pattern a ( _ , _"x"_)
+7, 11, 13, 15
+5000
+478 - 1 pattern 1 unknown
+assign a;
+Select a pattern a (_, _"x*y+z"_)
+15
+5000
+479 - 1 pattern 1 unknown
+assign a;
+Select a pattern a (_, _" x * y + z"_)
+15
+5000
+480 - 1 pattern 1 unknown
+assign a;
+Select a pattern a ( _ , _"x * y"_)
+15
+5000
+481 - 1 pattern 1 unknown
+assign a;
+Select a pattern a (_, "x*y+z")
+15
+5000
+482 - 1 pattern 1 unknown
+assign a;
+Select a pattern a ("x", _)
+4, 7, 11, 15
+5000
+483 - 1 pattern 1 unknown
+if pattern;
+Select pattern pattern pattern (_ , _ , _)
+10
+5000
+484 - 1 pattern 1 unknown
+if and;
+Select and pattern and ("x" , _ , _)
+10
+5000
+485 - 1 pattern 1 unknown
+while while;
+Select while pattern while (_ , _)
+6
+5000
+486 - 1 pattern 1 unknown
+while while;
+Select while pattern while ("i" , _)
+6
+5000
+487 - 1 pattern 1 unknown
+while while;
+Select while pattern while ("y" , _)
+none
+5000
+488 - 1 pattern 2 unknown
+assign a; variable and;
+Select a pattern a ( and , "x + 2 * y")
+7
+5000
+489 - 1 pattern 2 unknown
+assign a; variable and;
+Select a pattern a ( and , "z")
+17
+5000
+490 - 1 pattern 2 unknown
+assign a; variable and;
+Select a pattern a ( and , _"x"_)
+7, 11, 13, 15
+5000
+491 - 1 pattern 2 unknown
+assign a; variable and;
+Select a pattern a (and, _"x*y+z"_)
+15
+5000
+492 - 1 pattern 2 unknown
+assign a; variable and;
+Select a pattern a (and, _" x * y + z"_)
+15
+5000
+493 - 1 pattern 2 unknown
+assign a; variable and;
+Select a pattern a ( and , _"x * y"_)
+15
+5000
+494 - 1 pattern 2 unknown
+assign a; variable and;
+Select a pattern a (and, "x*y+z")
+15
+5000
+495 - 1 pattern 2 unknown
+assign a; variable and;
+Select a pattern a (and, _)
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+496 - 1 pattern 2 unknown
+if while; variable and;
+Select while pattern while (and , _, _)
+10
+5000
+497 - 1 pattern 2 unknown
+while while; variable and;
+Select while pattern while (and , _)
+6
+5000
+498 - 1 with holds
+stmt s;
+Select s with 1011212 = 1011212
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+499 - 1 with holds
+read r;
+Select r with "xsgfwef" = "xsgfwef"
+1, 2
+5000
+500 - 1 with does not hold
+print p ;
+Select p.stmt# with "x" = 10
+none
+5000
+501 - 1 with does not hold
+call c ;
+Select c.stmt# with "readPoint" = "read"
+none
+5000
+502 - 1 with does not hold
+while w ;
+Select w.stmt# with 1 = 10
+none
+5000
+503 - 1 with 1 unknown
+stmt s;
+Select s with 22 = s
+none
+5000
+504 - 1 with 1 unknown
+read r;
+Select r with 1 = r
+none
+5000
+505 - 1 with 1 unknown
+print p;
+Select p with p = "x"
+none
+5000
+506 - 1 with 1 unknown
+if Select;
+Select Select with i = 18
+none
+5000
+507 - 1 with 1 unknown
+assign a;
+Select a with a = "x"
+none
+5000
+508 - 1 with 1 unknown
+variable v;
+Select v with v = 2
+none
+5000
+509 - 1 with 1 unknown
+procedure p;
+Select p with p = "x"
+none
+5000
+510 - 1 with 1 unknown
+prog_line pg;
+Select pg with pg = 2
+2
+5000
+511 - 1 with 1 unknown
+read r;
+Select BOOLEAN with  r = "x"
+none
+5000
+512 - 1 with 1 unknown
+procedure procName ;
+Select procName . procName with procName . procName = "First"
+First
+5000
+513 - 1 with 1 unknown
+call c;
+Select c.procName with c.procName = "Third"
+Third
+5000
+514 - 1 with 1 unknown
+variable v ;
+Select v.varName with  v.varName = "v"
+v
+5000
+515 - 1 with 1 unknown
+read r;
+Select r.varName with r.varName = "x"
+x
+5000
+516 - 1 with 1 unknown
+print p ;
+Select p.varName with p.varName = "v"
+v
+5000
+517 - 1 with 1 unknown
+stmt s;
+Select s with 15 = s
+none
+5000
+518 - 1 with 1 unknown
+call c;
+Select c with c = "x"
+none
+5000
+519 - 1 with 1 unknown
+while while;
+Select while with 7 = w
+none
+5000
+520 - 1 with 1 unknown
+if main;
+Select main with "x" = main
+none
+5000
+521 - 1 with 1 unknown
+constant c;
+Select c with c = 3
+none
+5000
+522 - 1 with 1 unknown
+constant c ;
+Select c.value with c.value = 3
+none
+5000
+523 - 1 with 1 unknown
+stmt stmt ;
+Select stmt.stmt# with stmt.stmt# = 10
+10
+5000
+524 - 1 with 1 unknown
+read r ;
+Select r.stmt# with r.stmt# = "x"
+none
+5000
+525 - 1 with 1 unknown
+print p ;
+Select p.stmt# with 9 = p.stmt#
+none
+5000
+526 - 1 with 1 unknown
+call c ;
+Select c.stmt# with c.stmt# = 8
+8
+5000
+527 - 1 with 1 unknown
+while w ;
+Select w.stmt# with w.stmt# = 14
+none
+5000
+528 - 1 with 1 unknown
+if if ;
+Select if.stmt# with if.stmt# = 10
+10
+5000
+529 - 1 with 1 unknown
+assign a ;
+Select a.stmt# with a.stmt# = a.stmt#
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+530 - 1 with 1 unknown
+assign a, a1 ; print p; call call; constant c;
+Select <a.stmt#, c.value> with a.stmt# = 16
+16 0, 16 1, 16 2, 16 5
+5000
+531 - 1 with 2 unknown
+stmt s, s2;
+Select s with s2 = s
+none
+5000
+532 - 1 with 2 unknown
+read r; print p;
+Select r with p = r
+none
+5000
+533 - 1 with 2 unknown
+if Select; assign a;
+Select Select with i = a
+none
+5000
+534 - 1 with 2 unknown
+variable v; procedure p;
+Select v with v = p
+none
+5000
+535 - 1 with 2 unknown
+prog_line pg, p2;
+Select BOOLEAN with pg = p2
+TRUE
+5000
+536 - 1 with 2 unknown
+procedure procName; call c;
+Select procName . procName with procName . procName = c.procName
+Second, Third
+5000
+537 - 1 with 2 unknown
+variable v; read r;
+Select v.varName with  v.varName = r.varName
+x, z
+5000
+538 - 1 with 2 unknown
+print p ; variable v;
+Select p.varName with p.varName = v.varName
+v
+5000
+539 - 1 with 2 unknown
+stmt s; call c;
+Select s with c.stmt# = s.stmt#
+3, 8
+5000
+540 - 1 with 2 unknown
+while while; assign a;
+Select while with a.stmt# = w.stmt#
+none
+5000
+541 - 1 with 2 unknown
+if main;
+Select main with "x" = main.stmt#
+none
+5000
+542 - 1 with 2 unknown
+constant c; stmt s;
+Select c with c = s.stmt#
+none
+5000
+543 - 1 with 2 unknown
+constant c ; stmt s;
+Select c.value with c.value = s.stmt#
+1, 2, 5
+5000
+544 - 1 with 2 unknown
+stmt stmt , s2;
+Select stmt.stmt# with stmt.stmt# = s2.stmt#
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
+5000
+545 - 1 with 2 unknown
+read r ; stmt s;
+Select r.stmt# with r.varName = s.stmt#
+none
+5000
+546 - 1 with 2 unknown
+print p ; stmt s;
+Select p.stmt# with s.procName = p.stmt#
+none
+5000
+547 - 1 with 2 unknown
+call c ; assign a;
+Select c.stmt# with c.stmt# = a.stmt#
+none
+5000
+548 - 1 with 2 unknown
+while w ; stmt s;
+Select w.stmt# with w.stmt# = s.stmt#
+6
+5000
+549 - 1 with 2 unknown
+if if ; print p;
+Select if.stmt# with if.stmt# = p.stmt#
+none
+5000
+550 - 1 with 2 unknown
+assign a, a1 ; print p; call call; constant c;
+Select <a.stmt#, c.value> with a.stmt# = c.value
+5 5
+5000
+551 - 1 with 2 unknown
+stmt s; constant c;
+Select s with s.stmt# = c.value
+1, 2, 5
+5000
+552 - 1 with 2 unknown
+stmt s; procedure p; variable v;
+Select p with p.procName = v.varName
+none
+5000
+553 - 1 such that 1 pattern no common unknown
+assign a; stmt s;
+Select s such that Follows (13, s) pattern a (_ , "x + (2 * y)")
+14
+5000
+554 - 1 such that 1 pattern no common unknown
+assign a;variable v; stmt s1, s2;
+Select v such that Follows* ( s1, s2) pattern a ( v, _"1"_)
+i, x, z
+5000
+555 - 1 such that 1 pattern no common unknown
+assign a;variable v; while w ; stmt s;
+Select s such that Parent(w, s) pattern a ( v , _"x"_)
+7, 8, 9
+5000
+556 - 1 such that 1 pattern no common unknown
+assign a,a2;variable v; if if;
+Select a2 such that Parent*(if, a2) pattern a ( v, "5")
+11, 12
+5000
+557 - 1 such that 1 pattern no common unknown
+assign a;variable v; procedure p;
+Select a such that Uses(p,_) pattern a (v, _"x + 1"_)
+11
+5000
+558 - 1 such that 1 pattern no common unknown
+assign a, a2;variable v, v2;
+Select v2 such that Uses(a2, v2) pattern a ( v , "i - 1")
+x, y, i, z
+5000
+559 - 1 such that 1 pattern no common unknown
+assign a, a2;variable v, v2;
+Select a2 such that Modifies(a2, v2) pattern a ( v , _"i"_)
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+560 - 1 such that 1 pattern no common unknown
+assign a, a2;variable v;
+Select a2 such that Modifies (a2, "x") pattern a ( v , _"x"_)
+4, 7, 11, 15
+5000
+561 - 1 such that 1 pattern no common unknown
+assign a, a2; if i; procedure p, p2; variable v;
+Select <i, v, p, p2> such that Calls (p, p2) pattern i (v, _, _)
+10 x First Second, 10 x Second Third
+5000
+562 - 1 such that 1 pattern no common unknown
+if i; procedure p, p2; variable v;
+Select <i, v, p.procName, p2> such that Calls* (p, p2) pattern i (v, _, _)
+10 x First Second, 10 x First Third, 10 x Second Third
+5000
+563 - 1 such that 1 pattern no common unknown
+assign a, a2; while w; variable v;
+Select <a, a2.stmt#, w, v.varName> such that Next (a, a2) pattern w (v, _)
+4 5 6 i, 11 13 6 i, 12 13 6 i, 13 14 6 i, 14 15 6 i, 16 17 6 i,
+5000
+564 - 1 such that 1 pattern no common unknown
+assign a, a2; while w; variable v;
+Select <a2.stmt#, w, v.varName> such that Next* (9, a2) pattern w (v, _)
+7 6 i, 9 6 i, 11 6 i, 12 6 i, 13 6 i, 14 6 i, 15 6 i
+5000
+565 - 1 such that 1 pattern no common unknown
+assign a; call c; while w; variable v;
+Select <c.stmt#, a, w, v.varName> such that NextBip (c, a) pattern w (v, _)
+3 4 6 i, 8 16 6 i
+5000
+566 - 1 such that 1 pattern no common unknown
+assign a, a2; while w; variable v;
+Select <a2.stmt#, w, v.varName> such that NextBip* (9, a2) pattern w (v, _)
+7 6 i, 9 6 i, 11 6 i, 12 6 i, 13 6 i, 14 6 i, 15 6 i, 16 6 i, 17 6 i
+5000
+567 - 1 such that 1 pattern no common unknown
+assign a, a2; while w; variable v;
+Select <a, a2.stmt#, w, v.varName> such that Affects (a, a2) pattern w (v, _)
+4 7 6 i, 4 11 6 i, 4 13 6 i, 4 15 6 i, 5 9 6 i, 5 13 6 i, 7 7 6 i, 7 11 6 i, 7 13 6 i, 7 15 6 i, 9 9 6 i, 9 13 6 i, 11 13 6 i, 11 15 6 i, 12 13 6 i, 13 14 6 i, 13 15 6 i, 14 15 6 i, 16 17 6 i
+5000
+568 - 1 such that 1 pattern no common unknown
+assign a, a2; while w; variable v;
+Select <a, a2.stmt#, w, v.varName> such that Affects* (a, a2) pattern w (v, _)
+4 7 6 i, 4 11 6 i, 4 13 6 i, 4 14 6 i, 4 15 6 i, 5 9 6 i, 5 13 6 i, 5 14 6 i, 5 15 6 i, 7 7 6 i, 7 11 6 i, 7 13 6 i, 7 14 6 i, 7 15 6 i, 9 9 6 i, 9 13 6 i, 9 14 6 i, 9 15 6 i, 11 13 6 i, 11 14 6 i, 11 15 6 i, 12 13 6 i, 12 14 6 i, 12 15 6 i, 13 14 6 i, 13 15 6 i, 14 15 6 i, 16 17 6 i
+5000
+569 - 1 such that 1 pattern no common unknown
+assign a, a2; while w; variable v;
+Select <a, w, v.varName> such that AffectsBip (16, a) pattern w (v, _)
+17 6 i, 13 6 i
+5000
+570 - 1 such that 1 pattern no common unknown
+assign a, a2; while w; variable v;
+Select <a, w, v.varName> such that AffectsBip* (16, a) pattern w (v, _)
+17 6 i, 13 6 i, 14 6 i, 15 6 i
+5000
+571 - 1 such that 1 pattern 1 common unknown
+assign a; stmt s;
+Select a such that Follows (a, _) pattern a (_ , "x + (2 * y)")
+7
+5000
+572 - 1 such that 1 pattern 1 common unknown
+assign a;variable v; stmt s1, s2;
+Select v such that Follows* ( s1, a) pattern a ( v, _"1"_)
+i
+5000
+573 - 1 such that 1 pattern 1 common unknown
+assign a;variable v; while w ; stmt s;
+Select a such that Parent(w, a) pattern a ( v , _"x"_)
+7
+5000
+574 - 1 such that 1 pattern 1 common unknown
+assign a,a2;variable v; if if;
+Select a2 such that Parent*(if, a) pattern a ( v, "5")
+none
+5000
+575 - 1 such that 1 pattern 1 common unknown
+assign a;variable v; procedure p;
+Select v such that Uses(p,v) pattern a (v, _"x + 1"_)
+x
+5000
+576 - 1 such that 1 pattern 1 common unknown
+assign a, a2;variable v, v2;
+Select v such that Uses(a2, v) pattern a ( v , "i - 1")
+i
+5000
+577 - 1 such that 1 pattern 1 common unknown
+assign a, a2;variable v, v2;
+Select a2 such that Modifies(a2, v) pattern a ( v , _"i"_)
+5, 9, 12, 13, 16
+5000
+578 - 1 such that 1 pattern 1 common unknown
+assign a, a2;variable v;
+Select a such that Modifies (a, "x") pattern a ( v , _"x"_)
+7, 11, 15
+5000
+579 - 1 such that 1 pattern 1 common unknown
+assign a, a2; if i; procedure p, p2; variable v;
+Select <i, v, p, p2> such that Calls (p, p2) pattern p (v, _, _)
+none
+5000
+580 - 1 such that 1 pattern 1 common unknown
+if i; procedure p, p2; variable v;
+Select <i, v, p.procName, p2> such that Calls* (p, i) pattern i (v, _, _)
+none
+5000
+581 - 1 such that 1 pattern 1 common unknown
+assign a, a2; while w; variable v;
+Select <a, w, v.varName> such that Next (a, w) pattern w (v, _)
+5 6 i, 9 6 i
+5000
+582 - 1 such that 1 pattern 1 common unknown
+assign a, a2; while w; variable v;
+Select <w, a2.stmt#, v.varName> such that Next* (w, a2) pattern w (v, _)
+6 7 i, 6 9 i, 6 11 i, 6 12 i, 6 13 i, 6 14 i, 6 15 i
+5000
+583 - 1 such that 1 pattern 1 common unknown
+assign a, a2; while w; variable v; print p;
+Select <p, a, v.varName> such that NextBip (p, a) pattern a (v, _)
+18 9 i
+5000
+584 - 1 such that 1 pattern 1 common unknown
+assign a, a2; while w; variable v;
+Select <w, a2.stmt#, v.varName> such that NextBip* (w, a2) pattern w (v, _)
+6 7 i, 6 9 i, 6 11 i, 6 12 i, 6 13 i, 6 14 i, 6 15 i, 6 16 i, 6 17 i
+5000
+585 - 1 such that 1 pattern 1 common unknown
+assign a, a2; while w; variable v;
+Select <a, a2.stmt#, v.varName> such that Affects (a, a2) pattern a (v, _"y"_)
+7 7 x, 7 11 x, 7 13 x, 7 15 x
+5000
+586 - 1 such that 1 pattern 1 common unknown
+assign a, a2; while w; variable v;
+Select <a, a2.stmt#, w> such that Affects* (a, a2) pattern a ("z", _)
+12 13 6, 12 14 6, 12 15 6, 13 14 6, 13 15 6, 16 17 6
+5000
+587 - 1 such that 1 pattern 1 common unknown
+assign a, a2; while w; variable v;
+Select <a, a2.stmt#, v.varName> such that AffectsBip (a, a2) pattern a (v, "5")
+5 9 i, 5 13 i, 16 17 z, 16 13 z
+5000
+588 - 1 such that 1 pattern 1 common unknown
+assign a, a2; while w; variable v;
+Select <a, a2.stmt#, w> such that AffectsBip* (a, a2) pattern a ("z", _)
+12 13 6, 12 14 6, 12 15 6, 13 14 6, 13 15 6, 16 13 6, 16 14 6, 16 15 6, 16 17 6
+5000
+589 - 1 such that 1 pattern 2 common unknown
+assign a; stmt s;
+Select a such that Follows (a, s) pattern a (s , "x + (2 * y)")
+none
+5000
+590 - 1 such that 1 pattern 2 common unknown
+assign a;variable v; stmt s1, s2;
+Select v such that Follows* ( a, v) pattern a ( v, _"1"_)
+none
+5000
+591 - 1 such that 1 pattern 2 common unknown
+assign a;variable v; while w ; stmt s;
+Select a such that Parent(w, a) pattern a ( w , _"x"_)
+none
+5000
+592 - 1 such that 1 pattern 2 common unknown
+assign a,a2;variable v; if if;
+Select a2 such that Parent*(if, a) pattern a ( if, "5")
+none
+5000
+593 - 1 such that 1 pattern 2 common unknown
+assign a;variable v; procedure p;
+Select <a, v> such that Uses(a, v) pattern a (v, _"x"_)
+7 x, 11 x, 13 z, 15 x
+5000
+594 - 1 such that 1 pattern 2 common unknown
+assign a, a2;variable v, v2; if if;
+Select v.varName such that Uses(if, v) pattern if ( v , _, _)
+x
+5000
+595 - 1 such that 1 pattern 2 common unknown
+assign a, a2;variable v, v2;
+Select <a, v> such that Modifies(a, v) pattern a ( v , _"i"_)
+9 i, 13 z
+5000
+596 - 1 such that 1 pattern 2 common unknown
+assign a, a2;variable v; while w;
+Select w such that Modifies (w, v) pattern w ( v , _)
+6
+5000
+597 - 1 such that 1 pattern 2 common unknown
+assign a, a2; if i; procedure p, p2; variable v;
+Select <i, v, p, p2> such that Calls (p, p2) pattern p (p2, _, _)
+none
+5000
+598 - 1 such that 1 pattern 2 common unknown
+if i; procedure p, p2; variable v;
+Select <i, v, p.procName, p2> such that Calls* (v, i) pattern i (v, _, _)
+none
+5000
+599 - 1 such that 1 pattern 2 common unknown
+assign a, a2; while w; variable v;
+Select <a, w, v.varName> such that Next (v, w) pattern w (v, _)
+none
+5000
+600 - 1 such that 1 pattern 2 common unknown
+assign a, a2; while w; variable v;
+Select <w, a2.stmt#, v.varName> such that Next* (w, v) pattern w (v, _)
+none
+5000
+601 - 1 such that 1 pattern 2 common unknown
+assign a, a2; while w; variable v;
+Select <a, w, v.varName> such that NextBip (v, w) pattern w (v, _)
+none
+5000
+602 - 1 such that 1 pattern 2 common unknown
+assign a, a2; while w; variable v;
+Select <w, a2.stmt#, v.varName> such that NextBip* (w, v) pattern w (v, _)
+none
+5000
+603 - 1 such that 1 pattern 2 common unknown
+assign a, a2; while w; variable v;
+Select <a, a2.stmt#, v.varName> such that Affects (a, v) pattern a (v, _"y"_)
+none
+5000
+604 - 1 such that 1 pattern 2 common unknown
+assign a, a2; while w; variable v;
+Select <a, a2.stmt#, w, v.varName> such that Affects* (a, v) pattern a (v, _)
+none
+5000
+605 - 1 such that 1 pattern 2 common unknown
+assign a, a2; while w; variable v;
+Select <a, a2.stmt#, v.varName> such that AffectsBip (a, v) pattern a (v, _"y"_)
+none
+5000
+606 - 1 such that 1 pattern 2 common unknown
+assign a, a2; while w; variable v;
+Select <a, a2.stmt#, w, v.varName> such that AffectsBip* (a, v) pattern a (v, _)
+none
+5000
+607 - 1 such that 1 pattern 1 with no common unknown
+assign a; stmt s; constant c;
+Select s such that Follows (13, s) pattern a (_ , "x + (2 * y)") with c.value = 0
+14
+5000
+608 - 1 such that 1 pattern 1 with no common unknown
+assign a;variable v; stmt s1, s2; procedure p;
+Select v such that Follows* ( s1, s2) pattern a ( v, _"1"_) with p.procName = "First"
+i, x, z
+5000
+609 - 1 such that 1 pattern 1 with no common unknown
+assign a;variable v; while w ; stmt s; prog_line pg;
+Select s such that Parent(w, s) pattern a ( v , _"x"_) with pg = 10
+7, 8, 9
+5000
+610 - 1 such that 1 pattern 1 with no common unknown
+assign a,a2;variable v; if if; call c;
+Select a2 such that Parent*(if, a2) pattern a ( v, "5") with c.procName = "Second"
+11, 12
+5000
+611 - 1 such that 1 pattern 1 with no common unknown
+assign a;variable v, v2; procedure p; print pr;
+Select a such that Uses(p,_) pattern a (v, _"x + 1"_) with v2.varName = pr.varName
+11
+5000
+612 - 1 such that 1 pattern 1 with no common unknown
+assign a, a2;variable v, v2; while w; stmt s;
+Select v2 such that Uses(a2, v2) pattern a ( v , "i - 1") with w.stmt# = s.stmt#
+x, y, i, z
+5000
+613 - 1 such that 1 pattern 1 with no common unknown
+assign a, a2;variable v, v2, v3; read r;
+Select a2 such that Modifies(a2, v2) pattern a ( v , _"i"_) with r.varName = v3.varName
+4, 5, 7, 9, 11, 12, 13, 14, 15, 16, 17
+5000
+614 - 1 such that 1 pattern 1 with no common unknown
+assign a, a2;variable v;
+Select a2 such that Modifies (a2, "x") pattern a ( v , _"x"_)
+4, 7, 11, 15
+5000
+615 - 1 such that 1 pattern 1 with no common unknown
+assign a, a2; if i, i2; procedure p, p2; variable v; prog_line pg;
+Select <i, v, p, p2> such that Calls (p, p2) pattern i (v, _, _) with i2.stmt# = pg
+10 x First Second, 10 x Second Third
+5000
+616 - 1 such that 1 pattern 1 with no common unknown
+if i; procedure p, p2; variable v; assign a; stmt s;
+Select <i, v, p.procName, p2> such that Calls* (p, p2) pattern i (v, _, _) with a.stmt# = s.stmt#
+10 x First Second, 10 x First Third, 10 x Second Third
+5000
+617 - 1 such that 1 pattern 1 with no common unknown
+assign a, a2; while w; variable v; if i;
+Select <a, a2.stmt#, w, v.varName> such that Next (a, a2) pattern w (v, _) with i.stmt#=10
+4 5 6 i, 11 13 6 i, 12 13 6 i, 13 14 6 i, 14 15 6 i, 16 17 6 i
+5000
+618 - 1 such that 1 pattern 1 with no common unknown
+assign a, a2; while w; variable v; while w2;
+Select <a2.stmt#, w, v.varName> such that Next* (9, a2) pattern w (v, _) with w2.stmt# = 6
+7 6 i, 9 6 i, 11 6 i, 12 6 i, 13 6 i, 14 6 i, 15 6 i
+5000
+619 - 1 such that 1 pattern 1 with no common unknown
+assign a, a2; call c; while w; variable v;
+Select <c.stmt#, a, w, v.varName> such that NextBip (c, a) pattern w (v, _) with a2.stmt# = 4
+3 4 6 i, 8 16 6 i
+5000
+620 - 1 such that 1 pattern 1 with no common unknown
+assign a, a2; while w; variable v; constant c;
+Select <a2.stmt#, w, v.varName> such that NextBip* (9, a2) pattern w (v, _) with c.value = 2
+7 6 i, 9 6 i, 11 6 i, 12 6 i, 13 6 i, 14 6 i, 15 6 i, 16 6 i, 17 6 i
+5000
+621 - 1 such that 1 pattern 1 with no common unknown
+assign a, a2; while w; variable v; print pr;
+Select <a, a2.stmt#, w, v.varName> such that Affects (a, a2) pattern w (v, _) with pr.stmt# = 18
+4 7 6 i, 4 11 6 i, 4 13 6 i, 4 15 6 i, 5 9 6 i, 5 13 6 i, 7 7 6 i, 7 11 6 i, 7 13 6 i, 7 15 6 i, 9 9 6 i, 9 13 6 i, 11 13 6 i, 11 15 6 i, 12 13 6 i, 13 14 6 i, 13 15 6 i, 14 15 6 i, 16 17 6 i
+5000
+622 - 1 such that 1 pattern 1 with no common unknown
+assign a, a2; while w; variable v; read r;
+Select <a, a2.stmt#, w, v.varName> such that Affects* (a, a2) pattern w (v, _) with r.stmt# = 1
+4 7 6 i, 4 11 6 i, 4 13 6 i, 4 14 6 i, 4 15 6 i, 5 9 6 i, 5 13 6 i, 5 14 6 i, 5 15 6 i, 7 7 6 i, 7 11 6 i, 7 13 6 i, 7 14 6 i, 7 15 6 i, 9 9 6 i, 9 13 6 i, 9 14 6 i, 9 15 6 i, 11 13 6 i, 11 14 6 i, 11 15 6 i, 12 13 6 i, 12 14 6 i, 12 15 6 i, 13 14 6 i, 13 15 6 i, 14 15 6 i, 16 17 6 i
+5000
+623 - 1 such that 1 pattern 1 with no common unknown
+assign a, a2; while w; variable v; prog_line pg;
+Select <a, w, v.varName> such that AffectsBip (16, a) pattern w (v, _) with pg = 12
+17 6 i, 13 6 i
+5000
+624 - 1 such that 1 pattern 1 with no common unknown
+assign a, a2; while w; variable v; print p;
+Select <a, w, v.varName> such that AffectsBip* (16, a) pattern w (v, _) with v.varName = "i"
+17 6 i, 13 6 i, 14 6 i, 15 6 i
+5000
+625 - 1 such that 1 pattern 1 with 1 common unknown
+assign a; stmt s;
+Select a such that Follows (a, _) pattern a (_ , "x + (2 * y)") with a.stmt# = 7
+7
+5000
+626 - 1 such that 1 pattern 1 with 1 common unknown
+assign a;variable v; stmt s1, s2;
+Select v such that Follows* ( s1, a) pattern a ( v, _"1"_) with v.varName = "i"
+i
+5000
+627 - 1 such that 1 pattern 1 with 1 common unknown
+assign a;variable v; while w ; stmt s;
+Select a such that Parent(w, a) pattern a ( v , _"x"_) with v.varName = "x"
+7
+5000
+628 - 1 such that 1 pattern 1 with 1 common unknown
+assign a,a2;variable v; if if;
+Select a2 such that Parent*(if, a) pattern a ( v, "5") with if.stmt# = a
+none
+5000
+629 - 1 such that 1 pattern 1 with 1 common unknown
+assign a;variable v; procedure p;
+Select v such that Uses(p, v) pattern a (v, _"x + 1"_) with p.procName = "First"
+x
+5000
+630 - 1 such that 1 pattern 1 with 1 common unknown
+assign a, a2;variable v, v2;
+Select a such that Uses(a, v2) pattern a ( v , "i - 1") with v.varName = "i"
+9
+5000
+631 - 1 such that 1 pattern 1 with 1 common unknown
+assign a, a2;variable v, v2;
+Select a2 such that Modifies(a2, v) pattern a ( v , _"i"_) with v.varName = v2.varName
+5, 9, 12, 13, 16
+5000
+632 - 1 such that 1 pattern 1 with 1 common unknown
+assign a, a2;variable v;
+Select a such that Modifies (a, "x") pattern a ( v , _"x"_) with a.stmt# = 11
+11
+5000
+633 - 1 such that 1 pattern 1 with 1 common unknown
+assign a, a2; if i; procedure p, p2; variable v;
+Select <i, v, p, p2> such that Calls (p, p2) pattern p (v, _, _) with p.procName = p2.procName
+none
+5000
+634 - 1 such that 1 pattern 1 with 1 common unknown
+if i; procedure p, p2; variable v;
+Select <i, v, p.procName, p2> such that Calls* (p, i) pattern i (v, _, _) with i.stmt# = p
+none
+5000
+635 - 1 such that 1 pattern 1 with 1 common unknown
+assign a, a2; while w; variable v;
+Select <a, w, v.varName> such that Next (a, w) pattern w (v, _) with w.stmt# = 6
+5 6 i, 9 6 i
+5000
+636 - 1 such that 1 pattern 1 with 1 common unknown
+assign a, a2; while w; variable v;
+Select <w, a2.stmt#, v.varName> such that Next* (w, a2) pattern w (v, _) with a2.stmt# = 13
+6 13 i
+5000
+637 - 1 such that 1 pattern 1 with 1 common unknown
+assign a, a2; while w; variable v; print p;
+Select <p, a, v.varName> such that NextBip (p, a) pattern a (v, _) with a.stmt# = 9
+18 9 i
+5000
+638 - 1 such that 1 pattern 1 with 1 common unknown
+assign a, a2; while w; variable v;
+Select <w, a2.stmt#, v.varName> such that NextBip* (w, a2) pattern w (v, _) with a2.stmt# = 16
+6 16 i
+5000
+639 - 1 such that 1 pattern 1 with 1 common unknown
+assign a, a2; while w; variable v;
+Select <a, a2.stmt#, v.varName> such that Affects (a, a2) pattern a (v, _"y"_) with a2.stmt# = 11
+7 11 x
+5000
+640 - 1 such that 1 pattern 1 with 1 common unknown
+assign a, a2; while w; variable v;
+Select <a, a2.stmt#, w> such that Affects* (a, a2) pattern a ("z", _) with a.stmt# = 12
+12 13 6, 12 14 6, 12 15 6
+5000
+641 - 1 such that 1 pattern 1 with 1 common unknown
+assign a, a2; while w; variable v;
+Select <a, a2.stmt#, v.varName> such that AffectsBip (a, a2) pattern a (v, "5") with a.stmt# = 16
+16 17 z, 16 13 z
+5000
+642 - 1 such that 1 pattern 1 with 1 common unknown
+assign a, a2; while w; variable v;
+Select <a, a2.stmt#, w> such that AffectsBip* (a, a2) pattern a ("z", _) with a.stmt# = 16
+16 13 6, 16 14 6, 16 15 6, 16 17 6
+5000
+643 - 1 such that 1 pattern 1 with 2 common unknown
+assign a; stmt s;
+Select a such that Follows (a, s) pattern a (s , "x + (2 * y)") with a.stmt# = s.stmt#
+none
+5000
+644 - 1 such that 1 pattern 1 with 2 common unknown
+assign a;variable v; stmt s1, s2;
+Select v such that Follows* ( a, v) pattern a ( v, _"1"_) with a.stmt# = v.varName
+none
+5000
+645 - 1 such that 1 pattern 1 with 2 common unknown
+assign a;variable v; while w ; stmt s;
+Select a such that Parent(w, a) pattern a ( w , _"x"_) with a.stmt# = w.stmt#
+none
+5000
+646 - 1 such that 1 pattern 1 with 2 common unknown
+assign a,a2;variable v; if if;
+Select a2 such that Parent*(if, a) pattern a ( if, "5") with if.stmt# = a.stmt#
+none
+5000
+647 - 1 such that 1 pattern 1 with 2 common unknown
+assign a;variable v; procedure p;
+Select <a, v> such that Uses(a, v) pattern a (v, _"x"_) with a.stmt# = v.varName
+none
+5000
+648 - 1 such that 1 pattern 1 with 2 common unknown
+assign a, a2;variable v, v2; if if;
+Select v.varName such that Uses(if, v) pattern if ( v , _, _) with if.stmt# = v.varName
+none
+5000
+649 - 1 such that 1 pattern 1 with 2 common unknown
+assign a, a2;variable v, v2;
+Select <a, v> such that Modifies(a, v) pattern a ( v , _"i"_) with a.stmt# = v.varName
+none
+5000
+650 - 1 such that 1 pattern 1 with 2 common unknown
+assign a, a2;variable v; while w;
+Select w such that Modifies (w, v) pattern w ( v , _) with w.stmt# = v.varName
+none
+5000
+651 - 1 such that 1 pattern 1 with 2 common unknown
+assign a, a2; if i; procedure p, p2; variable v;
+Select <i, v, p, p2> such that Calls (p, p2) pattern p (p2, _, _) with p.procName = p2.procName
+none
+5000
+652 - 1 such that 1 pattern 1 with 2 common unknown
+if i; procedure p, p2; variable v;
+Select <i, v, p.procName, p2> such that Calls* (v, i) pattern i (v, _, _) with v.varName = i.stmt#
+none
+5000
+653 - 1 such that 1 pattern 1 with 2 common unknown
+assign a, a2; while w; variable v;
+Select <a, w, v.varName> such that Next (v, w) pattern w (v, _) with v.varName = w.stmt#
+none
+5000
+654 - 1 such that 1 pattern 1 with 2 common unknown
+assign a, a2; while w; variable v;
+Select <w, a2.stmt#, v.varName> such that Next* (w, v) pattern w (v, _) with w.stmt# = v.varName
+none
+5000
+655 - 1 such that 1 pattern 1 with 2 common unknown
+assign a, a2; while w; variable v;
+Select <a, w, v.varName> such that NextBip (v, w) pattern w (v, _) with w.stmt# = v
+none
+5000
+656 - 1 such that 1 pattern 1 with 2 common unknown
+assign a, a2; while w; variable v;
+Select <w, a2.stmt#, v.varName> such that NextBip* (w, v) pattern w (v, _) with w = v.varName
+none
+5000
+657 - 1 such that 1 pattern 1 with 2 common unknown
+assign a, a2; while w; variable v;
+Select <a, a2.stmt#, v.varName> such that Affects (a, v) pattern a (v, _"y"_) with a.stmt# = v.varName
+none
+5000
+658 - 1 such that 1 pattern 1 with 2 common unknown
+assign a, a2; while w; variable v;
+Select <a, a2.stmt#, w, v.varName> such that Affects* (a, v) pattern a (v, _) with a.stmt# = v.varName
+none
+5000
+659 - 1 such that 1 pattern 1 with 2 common unknown
+assign a, a2; while w; variable v;
+Select <a, a2.stmt#, v.varName> such that AffectsBip (a, v) pattern a (v, _"y"_) with a = v
+none
+5000
+660 - 1 such that 1 pattern 1 with 2 common unknown
+assign a, a2; while w; variable v;
+Select <a, a2.stmt#, w, v.varName> such that AffectsBip* (a, v) pattern a (v, _) with a.stmt# = v.varName
+none
+5000
+661 - multiple clauses
+procedure p, q;
+Select p such that Calls (p, q) with q.procName = "Third" such that Modifies (p, "i")
+Second
+5000
+662 - multiple clauses
+procedure p;
+Select p such that Calls (p, "Third") and Modifies (p, "i")
+Second
+5000
+663 - multiple clauses
+procedure p; call c; while w;
+Select p such that Calls ("Second", p) and Parent (w, c) with c.procName = p. procName
+Third
+5000
+664 - multiple clauses
+assign a; while w;
+Select a pattern a ("x", _) such that Parent* (w, a) and Next* (4, a)
+7
+5000
+665 - multiple clauses
+assign a; while w;
+Select a such that Modifies (a, "x") and Parent* (w, a) and Next* (4, a)
+7
+5000
+666 - multiple clauses
+prog_line n;
+Select n such that Next* (8, n) and Next* (n, 15)
+6, 7, 8, 9, 10, 11, 12, 13, 14
+5000
+667 - multiple clauses
+prog_line n; stmt s;
+Select s.stmt# such that Follows* (s, n) with n=13
+4, 5, 6, 10
+5000
+668 - multiple clauses
+prog_line n; stmt s, s1;
+Select s.stmt# such that Follows* (s, s1) with s1.stmt#=n and n=13
+4, 5, 6, 10
+5000
+669 - multiple clauses
+while w1, w2, w3;
+Select <w1, w2, w3> such that Parent* (w1, w2) and Parent* (w2, w3)
+none
+5000
+670 - multiple clauses
+assign a; while w; prog_line n;
+Select a such that Parent* (w, a) and Next* (60, n) pattern a("x", _) with a.stmt# = n
+none
+5000
+671 - multiple clauses
+assign a; while w;
+Select a such that Parent* (w, a) and Modifies (a, "x") and such that Next* (4, a)
+none
+5000
+672 - multiple clauses
+assign a; while w;
+Select a such that Parent* (w, a) and pattern a ("x", _) such that Next* (4, a)
+none
+5000
+673 - multiple clauses
+assign a; while w;
+Select a such that Parent* (w, a) pattern a ("x", _) and Next* (4, a)
+none
+5000
+674 - multiple clauses
+assign a, a2;
+Select <a, a2> such that Affects(a, _) and Affects*(a, a2) pattern a (_, _"x"_)
+7 7, 7 11, 7 13, 7 14, 7 15, 11 13, 11 14, 11 15, 13 14, 13 15
+5000
+675 - multiple clauses
+print p; call c; assign a; while w; variable v;
+Select <a, c.procName, w> such that Parent(w, c) and Uses(c, _) and Modifies(a, v) such that Parent(w, a)
+7 Third 6, 9 Third 6
+5000
+676 - multiple clauses
+procedure p; assign a; while w; variable v;
+Select <w, a> such that Follows*(w, a) and Next* (w, a) and Calls(p, _)
+6 13, 6 14, 6 15
+5000
+677 - multiple clauses
+assign a1, a2; while w; if and; variable v1, v2;
+Select <a1, w, v1, a2, and, v2> pattern a1 (v1, _) and and (v2,_,_) and w (v1,_) and a2(v2, _)
+5 6 i 4 10 x, 5 6 i 7 10 x, 5 6 i 11 10 x, 5 6 i 15 10 x, 9 6 i 4 10 x, 9 6 i 7 10 x, 9 6 i 11 10 x, 9 6 i 15 10 x
+5000
+678 - multiple clauses
+assign a; while w; if and; stmt s; variable v; print print; procedure procedure; prog_line pg;
+Select <a, procedure> with and.stmt# = s.stmt# and and.stmt# = s.stmt# and print.varName = v.varName and procedure.procName = "Third" and a.stmt# = pg and pg = 5
+5 Third
+5000
+679 - multiple clauses
+ procedure p; assign a; while w; variable v; call c;
+Select a such that Parent(w, c) and Uses(c, _) and Modifies(a, v) such that Parent(w, a) with a.stmt# = 7 and p.procName = "Third" and w.stmt# = 6 pattern a ("x", _"y"_) and a (_, _)
+7
+5000
+680 - multiple clauses
+procedure p; assign a; while w; variable v;
+Select <w, a> such that Follows*(w, a) and Next*(w, a) and Calls(p, _) pattern a (_, _"z"_) and a (_, _"x"_) and w (_, _)with v.varName = "z" and p.procName = "Second"
+6 13, 6 15
+5000
+681 - multiple clauses
+assign a1, a2; while w; if and; variable v1, v2; prog_line pg;
+Select <a1, w, v1, a2, and, v2> pattern a1 (v1, _) and and (v2,_,_) and w (v1,_) and a2(v2, _) with a2.stmt# = pg and pg = 7 pattern and ("x", _, _) and w ("i", _)
+5 6 i 7 10 x, 9 6 i 7 10 x
+5000
+682 - multiple clauses
+assign a; while w; if and; stmt s; variable v; print print; procedure p; prog_line pg;
+Select <a, p> with and.stmt# = s.stmt# and and.stmt# = s.stmt# and print.varName = v.varName and p.procName = "Third" and a.stmt# = pg and pg = 5 pattern and (_, _, _) and a ("i", _) such that Follows*(w, and) and Next*(a, 15) and Calls(_, p)
+5 Third
+5000
+683 - multiple clauses
+assign a, a2;
+Select <a, a2> such that Affects(a, _) and Affects*(a, a2) pattern a (_, _"x"_) with a.stmt# = 7
+7 7, 7 11, 7 13, 7 14, 7 15
+5000
+684 - multiple clauses
+assign a, a2;
+Select <a, a2> such that Affects(a, _) and Affects*(a, a2) pattern a (_, _"x"_) with a.stmt# = 7 such that Parent(_, a) and Next*(a, a2) and Follows*(4, a2) and Calls(_, _) and Calls*(_, _)
+7 13, 7 14, 7 15
+5000
+685 - multiple clauses
+assign a, a2;
+Select <a, a2> such that Affects(a, _) and Affects*(a, a2) pattern a (_, _"x"_) with a.stmt# = 7 such that Parent(_, a) and Next*(a, a2) and Follows*(4, a2) and Calls(_, _) and Calls*(_, _) pattern a (_, _"z"_)
+none
+5000
+686 - multiple clauses
+assign a; if i; while w; procedure p; variable v; prog_line pg;
+Select BOOLEAN pattern a (_,_) and i(_,_,_)and w(_,_) such that Uses(p, v) and Modifies(p, v) such that Follows(_, _) and Follows*(_,_) and Parent(_, _) and Parent*(_, _) and Affects(_, _) and Affects* (_, _) and AffectsBip(_,_) and AffectsBip*(_, _) and Calls(_, _) and Calls*(_,_) and Next(_,_) and Next*(_,_) and NextBip(_,_) and NextBip*(_, _) with a.stmt# = pg
+TRUE
+5000

@@ -1,0 +1,5 @@
+procedure p {
+    x = a; 
+    read x;
+    v = x;
+}

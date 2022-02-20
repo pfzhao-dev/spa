@@ -1,0 +1,165 @@
+1 - Test follows relationship
+stmt s;
+Select s such that Follows(1, 2)
+1,2,3,4,5,6,7,8,9,10, 11, 12, 13, 14, 15
+5000
+2 - Test follows relationship (syntax wrong)
+var v;
+Select v such that Follows(4, 5)
+none
+5000
+3 - Test Follows relationship 
+assign a;
+Select a such that Follows(5, 6)
+none
+5000
+4 - Test Parent relationship (syntax wrong)
+variable v;
+Select v such that parent(5, 7)
+none
+5000
+5 - Test Parent relationship 
+while w;
+Select w such that Parent(5, 7)
+5
+5000
+6 - Test Uses relationship with 1 unknown (Incomplete for later iterations)
+variable v;
+Select v such that Uses(5, v)
+x, y, count, cenX, cenY
+5000
+7 - Test Uses relationship with 1 unknown
+assign a;
+Select a such that Uses(a, "x")
+7
+5000
+8 - Test Modifies relationship with 1 unknown (incomplete for later iterations)
+stmt s;
+Select s such that Modifies(s, "cenX")
+2, 5, 7, 10, 12
+5000
+9 - Test 1 pattern clause (invalid query)
+assign a;
+Select a pattern v (_, _)
+none
+5000
+10 - Test 1 pattern clause 
+assign a;
+Select a pattern a (_, _"cenY * cenY"_)
+14
+5000
+11 - Test 1 pattern clause
+assign a;
+Select a pattern a     (_, "count + 1")
+6
+5000
+12 - Test 1 pattern and 1 such that with uncommon unknown
+assign a; stmt s;
+Select s such that Follows*(s, 5) pattern a ("cenX", _)
+1, 2, 3, 4
+5000
+13 - Test 1 pattern and 1 such that with uncommon unknown (invalid syntax)
+assign a; variable v;
+Select v such that Uses(v, a) pattern a (_, _)
+none
+5000
+14 - Test 1 pattern and 1 such that with uncommon unknown
+assign a; if i;
+Select a such that Modifies(i, "cenX") pattern a ("normSq", _"cenX * cenX"_)
+14
+5000
+15 - Test 1 pattern and 1 such that with common unknown
+variable v; assign a; if i;
+Select v such that Modifies(i, v) pattern a (v, _"cenX"_)
+cenX
+5000
+16 - Test 1 pattern and 1 such that with common unknown (invalid syntax)
+assign a; stmt s;
+Select a such that Parent*(s, a) pattern a ("count", _)
+6
+5000
+17 - Test 1 pattern and 1 such that with common unknown (invalid syntax)
+if i;
+Select i such that Uses(i, "count") pattern i ("flag", _)
+none
+5000
+18 - Test 1 pattern 1 such that and 2 common synonym 
+assign a; variable v;
+Select a such that Uses(a, v) pattern a (v, _"x"_)
+7
+5000
+19 - Test 1 pattern 1 such that and 2 common synonym (Invalid syntax) 
+assign a1, a2; variable v;
+Select a1 such that Follows(a1, a2) pattern a1 ("count", _)
+1, 6
+5000
+20 - Test 1 pattern 1 such that and 2 common synonyms
+if i; while w; assign a; variable v;
+Select a such that Parent*(i, a) pattern a ("flag", "1")
+11
+5000
+21 - Test without clause (invalid syntax)
+Print p;
+Select p
+none
+5000
+22 - Test without clause
+procedure p;
+Select p
+computeCentroid, readPoint
+5000
+23 - Test without clause
+variable v;
+Select v
+count, cenX, cenY, x, y, flag, normSq, a
+5000
+24 - Test Parent relationship
+constant c;
+Select c such that Parent(5, 9)
+0, 1
+5000
+25 - Test Parent* relationship
+if i;
+Select i such that Parent*(10, 11)
+10
+5000
+26 - Test Parent* relationship
+while w;
+Select w such that Parent*(10, 13)
+5
+5000
+27 - Test Parent* relationship
+call c;
+Select c such that Parent*(5, 10)
+none
+5000
+28 - Test Follows* relationship
+stmt s;
+Select s such that Follows*(s, 11)
+none
+5000
+29 - Test Follows* relationship
+procedure p;
+Select p such that Follows*(5, 14)
+computeCentroid, readPoint
+5000
+30 - Test Follows* relationship
+stmt s;
+Select s such that Follows*(s, 5)
+1,2,3,4
+5000
+31 - Test Uses relationship
+if i;
+Select i such that Uses(i, "count")
+10
+5000
+32 - Test Modifies relationship
+while w; variable v;
+Select v such that Modifies(w, v)
+count, cenX, cenY, a
+5000
+33 - Test Modifies relationship
+if i;
+Select i such that Modifies(14, "normSq")
+10
+5000

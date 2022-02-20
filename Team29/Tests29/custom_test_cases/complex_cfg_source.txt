@@ -1,0 +1,49 @@
+procedure main {
+	while (x < 0) {
+		a = b;
+		b = c;
+		c = a;
+	}
+	call readMe;
+}
+
+procedure readMe {
+	while (c > 10) {
+		z = c + x;
+		x = x + 1;
+		if (y == 0) then {
+			while (x < z) {
+				x = z + r; 
+				read x;
+				call Two;
+			}
+		} else {
+			call One;
+		}
+	}
+	y = x + z;
+	call One;
+}
+
+procedure One {
+	a = b * c + d;
+	while (c > 0) {
+		if (d > 0) then {
+			b = a - 1;
+		} else {
+			c = b * d;
+		}
+		d = b + c;
+		c = d * a;
+		b = d - c;
+	}
+	call Two;
+}
+
+procedure Two {
+	s = s + x;
+	x = x + 1;
+	y = y + x;
+	print c;
+	x = x * x;
+}

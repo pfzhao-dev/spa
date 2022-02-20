@@ -1,0 +1,48 @@
+procedure main {
+	if (i == 3) then {
+		while ((k == 3) || (pop != 3)) {
+			zz    =    pq *  zk +    kz - pz / pl ;
+			call tree;
+		}
+		read xx;
+		xx = py + yz;
+	} else {
+		a = a + b;
+	}
+	while (x == y) {
+		call prune;
+		if (y == (x%z)) then {
+			call ride;
+		} else {
+			x = x%y;
+		}
+	}
+	call sign;
+} 
+
+procedure sign {
+	call prune;
+	read x;
+	print y;
+}
+
+procedure tree {
+	if (x == y) then {
+		print zz;
+	} else {
+		y = zz;
+	}
+}
+
+procedure ride {
+	while (x == (y % (x + 4))) {
+		call tree;
+	}
+	x = x + y + z * z - 1;
+}
+
+procedure prune {
+	print pr;
+	read x;
+	x = kx + zy;
+}

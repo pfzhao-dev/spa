@@ -1,0 +1,42 @@
+procedure main00 {
+	while (x00 < 0) {
+		a00 = b00;
+		b00 = k00;
+		k00 = a00;
+	}
+	while (k00 > 10) {
+		z00 = k00 + x00;
+		x00 = x00 + 1;
+		if (y00 == 0) then {
+			while (x00 < z00) {
+				x00 = z00 + r00; 
+				read x00;
+				x00 = z00 + r00;
+			}
+		} else {
+			x00 = y00 + k00;
+			call main01;
+		}
+	}
+	y00 = x00 + z00;
+	s00 = s00 + x00;
+	x00 = x00 + 1;
+	y00 = y00 + x00;
+	print z00;
+	x00 = x00 * x00;
+	while (y00 == z00) {
+		if (xy00 == z00) then {
+			z00 = z00 + 1;
+			x00 = y00 + 2;
+		} else {
+			while (z00 == (y00 + x00)) {
+				cr00 = cr00 + z00;
+			}
+		}
+	}
+	print z00;
+}
+
+procedure main01 {
+	print z00;
+}
